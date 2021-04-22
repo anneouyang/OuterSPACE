@@ -33,11 +33,6 @@ def train(model, num_epochs=10, save_dir=None):
 
 	for epoch in range(num_epochs):
 		print('Epoch {}/{}'.format(epoch, num_epochs - 1))
-		# make_sparse_model_weights(model, 0.5)
-
-		# for param in model.parameters():
-		# 	# print(get_sparsity(param))
-		# 	print(param.size())
 
 		for phase in ['train', 'val']:
 			if phase == 'train':
@@ -108,11 +103,10 @@ def eval(model, save_dir=None):
 
 def main():
 	save_dir = 'saved_weights/test1/'
-	model = MLP1()
+	model = MLP1(sparsity_level=0.01)
 	train(model=model, num_epochs=3, save_dir=None)
 	eval(model=model, save_dir=None)
-	make_sparse_model_weights(model, 0.5)
-	eval(model=model, save_dir=None)
+	print_parameters_sparsity(model=model)
 
 if __name__ == '__main__':
 	main()

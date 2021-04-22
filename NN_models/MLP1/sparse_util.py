@@ -3,7 +3,7 @@ import torch
 # sparsity level is defined as number of non-zero elements / total size
 
 def get_sparsity(mat):
-	zeros_count = (abs(mat - 0) <= 0.00001).sum()
+	zeros_count = (abs(mat - 0) <= 0.000001).sum()
 	return (zeros_count, torch.numel(mat), 1 - zeros_count / torch.numel(mat))
 
 
@@ -31,3 +31,7 @@ def make_sparse_model_weights(model, sparsity_level):
 		model.fc3.weight = torch.nn.Parameter(prune_to_sparsity(model.fc3.weight.data, sparsity_level))
 		model.fc3.bias = torch.nn.Parameter(prune_to_sparsity(model.fc3.bias.data, sparsity_level))
 		pass
+
+def print_parameters_sparsity(model):
+	for param in model.parameters():
+		print(get_sparsity(param))
