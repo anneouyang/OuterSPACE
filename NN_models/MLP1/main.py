@@ -25,7 +25,7 @@ def load_model_weights(model, save_dir):
 	model.load_state_dict(torch.load(os.path.join(save_dir, 'weights.pt')))
 
 
-def train(model, num_epochs=20, save_dir=None):
+def train(model, num_epochs=10, save_dir=None):
 
 	optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 	criterion = nn.CrossEntropyLoss()
@@ -103,7 +103,7 @@ def eval(model, save_dir=None):
 def main():
 	save_dir = 'saved_weights/test1/'
 	model = MLP1()
-	train(model=model, num_epochs=2, save_dir=save_dir)
+	# train(model=model, num_epochs=3, save_dir=save_dir)
 	eval(model=model, save_dir=save_dir)
 
 if __name__ == '__main__':
