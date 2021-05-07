@@ -6,7 +6,7 @@ import copy
 import os
 import sys
 
-from models import MLP1
+from models import LeNet
 from dataloaders import dataloaders
 from sparse_util import *
 
@@ -45,14 +45,11 @@ def load_training_stats(save_dir):
 
 
 def plot_training_stats(train_losses, train_accs, val_losses, val_accs, save_dir):
-	
-	epochs_range = range(0, len(train_accs))
 
 	plt.figure()
 	plt.title("Training and Validation Loss")
 	plt.plot(val_losses,label="val")
 	plt.plot(train_losses,label="train")
-	plt.xticks(epochs_range)
 	plt.xlabel("Epoch")
 	plt.ylabel("Loss")
 	plt.legend()
@@ -62,7 +59,6 @@ def plot_training_stats(train_losses, train_accs, val_losses, val_accs, save_dir
 	plt.title("Training and Validation Accuracy")
 	plt.plot(val_accs,label="val")
 	plt.plot(train_accs,label="train")
-	plt.xticks(epochs_range)
 	plt.xlabel("Epoch")
 	plt.ylabel("Accuracy")
 	plt.legend()
@@ -186,7 +182,7 @@ def eval(model, save_dir=None, name="best_weights.pt"):
 
 def main():
 
-	parser = argparse.ArgumentParser(description="MLP 1")
+	parser = argparse.ArgumentParser(description="LeNet")
 	parser.add_argument("num_epochs", help="Number of epochs to train", type=int, default=-1, nargs="?")
 	parser.add_argument("saved_model_name", help="Name of saved model", type=str, default="no", nargs="?")
 	parser.add_argument("eval_weights", help="Name of weights used in eval", type=str, default="best_weights.pt", nargs="?")
@@ -203,7 +199,7 @@ def main():
 		except:
 			os.mkdir(save_dir)
 
-	model = MLP1(sparsity_level=0.01)
+	model = LeNet(sparsity_level=0.01)
 
 	if num_epochs > 0:
 		train(model=model, num_epochs=num_epochs, save_dir=save_dir)
@@ -211,7 +207,6 @@ def main():
 		print("skipped training")
 	load_training_stats(save_dir)
 	eval(model=model, save_dir=save_dir, name=eval_weights)
-	# print_parameters_sparsity(model=model)
 
 	# a = load_training_stats(save_dir)
 	# plot_training_stats(a[0], a[1], a[2], a[3], save_dir)
