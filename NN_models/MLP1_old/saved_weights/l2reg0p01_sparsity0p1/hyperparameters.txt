@@ -1,0 +1,2 @@
+lambda1, lambda2, lambda3 = 0.1, 0.01, 0.01
+sparsity_level = 0.1
