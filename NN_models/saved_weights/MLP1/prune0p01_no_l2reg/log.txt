@@ -1,0 +1,1090 @@
+Could not find GPU! Using CPU only
+Before pruning
+activation sparsity: 
+after fc1 (tensor(916018), 1024000, tensor(0.1055))
+after fc2 (tensor(350870), 1024000, tensor(0.6574))
+activation sparsity: 
+after fc1 (tensor(915508), 1024000, tensor(0.1059))
+after fc2 (tensor(342502), 1024000, tensor(0.6655))
+activation sparsity: 
+after fc1 (tensor(915384), 1024000, tensor(0.1061))
+after fc2 (tensor(345098), 1024000, tensor(0.6630))
+activation sparsity: 
+after fc1 (tensor(915069), 1024000, tensor(0.1064))
+after fc2 (tensor(343901), 1024000, tensor(0.6642))
+activation sparsity: 
+after fc1 (tensor(915055), 1024000, tensor(0.1064))
+after fc2 (tensor(343146), 1024000, tensor(0.6649))
+activation sparsity: 
+after fc1 (tensor(915632), 1024000, tensor(0.1058))
+after fc2 (tensor(336971), 1024000, tensor(0.6709))
+activation sparsity: 
+after fc1 (tensor(915606), 1024000, tensor(0.1059))
+after fc2 (tensor(340815), 1024000, tensor(0.6672))
+activation sparsity: 
+after fc1 (tensor(915585), 1024000, tensor(0.1059))
+after fc2 (tensor(344038), 1024000, tensor(0.6640))
+activation sparsity: 
+after fc1 (tensor(916518), 1024000, tensor(0.1050))
+after fc2 (tensor(344105), 1024000, tensor(0.6640))
+activation sparsity: 
+after fc1 (tensor(701124), 784000, tensor(0.1057))
+after fc2 (tensor(263438), 784000, tensor(0.6640))
+
+test loss: 0.1388 acc: 0.9787
+
+parameters sparsity: 
+fc1.weight (tensor(705600), 784000, tensor(0.1000))
+fc1.bias (tensor(234), 1000, tensor(0.7660))
+fc2.weight (tensor(900000), 1000000, tensor(0.1000))
+fc2.bias (tensor(7), 1000, tensor(0.9930))
+fc3.weight (tensor(9000), 10000, tensor(0.1000))
+fc3.bias (tensor(0), 10, tensor(1.))
+Before pruning: 
+parameters sparsity: 
+fc1.weight (tensor(705600), 784000, tensor(0.1000))
+fc1.bias (tensor(234), 1000, tensor(0.7660))
+fc2.weight (tensor(900000), 1000000, tensor(0.1000))
+fc2.bias (tensor(7), 1000, tensor(0.9930))
+fc3.weight (tensor(9000), 10000, tensor(0.1000))
+fc3.bias (tensor(0), 10, tensor(1.))
+After pruning: 
+parameters sparsity: 
+fc1.weight (tensor(776160), 784000, tensor(0.0100))
+fc1.bias (tensor(234), 1000, tensor(0.7660))
+fc2.weight (tensor(990000), 1000000, tensor(0.0100))
+fc2.bias (tensor(7), 1000, tensor(0.9930))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+After pruning
+activation sparsity: 
+after fc1 (tensor(887603), 1024000, tensor(0.1332))
+after fc2 (tensor(43960), 1024000, tensor(0.9571))
+activation sparsity: 
+after fc1 (tensor(887779), 1024000, tensor(0.1330))
+after fc2 (tensor(43682), 1024000, tensor(0.9573))
+activation sparsity: 
+after fc1 (tensor(887617), 1024000, tensor(0.1332))
+after fc2 (tensor(43764), 1024000, tensor(0.9573))
+activation sparsity: 
+after fc1 (tensor(886931), 1024000, tensor(0.1339))
+after fc2 (tensor(43963), 1024000, tensor(0.9571))
+activation sparsity: 
+after fc1 (tensor(886906), 1024000, tensor(0.1339))
+after fc2 (tensor(43561), 1024000, tensor(0.9575))
+activation sparsity: 
+after fc1 (tensor(887765), 1024000, tensor(0.1330))
+after fc2 (tensor(43440), 1024000, tensor(0.9576))
+activation sparsity: 
+after fc1 (tensor(887538), 1024000, tensor(0.1333))
+after fc2 (tensor(43708), 1024000, tensor(0.9573))
+activation sparsity: 
+after fc1 (tensor(887253), 1024000, tensor(0.1335))
+after fc2 (tensor(43660), 1024000, tensor(0.9574))
+activation sparsity: 
+after fc1 (tensor(888168), 1024000, tensor(0.1326))
+after fc2 (tensor(43641), 1024000, tensor(0.9574))
+activation sparsity: 
+after fc1 (tensor(679586), 784000, tensor(0.1332))
+after fc2 (tensor(33218), 784000, tensor(0.9576))
+
+test loss: 1.3500 acc: 0.8632
+
+parameters sparsity: 
+fc1.weight (tensor(776160), 784000, tensor(0.0100))
+fc1.bias (tensor(234), 1000, tensor(0.7660))
+fc2.weight (tensor(990000), 1000000, tensor(0.0100))
+fc2.bias (tensor(7), 1000, tensor(0.9930))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 0/49
+activation sparsity: 
+after fc1 (tensor(888186), 1024000, tensor(0.1326))
+after fc2 (tensor(43930), 1024000, tensor(0.9571))
+val loss: 1.6588 acc: 0.8566
+
+activation sparsity: 
+after fc1 (tensor(887197), 1024000, tensor(0.1336))
+after fc2 (tensor(43350), 1024000, tensor(0.9577))
+train loss: 1.0207 acc: 0.9435
+
+parameters sparsity: 
+fc1.weight (tensor(776160), 784000, tensor(0.0100))
+fc1.bias (tensor(0), 1000, tensor(1.))
+fc2.weight (tensor(990000), 1000000, tensor(0.0100))
+fc2.bias (tensor(0), 1000, tensor(1.))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 1/49
+activation sparsity: 
+after fc1 (tensor(765370), 1024000, tensor(0.2526))
+after fc2 (tensor(833324), 1024000, tensor(0.1862))
+val loss: 0.7646 acc: 0.9470
+
+activation sparsity: 
+after fc1 (tensor(764127), 1024000, tensor(0.2538))
+after fc2 (tensor(832813), 1024000, tensor(0.1867))
+train loss: 0.7005 acc: 0.9641
+
+parameters sparsity: 
+fc1.weight (tensor(776160), 784000, tensor(0.0100))
+fc1.bias (tensor(1), 1000, tensor(0.9990))
+fc2.weight (tensor(990000), 1000000, tensor(0.0100))
+fc2.bias (tensor(0), 1000, tensor(1.))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 2/49
+activation sparsity: 
+after fc1 (tensor(857842), 1024000, tensor(0.1623))
+after fc2 (tensor(930768), 1024000, tensor(0.0910))
+val loss: 0.6859 acc: 0.9640
+
+activation sparsity: 
+after fc1 (tensor(856791), 1024000, tensor(0.1633))
+after fc2 (tensor(929577), 1024000, tensor(0.0922))
+train loss: 0.6545 acc: 0.9723
+
+parameters sparsity: 
+fc1.weight (tensor(776160), 784000, tensor(0.0100))
+fc1.bias (tensor(1), 1000, tensor(0.9990))
+fc2.weight (tensor(990000), 1000000, tensor(0.0100))
+fc2.bias (tensor(0), 1000, tensor(1.))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 3/49
+activation sparsity: 
+after fc1 (tensor(849448), 1024000, tensor(0.1705))
+after fc2 (tensor(931364), 1024000, tensor(0.0905))
+val loss: 0.6581 acc: 0.9680
+
+activation sparsity: 
+after fc1 (tensor(848417), 1024000, tensor(0.1715))
+after fc2 (tensor(930461), 1024000, tensor(0.0913))
+train loss: 0.6326 acc: 0.9763
+
+parameters sparsity: 
+fc1.weight (tensor(776160), 784000, tensor(0.0100))
+fc1.bias (tensor(19), 1000, tensor(0.9810))
+fc2.weight (tensor(990000), 1000000, tensor(0.0100))
+fc2.bias (tensor(2), 1000, tensor(0.9980))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 4/49
+activation sparsity: 
+after fc1 (tensor(828313), 1024000, tensor(0.1911))
+after fc2 (tensor(926570), 1024000, tensor(0.0951))
+val loss: 0.6419 acc: 0.9724
+
+activation sparsity: 
+after fc1 (tensor(827175), 1024000, tensor(0.1922))
+after fc2 (tensor(925877), 1024000, tensor(0.0958))
+train loss: 0.6180 acc: 0.9788
+
+parameters sparsity: 
+fc1.weight (tensor(776160), 784000, tensor(0.0100))
+fc1.bias (tensor(115), 1000, tensor(0.8850))
+fc2.weight (tensor(990009), 1000000, tensor(0.0100))
+fc2.bias (tensor(19), 1000, tensor(0.9810))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 5/49
+activation sparsity: 
+after fc1 (tensor(907318), 1024000, tensor(0.1139))
+after fc2 (tensor(945936), 1024000, tensor(0.0762))
+val loss: 0.6307 acc: 0.9730
+
+activation sparsity: 
+after fc1 (tensor(906163), 1024000, tensor(0.1151))
+after fc2 (tensor(945406), 1024000, tensor(0.0768))
+train loss: 0.6071 acc: 0.9807
+
+parameters sparsity: 
+fc1.weight (tensor(776164), 784000, tensor(0.0100))
+fc1.bias (tensor(440), 1000, tensor(0.5600))
+fc2.weight (tensor(990126), 1000000, tensor(0.0099))
+fc2.bias (tensor(61), 1000, tensor(0.9390))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 6/49
+activation sparsity: 
+after fc1 (tensor(928355), 1024000, tensor(0.0934))
+after fc2 (tensor(957716), 1024000, tensor(0.0647))
+val loss: 0.6219 acc: 0.9740
+
+activation sparsity: 
+after fc1 (tensor(927072), 1024000, tensor(0.0947))
+after fc2 (tensor(957142), 1024000, tensor(0.0653))
+train loss: 0.5982 acc: 0.9818
+
+parameters sparsity: 
+fc1.weight (tensor(776176), 784000, tensor(0.0100))
+fc1.bias (tensor(476), 1000, tensor(0.5240))
+fc2.weight (tensor(991189), 1000000, tensor(0.0088))
+fc2.bias (tensor(156), 1000, tensor(0.8440))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 7/49
+activation sparsity: 
+after fc1 (tensor(942028), 1024000, tensor(0.0801))
+after fc2 (tensor(964985), 1024000, tensor(0.0576))
+val loss: 0.6150 acc: 0.9748
+
+activation sparsity: 
+after fc1 (tensor(940686), 1024000, tensor(0.0814))
+after fc2 (tensor(964471), 1024000, tensor(0.0581))
+train loss: 0.5909 acc: 0.9827
+
+parameters sparsity: 
+fc1.weight (tensor(776186), 784000, tensor(0.0100))
+fc1.bias (tensor(479), 1000, tensor(0.5210))
+fc2.weight (tensor(992235), 1000000, tensor(0.0078))
+fc2.bias (tensor(184), 1000, tensor(0.8160))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 8/49
+activation sparsity: 
+after fc1 (tensor(941076), 1024000, tensor(0.0810))
+after fc2 (tensor(967470), 1024000, tensor(0.0552))
+val loss: 0.6092 acc: 0.9756
+
+activation sparsity: 
+after fc1 (tensor(939686), 1024000, tensor(0.0823))
+after fc2 (tensor(966939), 1024000, tensor(0.0557))
+train loss: 0.5846 acc: 0.9837
+
+parameters sparsity: 
+fc1.weight (tensor(776189), 784000, tensor(0.0100))
+fc1.bias (tensor(462), 1000, tensor(0.5380))
+fc2.weight (tensor(992739), 1000000, tensor(0.0073))
+fc2.bias (tensor(217), 1000, tensor(0.7830))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 9/49
+activation sparsity: 
+after fc1 (tensor(928597), 1024000, tensor(0.0932))
+after fc2 (tensor(969564), 1024000, tensor(0.0532))
+val loss: 0.6043 acc: 0.9754
+
+activation sparsity: 
+after fc1 (tensor(927264), 1024000, tensor(0.0945))
+after fc2 (tensor(968825), 1024000, tensor(0.0539))
+train loss: 0.5792 acc: 0.9843
+
+parameters sparsity: 
+fc1.weight (tensor(776189), 784000, tensor(0.0100))
+fc1.bias (tensor(459), 1000, tensor(0.5410))
+fc2.weight (tensor(993072), 1000000, tensor(0.0069))
+fc2.bias (tensor(233), 1000, tensor(0.7670))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 10/49
+activation sparsity: 
+after fc1 (tensor(920681), 1024000, tensor(0.1009))
+after fc2 (tensor(974731), 1024000, tensor(0.0481))
+val loss: 0.6000 acc: 0.9754
+
+activation sparsity: 
+after fc1 (tensor(919317), 1024000, tensor(0.1022))
+after fc2 (tensor(973868), 1024000, tensor(0.0490))
+train loss: 0.5744 acc: 0.9848
+
+parameters sparsity: 
+fc1.weight (tensor(776189), 784000, tensor(0.0100))
+fc1.bias (tensor(436), 1000, tensor(0.5640))
+fc2.weight (tensor(993379), 1000000, tensor(0.0066))
+fc2.bias (tensor(250), 1000, tensor(0.7500))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 11/49
+activation sparsity: 
+after fc1 (tensor(931096), 1024000, tensor(0.0907))
+after fc2 (tensor(975251), 1024000, tensor(0.0476))
+val loss: 0.5962 acc: 0.9764
+
+activation sparsity: 
+after fc1 (tensor(929681), 1024000, tensor(0.0921))
+after fc2 (tensor(974396), 1024000, tensor(0.0484))
+train loss: 0.5702 acc: 0.9854
+
+parameters sparsity: 
+fc1.weight (tensor(776189), 784000, tensor(0.0100))
+fc1.bias (tensor(426), 1000, tensor(0.5740))
+fc2.weight (tensor(993673), 1000000, tensor(0.0063))
+fc2.bias (tensor(268), 1000, tensor(0.7320))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 12/49
+activation sparsity: 
+after fc1 (tensor(918317), 1024000, tensor(0.1032))
+after fc2 (tensor(978553), 1024000, tensor(0.0444))
+val loss: 0.5929 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(916867), 1024000, tensor(0.1046))
+after fc2 (tensor(977663), 1024000, tensor(0.0453))
+train loss: 0.5664 acc: 0.9860
+
+parameters sparsity: 
+fc1.weight (tensor(776189), 784000, tensor(0.0100))
+fc1.bias (tensor(396), 1000, tensor(0.6040))
+fc2.weight (tensor(993913), 1000000, tensor(0.0061))
+fc2.bias (tensor(287), 1000, tensor(0.7130))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 13/49
+activation sparsity: 
+after fc1 (tensor(913469), 1024000, tensor(0.1079))
+after fc2 (tensor(981830), 1024000, tensor(0.0412))
+val loss: 0.5898 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(912072), 1024000, tensor(0.1093))
+after fc2 (tensor(980952), 1024000, tensor(0.0420))
+train loss: 0.5629 acc: 0.9863
+
+parameters sparsity: 
+fc1.weight (tensor(776189), 784000, tensor(0.0100))
+fc1.bias (tensor(381), 1000, tensor(0.6190))
+fc2.weight (tensor(994168), 1000000, tensor(0.0058))
+fc2.bias (tensor(307), 1000, tensor(0.6930))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 14/49
+activation sparsity: 
+after fc1 (tensor(931339), 1024000, tensor(0.0905))
+after fc2 (tensor(982428), 1024000, tensor(0.0406))
+val loss: 0.5871 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(929920), 1024000, tensor(0.0919))
+after fc2 (tensor(981566), 1024000, tensor(0.0414))
+train loss: 0.5599 acc: 0.9866
+
+parameters sparsity: 
+fc1.weight (tensor(776179), 784000, tensor(0.0100))
+fc1.bias (tensor(360), 1000, tensor(0.6400))
+fc2.weight (tensor(994388), 1000000, tensor(0.0056))
+fc2.bias (tensor(323), 1000, tensor(0.6770))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 15/49
+activation sparsity: 
+after fc1 (tensor(921251), 1024000, tensor(0.1003))
+after fc2 (tensor(982156), 1024000, tensor(0.0409))
+val loss: 0.5846 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(919767), 1024000, tensor(0.1018))
+after fc2 (tensor(981291), 1024000, tensor(0.0417))
+train loss: 0.5571 acc: 0.9868
+
+parameters sparsity: 
+fc1.weight (tensor(776179), 784000, tensor(0.0100))
+fc1.bias (tensor(328), 1000, tensor(0.6720))
+fc2.weight (tensor(994579), 1000000, tensor(0.0054))
+fc2.bias (tensor(337), 1000, tensor(0.6630))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 16/49
+activation sparsity: 
+after fc1 (tensor(919529), 1024000, tensor(0.1020))
+after fc2 (tensor(984456), 1024000, tensor(0.0386))
+val loss: 0.5823 acc: 0.9764
+
+activation sparsity: 
+after fc1 (tensor(918058), 1024000, tensor(0.1035))
+after fc2 (tensor(983610), 1024000, tensor(0.0394))
+train loss: 0.5545 acc: 0.9870
+
+parameters sparsity: 
+fc1.weight (tensor(776183), 784000, tensor(0.0100))
+fc1.bias (tensor(308), 1000, tensor(0.6920))
+fc2.weight (tensor(994766), 1000000, tensor(0.0052))
+fc2.bias (tensor(354), 1000, tensor(0.6460))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 17/49
+activation sparsity: 
+after fc1 (tensor(909630), 1024000, tensor(0.1117))
+after fc2 (tensor(983863), 1024000, tensor(0.0392))
+val loss: 0.5803 acc: 0.9766
+
+activation sparsity: 
+after fc1 (tensor(908257), 1024000, tensor(0.1130))
+after fc2 (tensor(982972), 1024000, tensor(0.0401))
+train loss: 0.5522 acc: 0.9873
+
+parameters sparsity: 
+fc1.weight (tensor(776183), 784000, tensor(0.0100))
+fc1.bias (tensor(277), 1000, tensor(0.7230))
+fc2.weight (tensor(994944), 1000000, tensor(0.0051))
+fc2.bias (tensor(374), 1000, tensor(0.6260))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 18/49
+activation sparsity: 
+after fc1 (tensor(911974), 1024000, tensor(0.1094))
+after fc2 (tensor(984750), 1024000, tensor(0.0383))
+val loss: 0.5784 acc: 0.9768
+
+activation sparsity: 
+after fc1 (tensor(910573), 1024000, tensor(0.1108))
+after fc2 (tensor(983793), 1024000, tensor(0.0393))
+train loss: 0.5501 acc: 0.9873
+
+parameters sparsity: 
+fc1.weight (tensor(776186), 784000, tensor(0.0100))
+fc1.bias (tensor(254), 1000, tensor(0.7460))
+fc2.weight (tensor(995101), 1000000, tensor(0.0049))
+fc2.bias (tensor(392), 1000, tensor(0.6080))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 19/49
+activation sparsity: 
+after fc1 (tensor(888641), 1024000, tensor(0.1322))
+after fc2 (tensor(987109), 1024000, tensor(0.0360))
+val loss: 0.5767 acc: 0.9766
+
+activation sparsity: 
+after fc1 (tensor(887282), 1024000, tensor(0.1335))
+after fc2 (tensor(986153), 1024000, tensor(0.0370))
+train loss: 0.5482 acc: 0.9877
+
+parameters sparsity: 
+fc1.weight (tensor(776187), 784000, tensor(0.0100))
+fc1.bias (tensor(228), 1000, tensor(0.7720))
+fc2.weight (tensor(995208), 1000000, tensor(0.0048))
+fc2.bias (tensor(413), 1000, tensor(0.5870))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 20/49
+activation sparsity: 
+after fc1 (tensor(912166), 1024000, tensor(0.1092))
+after fc2 (tensor(984732), 1024000, tensor(0.0383))
+val loss: 0.5752 acc: 0.9766
+
+activation sparsity: 
+after fc1 (tensor(910772), 1024000, tensor(0.1106))
+after fc2 (tensor(983822), 1024000, tensor(0.0392))
+train loss: 0.5464 acc: 0.9878
+
+parameters sparsity: 
+fc1.weight (tensor(776189), 784000, tensor(0.0100))
+fc1.bias (tensor(198), 1000, tensor(0.8020))
+fc2.weight (tensor(995275), 1000000, tensor(0.0047))
+fc2.bias (tensor(434), 1000, tensor(0.5660))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 21/49
+activation sparsity: 
+after fc1 (tensor(890917), 1024000, tensor(0.1300))
+after fc2 (tensor(983820), 1024000, tensor(0.0392))
+val loss: 0.5737 acc: 0.9766
+
+activation sparsity: 
+after fc1 (tensor(889528), 1024000, tensor(0.1313))
+after fc2 (tensor(982885), 1024000, tensor(0.0402))
+train loss: 0.5447 acc: 0.9880
+
+parameters sparsity: 
+fc1.weight (tensor(776204), 784000, tensor(0.0099))
+fc1.bias (tensor(206), 1000, tensor(0.7940))
+fc2.weight (tensor(995336), 1000000, tensor(0.0047))
+fc2.bias (tensor(446), 1000, tensor(0.5540))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 22/49
+activation sparsity: 
+after fc1 (tensor(903519), 1024000, tensor(0.1177))
+after fc2 (tensor(983914), 1024000, tensor(0.0391))
+val loss: 0.5724 acc: 0.9766
+
+activation sparsity: 
+after fc1 (tensor(902161), 1024000, tensor(0.1190))
+after fc2 (tensor(983015), 1024000, tensor(0.0400))
+train loss: 0.5432 acc: 0.9881
+
+parameters sparsity: 
+fc1.weight (tensor(776211), 784000, tensor(0.0099))
+fc1.bias (tensor(221), 1000, tensor(0.7790))
+fc2.weight (tensor(995370), 1000000, tensor(0.0046))
+fc2.bias (tensor(458), 1000, tensor(0.5420))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 23/49
+activation sparsity: 
+after fc1 (tensor(911582), 1024000, tensor(0.1098))
+after fc2 (tensor(984996), 1024000, tensor(0.0381))
+val loss: 0.5711 acc: 0.9766
+
+activation sparsity: 
+after fc1 (tensor(910246), 1024000, tensor(0.1111))
+after fc2 (tensor(984074), 1024000, tensor(0.0390))
+train loss: 0.5418 acc: 0.9883
+
+parameters sparsity: 
+fc1.weight (tensor(776213), 784000, tensor(0.0099))
+fc1.bias (tensor(227), 1000, tensor(0.7730))
+fc2.weight (tensor(995396), 1000000, tensor(0.0046))
+fc2.bias (tensor(471), 1000, tensor(0.5290))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 24/49
+activation sparsity: 
+after fc1 (tensor(904784), 1024000, tensor(0.1164))
+after fc2 (tensor(987135), 1024000, tensor(0.0360))
+val loss: 0.5700 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(903444), 1024000, tensor(0.1177))
+after fc2 (tensor(986227), 1024000, tensor(0.0369))
+train loss: 0.5405 acc: 0.9883
+
+parameters sparsity: 
+fc1.weight (tensor(776216), 784000, tensor(0.0099))
+fc1.bias (tensor(256), 1000, tensor(0.7440))
+fc2.weight (tensor(995426), 1000000, tensor(0.0046))
+fc2.bias (tensor(496), 1000, tensor(0.5040))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 25/49
+activation sparsity: 
+after fc1 (tensor(895852), 1024000, tensor(0.1251))
+after fc2 (tensor(987188), 1024000, tensor(0.0359))
+val loss: 0.5688 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(894466), 1024000, tensor(0.1265))
+after fc2 (tensor(986264), 1024000, tensor(0.0369))
+train loss: 0.5393 acc: 0.9884
+
+parameters sparsity: 
+fc1.weight (tensor(776218), 784000, tensor(0.0099))
+fc1.bias (tensor(266), 1000, tensor(0.7340))
+fc2.weight (tensor(995444), 1000000, tensor(0.0046))
+fc2.bias (tensor(509), 1000, tensor(0.4910))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 26/49
+activation sparsity: 
+after fc1 (tensor(911190), 1024000, tensor(0.1102))
+after fc2 (tensor(985214), 1024000, tensor(0.0379))
+val loss: 0.5678 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(909878), 1024000, tensor(0.1114))
+after fc2 (tensor(984247), 1024000, tensor(0.0388))
+train loss: 0.5381 acc: 0.9885
+
+parameters sparsity: 
+fc1.weight (tensor(776220), 784000, tensor(0.0099))
+fc1.bias (tensor(299), 1000, tensor(0.7010))
+fc2.weight (tensor(995458), 1000000, tensor(0.0045))
+fc2.bias (tensor(527), 1000, tensor(0.4730))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 27/49
+activation sparsity: 
+after fc1 (tensor(925577), 1024000, tensor(0.0961))
+after fc2 (tensor(984205), 1024000, tensor(0.0389))
+val loss: 0.5669 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(924263), 1024000, tensor(0.0974))
+after fc2 (tensor(983239), 1024000, tensor(0.0398))
+train loss: 0.5371 acc: 0.9886
+
+parameters sparsity: 
+fc1.weight (tensor(776221), 784000, tensor(0.0099))
+fc1.bias (tensor(331), 1000, tensor(0.6690))
+fc2.weight (tensor(995471), 1000000, tensor(0.0045))
+fc2.bias (tensor(546), 1000, tensor(0.4540))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 28/49
+activation sparsity: 
+after fc1 (tensor(924518), 1024000, tensor(0.0972))
+after fc2 (tensor(986276), 1024000, tensor(0.0368))
+val loss: 0.5660 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(923190), 1024000, tensor(0.0984))
+after fc2 (tensor(985361), 1024000, tensor(0.0377))
+train loss: 0.5361 acc: 0.9886
+
+parameters sparsity: 
+fc1.weight (tensor(776223), 784000, tensor(0.0099))
+fc1.bias (tensor(344), 1000, tensor(0.6560))
+fc2.weight (tensor(995482), 1000000, tensor(0.0045))
+fc2.bias (tensor(572), 1000, tensor(0.4280))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 29/49
+activation sparsity: 
+after fc1 (tensor(924496), 1024000, tensor(0.0972))
+after fc2 (tensor(986303), 1024000, tensor(0.0368))
+val loss: 0.5652 acc: 0.9768
+
+activation sparsity: 
+after fc1 (tensor(923231), 1024000, tensor(0.0984))
+after fc2 (tensor(985372), 1024000, tensor(0.0377))
+train loss: 0.5352 acc: 0.9888
+
+parameters sparsity: 
+fc1.weight (tensor(776223), 784000, tensor(0.0099))
+fc1.bias (tensor(359), 1000, tensor(0.6410))
+fc2.weight (tensor(995487), 1000000, tensor(0.0045))
+fc2.bias (tensor(584), 1000, tensor(0.4160))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 30/49
+activation sparsity: 
+after fc1 (tensor(929747), 1024000, tensor(0.0920))
+after fc2 (tensor(987300), 1024000, tensor(0.0358))
+val loss: 0.5644 acc: 0.9768
+
+activation sparsity: 
+after fc1 (tensor(928441), 1024000, tensor(0.0933))
+after fc2 (tensor(986403), 1024000, tensor(0.0367))
+train loss: 0.5343 acc: 0.9889
+
+parameters sparsity: 
+fc1.weight (tensor(776223), 784000, tensor(0.0099))
+fc1.bias (tensor(390), 1000, tensor(0.6100))
+fc2.weight (tensor(995496), 1000000, tensor(0.0045))
+fc2.bias (tensor(605), 1000, tensor(0.3950))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 31/49
+activation sparsity: 
+after fc1 (tensor(920858), 1024000, tensor(0.1007))
+after fc2 (tensor(984204), 1024000, tensor(0.0389))
+val loss: 0.5638 acc: 0.9768
+
+activation sparsity: 
+after fc1 (tensor(919548), 1024000, tensor(0.1020))
+after fc2 (tensor(983291), 1024000, tensor(0.0398))
+train loss: 0.5335 acc: 0.9890
+
+parameters sparsity: 
+fc1.weight (tensor(776227), 784000, tensor(0.0099))
+fc1.bias (tensor(433), 1000, tensor(0.5670))
+fc2.weight (tensor(995510), 1000000, tensor(0.0045))
+fc2.bias (tensor(622), 1000, tensor(0.3780))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 32/49
+activation sparsity: 
+after fc1 (tensor(933284), 1024000, tensor(0.0886))
+after fc2 (tensor(988331), 1024000, tensor(0.0348))
+val loss: 0.5630 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(931998), 1024000, tensor(0.0898))
+after fc2 (tensor(987455), 1024000, tensor(0.0357))
+train loss: 0.5327 acc: 0.9890
+
+parameters sparsity: 
+fc1.weight (tensor(776229), 784000, tensor(0.0099))
+fc1.bias (tensor(443), 1000, tensor(0.5570))
+fc2.weight (tensor(995513), 1000000, tensor(0.0045))
+fc2.bias (tensor(640), 1000, tensor(0.3600))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 33/49
+activation sparsity: 
+after fc1 (tensor(933530), 1024000, tensor(0.0883))
+after fc2 (tensor(986276), 1024000, tensor(0.0368))
+val loss: 0.5624 acc: 0.9768
+
+activation sparsity: 
+after fc1 (tensor(932171), 1024000, tensor(0.0897))
+after fc2 (tensor(985375), 1024000, tensor(0.0377))
+train loss: 0.5320 acc: 0.9890
+
+parameters sparsity: 
+fc1.weight (tensor(776241), 784000, tensor(0.0099))
+fc1.bias (tensor(457), 1000, tensor(0.5430))
+fc2.weight (tensor(995515), 1000000, tensor(0.0045))
+fc2.bias (tensor(651), 1000, tensor(0.3490))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 34/49
+activation sparsity: 
+after fc1 (tensor(940760), 1024000, tensor(0.0813))
+after fc2 (tensor(987292), 1024000, tensor(0.0358))
+val loss: 0.5618 acc: 0.9766
+
+activation sparsity: 
+after fc1 (tensor(939449), 1024000, tensor(0.0826))
+after fc2 (tensor(986375), 1024000, tensor(0.0367))
+train loss: 0.5313 acc: 0.9890
+
+parameters sparsity: 
+fc1.weight (tensor(776244), 784000, tensor(0.0099))
+fc1.bias (tensor(459), 1000, tensor(0.5410))
+fc2.weight (tensor(995522), 1000000, tensor(0.0045))
+fc2.bias (tensor(664), 1000, tensor(0.3360))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 35/49
+activation sparsity: 
+after fc1 (tensor(946975), 1024000, tensor(0.0752))
+after fc2 (tensor(987290), 1024000, tensor(0.0358))
+val loss: 0.5613 acc: 0.9768
+
+activation sparsity: 
+after fc1 (tensor(945606), 1024000, tensor(0.0766))
+after fc2 (tensor(986350), 1024000, tensor(0.0368))
+train loss: 0.5307 acc: 0.9890
+
+parameters sparsity: 
+fc1.weight (tensor(776247), 784000, tensor(0.0099))
+fc1.bias (tensor(471), 1000, tensor(0.5290))
+fc2.weight (tensor(995526), 1000000, tensor(0.0045))
+fc2.bias (tensor(681), 1000, tensor(0.3190))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 36/49
+activation sparsity: 
+after fc1 (tensor(939858), 1024000, tensor(0.0822))
+after fc2 (tensor(988326), 1024000, tensor(0.0348))
+val loss: 0.5607 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(938521), 1024000, tensor(0.0835))
+after fc2 (tensor(987432), 1024000, tensor(0.0357))
+train loss: 0.5302 acc: 0.9891
+
+parameters sparsity: 
+fc1.weight (tensor(776248), 784000, tensor(0.0099))
+fc1.bias (tensor(475), 1000, tensor(0.5250))
+fc2.weight (tensor(995530), 1000000, tensor(0.0045))
+fc2.bias (tensor(697), 1000, tensor(0.3030))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 37/49
+activation sparsity: 
+after fc1 (tensor(952332), 1024000, tensor(0.0700))
+after fc2 (tensor(986228), 1024000, tensor(0.0369))
+val loss: 0.5603 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(950960), 1024000, tensor(0.0713))
+after fc2 (tensor(985328), 1024000, tensor(0.0378))
+train loss: 0.5296 acc: 0.9890
+
+parameters sparsity: 
+fc1.weight (tensor(776248), 784000, tensor(0.0099))
+fc1.bias (tensor(479), 1000, tensor(0.5210))
+fc2.weight (tensor(995536), 1000000, tensor(0.0045))
+fc2.bias (tensor(718), 1000, tensor(0.2820))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 38/49
+activation sparsity: 
+after fc1 (tensor(941116), 1024000, tensor(0.0809))
+after fc2 (tensor(987278), 1024000, tensor(0.0359))
+val loss: 0.5599 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(939767), 1024000, tensor(0.0823))
+after fc2 (tensor(986345), 1024000, tensor(0.0368))
+train loss: 0.5291 acc: 0.9890
+
+parameters sparsity: 
+fc1.weight (tensor(776248), 784000, tensor(0.0099))
+fc1.bias (tensor(490), 1000, tensor(0.5100))
+fc2.weight (tensor(995540), 1000000, tensor(0.0045))
+fc2.bias (tensor(736), 1000, tensor(0.2640))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 39/49
+activation sparsity: 
+after fc1 (tensor(946168), 1024000, tensor(0.0760))
+after fc2 (tensor(986215), 1024000, tensor(0.0369))
+val loss: 0.5593 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(944831), 1024000, tensor(0.0773))
+after fc2 (tensor(985339), 1024000, tensor(0.0378))
+train loss: 0.5286 acc: 0.9892
+
+parameters sparsity: 
+fc1.weight (tensor(776248), 784000, tensor(0.0099))
+fc1.bias (tensor(499), 1000, tensor(0.5010))
+fc2.weight (tensor(995540), 1000000, tensor(0.0045))
+fc2.bias (tensor(754), 1000, tensor(0.2460))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 40/49
+activation sparsity: 
+after fc1 (tensor(943243), 1024000, tensor(0.0789))
+after fc2 (tensor(988271), 1024000, tensor(0.0349))
+val loss: 0.5590 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(941894), 1024000, tensor(0.0802))
+after fc2 (tensor(987412), 1024000, tensor(0.0357))
+train loss: 0.5281 acc: 0.9892
+
+parameters sparsity: 
+fc1.weight (tensor(776249), 784000, tensor(0.0099))
+fc1.bias (tensor(484), 1000, tensor(0.5160))
+fc2.weight (tensor(995541), 1000000, tensor(0.0045))
+fc2.bias (tensor(768), 1000, tensor(0.2320))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 41/49
+activation sparsity: 
+after fc1 (tensor(938008), 1024000, tensor(0.0840))
+after fc2 (tensor(986176), 1024000, tensor(0.0369))
+val loss: 0.5586 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(936660), 1024000, tensor(0.0853))
+after fc2 (tensor(985327), 1024000, tensor(0.0378))
+train loss: 0.5277 acc: 0.9892
+
+parameters sparsity: 
+fc1.weight (tensor(776250), 784000, tensor(0.0099))
+fc1.bias (tensor(477), 1000, tensor(0.5230))
+fc2.weight (tensor(995541), 1000000, tensor(0.0045))
+fc2.bias (tensor(778), 1000, tensor(0.2220))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 42/49
+activation sparsity: 
+after fc1 (tensor(943203), 1024000, tensor(0.0789))
+after fc2 (tensor(985087), 1024000, tensor(0.0380))
+val loss: 0.5583 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(941830), 1024000, tensor(0.0802))
+after fc2 (tensor(984228), 1024000, tensor(0.0388))
+train loss: 0.5273 acc: 0.9892
+
+parameters sparsity: 
+fc1.weight (tensor(776251), 784000, tensor(0.0099))
+fc1.bias (tensor(473), 1000, tensor(0.5270))
+fc2.weight (tensor(995542), 1000000, tensor(0.0045))
+fc2.bias (tensor(784), 1000, tensor(0.2160))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 43/49
+activation sparsity: 
+after fc1 (tensor(936211), 1024000, tensor(0.0857))
+after fc2 (tensor(987174), 1024000, tensor(0.0360))
+val loss: 0.5579 acc: 0.9768
+
+activation sparsity: 
+after fc1 (tensor(934840), 1024000, tensor(0.0871))
+after fc2 (tensor(986288), 1024000, tensor(0.0368))
+train loss: 0.5269 acc: 0.9892
+
+parameters sparsity: 
+fc1.weight (tensor(776252), 784000, tensor(0.0099))
+fc1.bias (tensor(475), 1000, tensor(0.5250))
+fc2.weight (tensor(995542), 1000000, tensor(0.0045))
+fc2.bias (tensor(790), 1000, tensor(0.2100))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 44/49
+activation sparsity: 
+after fc1 (tensor(948551), 1024000, tensor(0.0737))
+after fc2 (tensor(986140), 1024000, tensor(0.0370))
+val loss: 0.5576 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(947178), 1024000, tensor(0.0750))
+after fc2 (tensor(985295), 1024000, tensor(0.0378))
+train loss: 0.5266 acc: 0.9891
+
+parameters sparsity: 
+fc1.weight (tensor(776254), 784000, tensor(0.0099))
+fc1.bias (tensor(469), 1000, tensor(0.5310))
+fc2.weight (tensor(995543), 1000000, tensor(0.0045))
+fc2.bias (tensor(795), 1000, tensor(0.2050))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 45/49
+activation sparsity: 
+after fc1 (tensor(948640), 1024000, tensor(0.0736))
+after fc2 (tensor(988141), 1024000, tensor(0.0350))
+val loss: 0.5574 acc: 0.9774
+
+activation sparsity: 
+after fc1 (tensor(947265), 1024000, tensor(0.0749))
+after fc2 (tensor(987320), 1024000, tensor(0.0358))
+train loss: 0.5262 acc: 0.9893
+
+parameters sparsity: 
+fc1.weight (tensor(776255), 784000, tensor(0.0099))
+fc1.bias (tensor(469), 1000, tensor(0.5310))
+fc2.weight (tensor(995545), 1000000, tensor(0.0045))
+fc2.bias (tensor(808), 1000, tensor(0.1920))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 46/49
+activation sparsity: 
+after fc1 (tensor(944610), 1024000, tensor(0.0775))
+after fc2 (tensor(983997), 1024000, tensor(0.0391))
+val loss: 0.5570 acc: 0.9776
+
+activation sparsity: 
+after fc1 (tensor(943200), 1024000, tensor(0.0789))
+after fc2 (tensor(983163), 1024000, tensor(0.0399))
+train loss: 0.5259 acc: 0.9891
+
+parameters sparsity: 
+fc1.weight (tensor(776255), 784000, tensor(0.0099))
+fc1.bias (tensor(468), 1000, tensor(0.5320))
+fc2.weight (tensor(995546), 1000000, tensor(0.0045))
+fc2.bias (tensor(818), 1000, tensor(0.1820))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 47/49
+activation sparsity: 
+after fc1 (tensor(940575), 1024000, tensor(0.0815))
+after fc2 (tensor(987120), 1024000, tensor(0.0360))
+val loss: 0.5568 acc: 0.9776
+
+activation sparsity: 
+after fc1 (tensor(939202), 1024000, tensor(0.0828))
+after fc2 (tensor(986232), 1024000, tensor(0.0369))
+train loss: 0.5255 acc: 0.9892
+
+parameters sparsity: 
+fc1.weight (tensor(776256), 784000, tensor(0.0099))
+fc1.bias (tensor(473), 1000, tensor(0.5270))
+fc2.weight (tensor(995548), 1000000, tensor(0.0045))
+fc2.bias (tensor(828), 1000, tensor(0.1720))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 48/49
+activation sparsity: 
+after fc1 (tensor(951876), 1024000, tensor(0.0704))
+after fc2 (tensor(986058), 1024000, tensor(0.0371))
+val loss: 0.5566 acc: 0.9772
+
+activation sparsity: 
+after fc1 (tensor(950520), 1024000, tensor(0.0718))
+after fc2 (tensor(985184), 1024000, tensor(0.0379))
+train loss: 0.5252 acc: 0.9892
+
+parameters sparsity: 
+fc1.weight (tensor(776256), 784000, tensor(0.0099))
+fc1.bias (tensor(475), 1000, tensor(0.5250))
+fc2.weight (tensor(995550), 1000000, tensor(0.0045))
+fc2.bias (tensor(830), 1000, tensor(0.1700))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 49/49
+activation sparsity: 
+after fc1 (tensor(943745), 1024000, tensor(0.0784))
+after fc2 (tensor(985047), 1024000, tensor(0.0380))
+val loss: 0.5564 acc: 0.9770
+
+activation sparsity: 
+after fc1 (tensor(942348), 1024000, tensor(0.0797))
+after fc2 (tensor(984151), 1024000, tensor(0.0389))
+train loss: 0.5250 acc: 0.9893
+
+parameters sparsity: 
+fc1.weight (tensor(776261), 784000, tensor(0.0099))
+fc1.bias (tensor(489), 1000, tensor(0.5110))
+fc2.weight (tensor(995556), 1000000, tensor(0.0044))
+fc2.bias (tensor(839), 1000, tensor(0.1610))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))
+After finetuning
+activation sparsity: 
+after fc1 (tensor(937269), 1024000, tensor(0.0847))
+after fc2 (tensor(984529), 1024000, tensor(0.0385))
+activation sparsity: 
+after fc1 (tensor(936709), 1024000, tensor(0.0852))
+after fc2 (tensor(983929), 1024000, tensor(0.0391))
+activation sparsity: 
+after fc1 (tensor(936876), 1024000, tensor(0.0851))
+after fc2 (tensor(984012), 1024000, tensor(0.0391))
+activation sparsity: 
+after fc1 (tensor(936164), 1024000, tensor(0.0858))
+after fc2 (tensor(984229), 1024000, tensor(0.0388))
+activation sparsity: 
+after fc1 (tensor(936058), 1024000, tensor(0.0859))
+after fc2 (tensor(983976), 1024000, tensor(0.0391))
+activation sparsity: 
+after fc1 (tensor(936686), 1024000, tensor(0.0853))
+after fc2 (tensor(983835), 1024000, tensor(0.0392))
+activation sparsity: 
+after fc1 (tensor(936679), 1024000, tensor(0.0853))
+after fc2 (tensor(983461), 1024000, tensor(0.0396))
+activation sparsity: 
+after fc1 (tensor(936754), 1024000, tensor(0.0852))
+after fc2 (tensor(984261), 1024000, tensor(0.0388))
+activation sparsity: 
+after fc1 (tensor(937292), 1024000, tensor(0.0847))
+after fc2 (tensor(984276), 1024000, tensor(0.0388))
+activation sparsity: 
+after fc1 (tensor(717041), 784000, tensor(0.0854))
+after fc2 (tensor(753448), 784000, tensor(0.0390))
+
+test loss: 0.1203 acc: 0.9730
+
+parameters sparsity: 
+fc1.weight (tensor(776261), 784000, tensor(0.0099))
+fc1.bias (tensor(489), 1000, tensor(0.5110))
+fc2.weight (tensor(995556), 1000000, tensor(0.0044))
+fc2.bias (tensor(839), 1000, tensor(0.1610))
+fc3.weight (tensor(9900), 10000, tensor(0.0100))
+fc3.bias (tensor(0), 10, tensor(1.))

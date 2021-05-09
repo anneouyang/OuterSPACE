@@ -1,0 +1,3188 @@
+Could not find GPU! Using CPU only
+
+Epoch 0/99
+activation sparsity: 
+after conv1 (tensor(2239913), 4816896, tensor(0.5350))
+after max pool 1 (tensor(463211), 1204224, tensor(0.6153))
+after conv2 (tensor(821941), 1638400, tensor(0.4983))
+after max pool 2 (tensor(132866), 409600, tensor(0.6756))
+after fc1 (tensor(64673), 122880, tensor(0.4737))
+after fc2 (tensor(45074), 86016, tensor(0.4760))
+val loss: 2.3037 acc: 0.1022
+
+activation sparsity: 
+after conv1 (tensor(2244630), 4816896, tensor(0.5340))
+after max pool 1 (tensor(465689), 1204224, tensor(0.6133))
+after conv2 (tensor(821539), 1638400, tensor(0.4986))
+after max pool 2 (tensor(132826), 409600, tensor(0.6757))
+after fc1 (tensor(64625), 122880, tensor(0.4741))
+after fc2 (tensor(45048), 86016, tensor(0.4763))
+train loss: 1.5506 acc: 0.5716
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 1/99
+activation sparsity: 
+after conv1 (tensor(1776873), 4816896, tensor(0.6311))
+after max pool 1 (tensor(374069), 1204224, tensor(0.6894))
+after conv2 (tensor(166698), 1638400, tensor(0.8983))
+after max pool 2 (tensor(13847), 409600, tensor(0.9662))
+after fc1 (tensor(43981), 122880, tensor(0.6421))
+after fc2 (tensor(34348), 86016, tensor(0.6007))
+val loss: 0.5768 acc: 0.8258
+
+activation sparsity: 
+after conv1 (tensor(1789877), 4816896, tensor(0.6284))
+after max pool 1 (tensor(378008), 1204224, tensor(0.6861))
+after conv2 (tensor(164742), 1638400, tensor(0.8994))
+after max pool 2 (tensor(13538), 409600, tensor(0.9669))
+after fc1 (tensor(43978), 122880, tensor(0.6421))
+after fc2 (tensor(34446), 86016, tensor(0.5995))
+train loss: 0.4235 acc: 0.8733
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 2/99
+activation sparsity: 
+after conv1 (tensor(1786474), 4816896, tensor(0.6291))
+after max pool 1 (tensor(375399), 1204224, tensor(0.6883))
+after conv2 (tensor(285466), 1638400, tensor(0.8258))
+after max pool 2 (tensor(28922), 409600, tensor(0.9294))
+after fc1 (tensor(45777), 122880, tensor(0.6275))
+after fc2 (tensor(35819), 86016, tensor(0.5836))
+val loss: 0.3417 acc: 0.8988
+
+activation sparsity: 
+after conv1 (tensor(1798875), 4816896, tensor(0.6265))
+after max pool 1 (tensor(379250), 1204224, tensor(0.6851))
+after conv2 (tensor(283551), 1638400, tensor(0.8269))
+after max pool 2 (tensor(28594), 409600, tensor(0.9302))
+after fc1 (tensor(45787), 122880, tensor(0.6274))
+after fc2 (tensor(35832), 86016, tensor(0.5834))
+train loss: 0.2842 acc: 0.9160
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 3/99
+activation sparsity: 
+after conv1 (tensor(1772456), 4816896, tensor(0.6320))
+after max pool 1 (tensor(371646), 1204224, tensor(0.6914))
+after conv2 (tensor(338769), 1638400, tensor(0.7932))
+after max pool 2 (tensor(38660), 409600, tensor(0.9056))
+after fc1 (tensor(46308), 122880, tensor(0.6231))
+after fc2 (tensor(35604), 86016, tensor(0.5861))
+val loss: 0.2567 acc: 0.9252
+
+activation sparsity: 
+after conv1 (tensor(1785185), 4816896, tensor(0.6294))
+after max pool 1 (tensor(375599), 1204224, tensor(0.6881))
+after conv2 (tensor(336640), 1638400, tensor(0.7945))
+after max pool 2 (tensor(38121), 409600, tensor(0.9069))
+after fc1 (tensor(46333), 122880, tensor(0.6229))
+after fc2 (tensor(35574), 86016, tensor(0.5864))
+train loss: 0.2161 acc: 0.9352
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 4/99
+activation sparsity: 
+after conv1 (tensor(1772417), 4816896, tensor(0.6320))
+after max pool 1 (tensor(370606), 1204224, tensor(0.6922))
+after conv2 (tensor(387556), 1638400, tensor(0.7635))
+after max pool 2 (tensor(46626), 409600, tensor(0.8862))
+after fc1 (tensor(47124), 122880, tensor(0.6165))
+after fc2 (tensor(35907), 86016, tensor(0.5826))
+val loss: 0.1919 acc: 0.9420
+
+activation sparsity: 
+after conv1 (tensor(1784963), 4816896, tensor(0.6294))
+after max pool 1 (tensor(374485), 1204224, tensor(0.6890))
+after conv2 (tensor(385050), 1638400, tensor(0.7650))
+after max pool 2 (tensor(46304), 409600, tensor(0.8870))
+after fc1 (tensor(47082), 122880, tensor(0.6168))
+after fc2 (tensor(35834), 86016, tensor(0.5834))
+train loss: 0.1681 acc: 0.9498
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 5/99
+activation sparsity: 
+after conv1 (tensor(1770971), 4816896, tensor(0.6323))
+after max pool 1 (tensor(369708), 1204224, tensor(0.6930))
+after conv2 (tensor(413632), 1638400, tensor(0.7475))
+after max pool 2 (tensor(50874), 409600, tensor(0.8758))
+after fc1 (tensor(46651), 122880, tensor(0.6204))
+after fc2 (tensor(35977), 86016, tensor(0.5817))
+val loss: 0.1516 acc: 0.9558
+
+activation sparsity: 
+after conv1 (tensor(1783334), 4816896, tensor(0.6298))
+after max pool 1 (tensor(373537), 1204224, tensor(0.6898))
+after conv2 (tensor(411425), 1638400, tensor(0.7489))
+after max pool 2 (tensor(50749), 409600, tensor(0.8761))
+after fc1 (tensor(46654), 122880, tensor(0.6203))
+after fc2 (tensor(35931), 86016, tensor(0.5823))
+train loss: 0.1356 acc: 0.9594
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 6/99
+activation sparsity: 
+after conv1 (tensor(1319450), 4816896, tensor(0.7261))
+after max pool 1 (tensor(262301), 1204224, tensor(0.7822))
+after conv2 (tensor(426843), 1638400, tensor(0.7395))
+after max pool 2 (tensor(52640), 409600, tensor(0.8715))
+after fc1 (tensor(47065), 122880, tensor(0.6170))
+after fc2 (tensor(36202), 86016, tensor(0.5791))
+val loss: 0.1275 acc: 0.9630
+
+activation sparsity: 
+after conv1 (tensor(1325975), 4816896, tensor(0.7247))
+after max pool 1 (tensor(264617), 1204224, tensor(0.7803))
+after conv2 (tensor(425214), 1638400, tensor(0.7405))
+after max pool 2 (tensor(52700), 409600, tensor(0.8713))
+after fc1 (tensor(47039), 122880, tensor(0.6172))
+after fc2 (tensor(36153), 86016, tensor(0.5797))
+train loss: 0.1140 acc: 0.9664
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 7/99
+activation sparsity: 
+after conv1 (tensor(1318185), 4816896, tensor(0.7263))
+after max pool 1 (tensor(261653), 1204224, tensor(0.7827))
+after conv2 (tensor(436574), 1638400, tensor(0.7335))
+after max pool 2 (tensor(53307), 409600, tensor(0.8699))
+after fc1 (tensor(46737), 122880, tensor(0.6197))
+after fc2 (tensor(36277), 86016, tensor(0.5783))
+val loss: 0.1109 acc: 0.9674
+
+activation sparsity: 
+after conv1 (tensor(1324723), 4816896, tensor(0.7250))
+after max pool 1 (tensor(263931), 1204224, tensor(0.7808))
+after conv2 (tensor(435002), 1638400, tensor(0.7345))
+after max pool 2 (tensor(53449), 409600, tensor(0.8695))
+after fc1 (tensor(46742), 122880, tensor(0.6196))
+after fc2 (tensor(36222), 86016, tensor(0.5789))
+train loss: 0.0992 acc: 0.9707
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 8/99
+activation sparsity: 
+after conv1 (tensor(1318059), 4816896, tensor(0.7264))
+after max pool 1 (tensor(261208), 1204224, tensor(0.7831))
+after conv2 (tensor(450355), 1638400, tensor(0.7251))
+after max pool 2 (tensor(54618), 409600, tensor(0.8667))
+after fc1 (tensor(47534), 122880, tensor(0.6132))
+after fc2 (tensor(36422), 86016, tensor(0.5766))
+val loss: 0.1018 acc: 0.9704
+
+activation sparsity: 
+after conv1 (tensor(1324667), 4816896, tensor(0.7250))
+after max pool 1 (tensor(263414), 1204224, tensor(0.7813))
+after conv2 (tensor(448511), 1638400, tensor(0.7263))
+after max pool 2 (tensor(54736), 409600, tensor(0.8664))
+after fc1 (tensor(47507), 122880, tensor(0.6134))
+after fc2 (tensor(36382), 86016, tensor(0.5770))
+train loss: 0.0886 acc: 0.9741
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 9/99
+activation sparsity: 
+after conv1 (tensor(1317955), 4816896, tensor(0.7264))
+after max pool 1 (tensor(260853), 1204224, tensor(0.7834))
+after conv2 (tensor(467688), 1638400, tensor(0.7145))
+after max pool 2 (tensor(56343), 409600, tensor(0.8624))
+after fc1 (tensor(48191), 122880, tensor(0.6078))
+after fc2 (tensor(36664), 86016, tensor(0.5738))
+val loss: 0.0952 acc: 0.9722
+
+activation sparsity: 
+after conv1 (tensor(1324571), 4816896, tensor(0.7250))
+after max pool 1 (tensor(262978), 1204224, tensor(0.7816))
+after conv2 (tensor(466441), 1638400, tensor(0.7153))
+after max pool 2 (tensor(56506), 409600, tensor(0.8620))
+after fc1 (tensor(48150), 122880, tensor(0.6082))
+after fc2 (tensor(36599), 86016, tensor(0.5745))
+train loss: 0.0805 acc: 0.9759
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 10/99
+activation sparsity: 
+after conv1 (tensor(1315887), 4816896, tensor(0.7268))
+after max pool 1 (tensor(260281), 1204224, tensor(0.7839))
+after conv2 (tensor(482967), 1638400, tensor(0.7052))
+after max pool 2 (tensor(58058), 409600, tensor(0.8583))
+after fc1 (tensor(48450), 122880, tensor(0.6057))
+after fc2 (tensor(36969), 86016, tensor(0.5702))
+val loss: 0.0892 acc: 0.9726
+
+activation sparsity: 
+after conv1 (tensor(1322531), 4816896, tensor(0.7254))
+after max pool 1 (tensor(262438), 1204224, tensor(0.7821))
+after conv2 (tensor(481644), 1638400, tensor(0.7060))
+after max pool 2 (tensor(58106), 409600, tensor(0.8581))
+after fc1 (tensor(48497), 122880, tensor(0.6053))
+after fc2 (tensor(36946), 86016, tensor(0.5705))
+train loss: 0.0742 acc: 0.9778
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 11/99
+activation sparsity: 
+after conv1 (tensor(1315156), 4816896, tensor(0.7270))
+after max pool 1 (tensor(260054), 1204224, tensor(0.7840))
+after conv2 (tensor(496210), 1638400, tensor(0.6971))
+after max pool 2 (tensor(59675), 409600, tensor(0.8543))
+after fc1 (tensor(48979), 122880, tensor(0.6014))
+after fc2 (tensor(37189), 86016, tensor(0.5677))
+val loss: 0.0822 acc: 0.9746
+
+activation sparsity: 
+after conv1 (tensor(1321906), 4816896, tensor(0.7256))
+after max pool 1 (tensor(262208), 1204224, tensor(0.7823))
+after conv2 (tensor(494710), 1638400, tensor(0.6981))
+after max pool 2 (tensor(59613), 409600, tensor(0.8545))
+after fc1 (tensor(48962), 122880, tensor(0.6015))
+after fc2 (tensor(37247), 86016, tensor(0.5670))
+train loss: 0.0687 acc: 0.9792
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 12/99
+activation sparsity: 
+after conv1 (tensor(1314347), 4816896, tensor(0.7271))
+after max pool 1 (tensor(259885), 1204224, tensor(0.7842))
+after conv2 (tensor(503912), 1638400, tensor(0.6924))
+after max pool 2 (tensor(60301), 409600, tensor(0.8528))
+after fc1 (tensor(49259), 122880, tensor(0.5991))
+after fc2 (tensor(36708), 86016, tensor(0.5732))
+val loss: 0.0734 acc: 0.9766
+
+activation sparsity: 
+after conv1 (tensor(1321013), 4816896, tensor(0.7258))
+after max pool 1 (tensor(262000), 1204224, tensor(0.7824))
+after conv2 (tensor(502471), 1638400, tensor(0.6933))
+after max pool 2 (tensor(60313), 409600, tensor(0.8528))
+after fc1 (tensor(49257), 122880, tensor(0.5991))
+after fc2 (tensor(36723), 86016, tensor(0.5731))
+train loss: 0.0638 acc: 0.9806
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 13/99
+activation sparsity: 
+after conv1 (tensor(1313494), 4816896, tensor(0.7273))
+after max pool 1 (tensor(259610), 1204224, tensor(0.7844))
+after conv2 (tensor(508170), 1638400, tensor(0.6898))
+after max pool 2 (tensor(60298), 409600, tensor(0.8528))
+after fc1 (tensor(49458), 122880, tensor(0.5975))
+after fc2 (tensor(37414), 86016, tensor(0.5650))
+val loss: 0.0665 acc: 0.9792
+
+activation sparsity: 
+after conv1 (tensor(1320170), 4816896, tensor(0.7259))
+after max pool 1 (tensor(261703), 1204224, tensor(0.7827))
+after conv2 (tensor(506759), 1638400, tensor(0.6907))
+after max pool 2 (tensor(60386), 409600, tensor(0.8526))
+after fc1 (tensor(49396), 122880, tensor(0.5980))
+after fc2 (tensor(37433), 86016, tensor(0.5648))
+train loss: 0.0596 acc: 0.9820
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 14/99
+activation sparsity: 
+after conv1 (tensor(1757717), 4816896, tensor(0.6351))
+after max pool 1 (tensor(366138), 1204224, tensor(0.6960))
+after conv2 (tensor(514317), 1638400, tensor(0.6861))
+after max pool 2 (tensor(60752), 409600, tensor(0.8517))
+after fc1 (tensor(49697), 122880, tensor(0.5956))
+after fc2 (tensor(37512), 86016, tensor(0.5639))
+val loss: 0.0624 acc: 0.9804
+
+activation sparsity: 
+after conv1 (tensor(1770482), 4816896, tensor(0.6324))
+after max pool 1 (tensor(369804), 1204224, tensor(0.6929))
+after conv2 (tensor(512889), 1638400, tensor(0.6870))
+after max pool 2 (tensor(60787), 409600, tensor(0.8516))
+after fc1 (tensor(49700), 122880, tensor(0.5955))
+after fc2 (tensor(37553), 86016, tensor(0.5634))
+train loss: 0.0556 acc: 0.9832
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 15/99
+activation sparsity: 
+after conv1 (tensor(1756064), 4816896, tensor(0.6354))
+after max pool 1 (tensor(365784), 1204224, tensor(0.6962))
+after conv2 (tensor(520631), 1638400, tensor(0.6822))
+after max pool 2 (tensor(61150), 409600, tensor(0.8507))
+after fc1 (tensor(49922), 122880, tensor(0.5937))
+after fc2 (tensor(37485), 86016, tensor(0.5642))
+val loss: 0.0597 acc: 0.9812
+
+activation sparsity: 
+after conv1 (tensor(1768795), 4816896, tensor(0.6328))
+after max pool 1 (tensor(369449), 1204224, tensor(0.6932))
+after conv2 (tensor(519306), 1638400, tensor(0.6830))
+after max pool 2 (tensor(61232), 409600, tensor(0.8505))
+after fc1 (tensor(49916), 122880, tensor(0.5938))
+after fc2 (tensor(37520), 86016, tensor(0.5638))
+train loss: 0.0523 acc: 0.9844
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 16/99
+activation sparsity: 
+after conv1 (tensor(1309444), 4816896, tensor(0.7282))
+after max pool 1 (tensor(258545), 1204224, tensor(0.7853))
+after conv2 (tensor(525973), 1638400, tensor(0.6790))
+after max pool 2 (tensor(61432), 409600, tensor(0.8500))
+after fc1 (tensor(50160), 122880, tensor(0.5918))
+after fc2 (tensor(37589), 86016, tensor(0.5630))
+val loss: 0.0575 acc: 0.9824
+
+activation sparsity: 
+after conv1 (tensor(1316234), 4816896, tensor(0.7267))
+after max pool 1 (tensor(260670), 1204224, tensor(0.7835))
+after conv2 (tensor(524662), 1638400, tensor(0.6798))
+after max pool 2 (tensor(61542), 409600, tensor(0.8498))
+after fc1 (tensor(50168), 122880, tensor(0.5917))
+after fc2 (tensor(37617), 86016, tensor(0.5627))
+train loss: 0.0493 acc: 0.9851
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 17/99
+activation sparsity: 
+after conv1 (tensor(1307455), 4816896, tensor(0.7286))
+after max pool 1 (tensor(258288), 1204224, tensor(0.7855))
+after conv2 (tensor(529941), 1638400, tensor(0.6765))
+after max pool 2 (tensor(61427), 409600, tensor(0.8500))
+after fc1 (tensor(50344), 122880, tensor(0.5903))
+after fc2 (tensor(37729), 86016, tensor(0.5614))
+val loss: 0.0555 acc: 0.9824
+
+activation sparsity: 
+after conv1 (tensor(1314183), 4816896, tensor(0.7272))
+after max pool 1 (tensor(260380), 1204224, tensor(0.7838))
+after conv2 (tensor(528613), 1638400, tensor(0.6774))
+after max pool 2 (tensor(61513), 409600, tensor(0.8498))
+after fc1 (tensor(50297), 122880, tensor(0.5907))
+after fc2 (tensor(37766), 86016, tensor(0.5609))
+train loss: 0.0468 acc: 0.9858
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 18/99
+activation sparsity: 
+after conv1 (tensor(1306723), 4816896, tensor(0.7287))
+after max pool 1 (tensor(258087), 1204224, tensor(0.7857))
+after conv2 (tensor(535699), 1638400, tensor(0.6730))
+after max pool 2 (tensor(61759), 409600, tensor(0.8492))
+after fc1 (tensor(50539), 122880, tensor(0.5887))
+after fc2 (tensor(37826), 86016, tensor(0.5602))
+val loss: 0.0539 acc: 0.9834
+
+activation sparsity: 
+after conv1 (tensor(1313351), 4816896, tensor(0.7273))
+after max pool 1 (tensor(260137), 1204224, tensor(0.7840))
+after conv2 (tensor(534590), 1638400, tensor(0.6737))
+after max pool 2 (tensor(61854), 409600, tensor(0.8490))
+after fc1 (tensor(50535), 122880, tensor(0.5887))
+after fc2 (tensor(37822), 86016, tensor(0.5603))
+train loss: 0.0444 acc: 0.9863
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 19/99
+activation sparsity: 
+after conv1 (tensor(1752112), 4816896, tensor(0.6363))
+after max pool 1 (tensor(364891), 1204224, tensor(0.6970))
+after conv2 (tensor(541957), 1638400, tensor(0.6692))
+after max pool 2 (tensor(62036), 409600, tensor(0.8485))
+after fc1 (tensor(50650), 122880, tensor(0.5878))
+after fc2 (tensor(37993), 86016, tensor(0.5583))
+val loss: 0.0524 acc: 0.9838
+
+activation sparsity: 
+after conv1 (tensor(1764782), 4816896, tensor(0.6336))
+after max pool 1 (tensor(368554), 1204224, tensor(0.6939))
+after conv2 (tensor(540764), 1638400, tensor(0.6699))
+after max pool 2 (tensor(62082), 409600, tensor(0.8484))
+after fc1 (tensor(50638), 122880, tensor(0.5879))
+after fc2 (tensor(38017), 86016, tensor(0.5580))
+train loss: 0.0423 acc: 0.9872
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 20/99
+activation sparsity: 
+after conv1 (tensor(1305085), 4816896, tensor(0.7291))
+after max pool 1 (tensor(257614), 1204224, tensor(0.7861))
+after conv2 (tensor(547819), 1638400, tensor(0.6656))
+after max pool 2 (tensor(62402), 409600, tensor(0.8477))
+after fc1 (tensor(50705), 122880, tensor(0.5874))
+after fc2 (tensor(38000), 86016, tensor(0.5582))
+val loss: 0.0510 acc: 0.9842
+
+activation sparsity: 
+after conv1 (tensor(1311674), 4816896, tensor(0.7277))
+after max pool 1 (tensor(259674), 1204224, tensor(0.7844))
+after conv2 (tensor(546726), 1638400, tensor(0.6663))
+after max pool 2 (tensor(62466), 409600, tensor(0.8475))
+after fc1 (tensor(50744), 122880, tensor(0.5870))
+after fc2 (tensor(38018), 86016, tensor(0.5580))
+train loss: 0.0404 acc: 0.9880
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 21/99
+activation sparsity: 
+after conv1 (tensor(1303734), 4816896, tensor(0.7293))
+after max pool 1 (tensor(257406), 1204224, tensor(0.7862))
+after conv2 (tensor(556197), 1638400, tensor(0.6605))
+after max pool 2 (tensor(63398), 409600, tensor(0.8452))
+after fc1 (tensor(50978), 122880, tensor(0.5851))
+after fc2 (tensor(38095), 86016, tensor(0.5571))
+val loss: 0.0501 acc: 0.9840
+
+activation sparsity: 
+after conv1 (tensor(1310338), 4816896, tensor(0.7280))
+after max pool 1 (tensor(259506), 1204224, tensor(0.7845))
+after conv2 (tensor(555208), 1638400, tensor(0.6611))
+after max pool 2 (tensor(63553), 409600, tensor(0.8448))
+after fc1 (tensor(50984), 122880, tensor(0.5851))
+after fc2 (tensor(38059), 86016, tensor(0.5575))
+train loss: 0.0384 acc: 0.9886
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 22/99
+activation sparsity: 
+after conv1 (tensor(1749729), 4816896, tensor(0.6368))
+after max pool 1 (tensor(364335), 1204224, tensor(0.6975))
+after conv2 (tensor(562220), 1638400, tensor(0.6568))
+after max pool 2 (tensor(64119), 409600, tensor(0.8435))
+after fc1 (tensor(51142), 122880, tensor(0.5838))
+after fc2 (tensor(38224), 86016, tensor(0.5556))
+val loss: 0.0490 acc: 0.9844
+
+activation sparsity: 
+after conv1 (tensor(1762406), 4816896, tensor(0.6341))
+after max pool 1 (tensor(368014), 1204224, tensor(0.6944))
+after conv2 (tensor(561184), 1638400, tensor(0.6575))
+after max pool 2 (tensor(64215), 409600, tensor(0.8432))
+after fc1 (tensor(51164), 122880, tensor(0.5836))
+after fc2 (tensor(38176), 86016, tensor(0.5562))
+train loss: 0.0367 acc: 0.9891
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 23/99
+activation sparsity: 
+after conv1 (tensor(1302767), 4816896, tensor(0.7295))
+after max pool 1 (tensor(257078), 1204224, tensor(0.7865))
+after conv2 (tensor(564986), 1638400, tensor(0.6552))
+after max pool 2 (tensor(64259), 409600, tensor(0.8431))
+after fc1 (tensor(51394), 122880, tensor(0.5818))
+after fc2 (tensor(38234), 86016, tensor(0.5555))
+val loss: 0.0485 acc: 0.9848
+
+activation sparsity: 
+after conv1 (tensor(1309426), 4816896, tensor(0.7282))
+after max pool 1 (tensor(259180), 1204224, tensor(0.7848))
+after conv2 (tensor(563887), 1638400, tensor(0.6558))
+after max pool 2 (tensor(64323), 409600, tensor(0.8430))
+after fc1 (tensor(51327), 122880, tensor(0.5823))
+after fc2 (tensor(38226), 86016, tensor(0.5556))
+train loss: 0.0352 acc: 0.9896
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 24/99
+activation sparsity: 
+after conv1 (tensor(1748721), 4816896, tensor(0.6370))
+after max pool 1 (tensor(364102), 1204224, tensor(0.6976))
+after conv2 (tensor(570369), 1638400, tensor(0.6519))
+after max pool 2 (tensor(64795), 409600, tensor(0.8418))
+after fc1 (tensor(51681), 122880, tensor(0.5794))
+after fc2 (tensor(38333), 86016, tensor(0.5544))
+val loss: 0.0477 acc: 0.9846
+
+activation sparsity: 
+after conv1 (tensor(1761583), 4816896, tensor(0.6343))
+after max pool 1 (tensor(367783), 1204224, tensor(0.6946))
+after conv2 (tensor(569302), 1638400, tensor(0.6525))
+after max pool 2 (tensor(64933), 409600, tensor(0.8415))
+after fc1 (tensor(51637), 122880, tensor(0.5798))
+after fc2 (tensor(38297), 86016, tensor(0.5548))
+train loss: 0.0339 acc: 0.9900
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 25/99
+activation sparsity: 
+after conv1 (tensor(1749112), 4816896, tensor(0.6369))
+after max pool 1 (tensor(364082), 1204224, tensor(0.6977))
+after conv2 (tensor(575275), 1638400, tensor(0.6489))
+after max pool 2 (tensor(65313), 409600, tensor(0.8405))
+after fc1 (tensor(51950), 122880, tensor(0.5772))
+after fc2 (tensor(38449), 86016, tensor(0.5530))
+val loss: 0.0471 acc: 0.9848
+
+activation sparsity: 
+after conv1 (tensor(1762073), 4816896, tensor(0.6342))
+after max pool 1 (tensor(367814), 1204224, tensor(0.6946))
+after conv2 (tensor(574277), 1638400, tensor(0.6495))
+after max pool 2 (tensor(65512), 409600, tensor(0.8401))
+after fc1 (tensor(51911), 122880, tensor(0.5775))
+after fc2 (tensor(38400), 86016, tensor(0.5536))
+train loss: 0.0327 acc: 0.9901
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 26/99
+activation sparsity: 
+after conv1 (tensor(1749615), 4816896, tensor(0.6368))
+after max pool 1 (tensor(364124), 1204224, tensor(0.6976))
+after conv2 (tensor(581435), 1638400, tensor(0.6451))
+after max pool 2 (tensor(66187), 409600, tensor(0.8384))
+after fc1 (tensor(52232), 122880, tensor(0.5749))
+after fc2 (tensor(38535), 86016, tensor(0.5520))
+val loss: 0.0465 acc: 0.9850
+
+activation sparsity: 
+after conv1 (tensor(1762648), 4816896, tensor(0.6341))
+after max pool 1 (tensor(367856), 1204224, tensor(0.6945))
+after conv2 (tensor(580327), 1638400, tensor(0.6458))
+after max pool 2 (tensor(66267), 409600, tensor(0.8382))
+after fc1 (tensor(52231), 122880, tensor(0.5749))
+after fc2 (tensor(38463), 86016, tensor(0.5528))
+train loss: 0.0315 acc: 0.9904
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 27/99
+activation sparsity: 
+after conv1 (tensor(1749474), 4816896, tensor(0.6368))
+after max pool 1 (tensor(364000), 1204224, tensor(0.6977))
+after conv2 (tensor(586353), 1638400, tensor(0.6421))
+after max pool 2 (tensor(66888), 409600, tensor(0.8367))
+after fc1 (tensor(52516), 122880, tensor(0.5726))
+after fc2 (tensor(38669), 86016, tensor(0.5504))
+val loss: 0.0467 acc: 0.9850
+
+activation sparsity: 
+after conv1 (tensor(1762525), 4816896, tensor(0.6341))
+after max pool 1 (tensor(367738), 1204224, tensor(0.6946))
+after conv2 (tensor(585248), 1638400, tensor(0.6428))
+after max pool 2 (tensor(66935), 409600, tensor(0.8366))
+after fc1 (tensor(52493), 122880, tensor(0.5728))
+after fc2 (tensor(38586), 86016, tensor(0.5514))
+train loss: 0.0304 acc: 0.9908
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 28/99
+activation sparsity: 
+after conv1 (tensor(1750251), 4816896, tensor(0.6366))
+after max pool 1 (tensor(364052), 1204224, tensor(0.6977))
+after conv2 (tensor(592795), 1638400, tensor(0.6382))
+after max pool 2 (tensor(67696), 409600, tensor(0.8347))
+after fc1 (tensor(52827), 122880, tensor(0.5701))
+after fc2 (tensor(38720), 86016, tensor(0.5499))
+val loss: 0.0462 acc: 0.9852
+
+activation sparsity: 
+after conv1 (tensor(1763330), 4816896, tensor(0.6339))
+after max pool 1 (tensor(367828), 1204224, tensor(0.6946))
+after conv2 (tensor(591652), 1638400, tensor(0.6389))
+after max pool 2 (tensor(67825), 409600, tensor(0.8344))
+after fc1 (tensor(52858), 122880, tensor(0.5698))
+after fc2 (tensor(38617), 86016, tensor(0.5510))
+train loss: 0.0296 acc: 0.9910
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 29/99
+activation sparsity: 
+after conv1 (tensor(1751103), 4816896, tensor(0.6365))
+after max pool 1 (tensor(364127), 1204224, tensor(0.6976))
+after conv2 (tensor(601992), 1638400, tensor(0.6326))
+after max pool 2 (tensor(69230), 409600, tensor(0.8310))
+after fc1 (tensor(53216), 122880, tensor(0.5669))
+after fc2 (tensor(38790), 86016, tensor(0.5490))
+val loss: 0.0462 acc: 0.9856
+
+activation sparsity: 
+after conv1 (tensor(1764029), 4816896, tensor(0.6338))
+after max pool 1 (tensor(367884), 1204224, tensor(0.6945))
+after conv2 (tensor(600967), 1638400, tensor(0.6332))
+after max pool 2 (tensor(69352), 409600, tensor(0.8307))
+after fc1 (tensor(53186), 122880, tensor(0.5672))
+after fc2 (tensor(38689), 86016, tensor(0.5502))
+train loss: 0.0291 acc: 0.9912
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 30/99
+activation sparsity: 
+after conv1 (tensor(1753677), 4816896, tensor(0.6359))
+after max pool 1 (tensor(364501), 1204224, tensor(0.6973))
+after conv2 (tensor(611953), 1638400, tensor(0.6265))
+after max pool 2 (tensor(70742), 409600, tensor(0.8273))
+after fc1 (tensor(53720), 122880, tensor(0.5628))
+after fc2 (tensor(38970), 86016, tensor(0.5469))
+val loss: 0.0461 acc: 0.9860
+
+activation sparsity: 
+after conv1 (tensor(1766480), 4816896, tensor(0.6333))
+after max pool 1 (tensor(368265), 1204224, tensor(0.6942))
+after conv2 (tensor(610929), 1638400, tensor(0.6271))
+after max pool 2 (tensor(70755), 409600, tensor(0.8273))
+after fc1 (tensor(53719), 122880, tensor(0.5628))
+after fc2 (tensor(38873), 86016, tensor(0.5481))
+train loss: 0.0288 acc: 0.9909
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 31/99
+activation sparsity: 
+after conv1 (tensor(1756541), 4816896, tensor(0.6353))
+after max pool 1 (tensor(364927), 1204224, tensor(0.6970))
+after conv2 (tensor(622443), 1638400, tensor(0.6201))
+after max pool 2 (tensor(72340), 409600, tensor(0.8234))
+after fc1 (tensor(54292), 122880, tensor(0.5582))
+after fc2 (tensor(38999), 86016, tensor(0.5466))
+val loss: 0.0466 acc: 0.9856
+
+activation sparsity: 
+after conv1 (tensor(1769424), 4816896, tensor(0.6327))
+after max pool 1 (tensor(368718), 1204224, tensor(0.6938))
+after conv2 (tensor(621395), 1638400, tensor(0.6207))
+after max pool 2 (tensor(72313), 409600, tensor(0.8235))
+after fc1 (tensor(54230), 122880, tensor(0.5587))
+after fc2 (tensor(38898), 86016, tensor(0.5478))
+train loss: 0.0290 acc: 0.9905
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 32/99
+activation sparsity: 
+after conv1 (tensor(1760214), 4816896, tensor(0.6346))
+after max pool 1 (tensor(365498), 1204224, tensor(0.6965))
+after conv2 (tensor(636619), 1638400, tensor(0.6114))
+after max pool 2 (tensor(74496), 409600, tensor(0.8181))
+after fc1 (tensor(54773), 122880, tensor(0.5543))
+after fc2 (tensor(39126), 86016, tensor(0.5451))
+val loss: 0.0462 acc: 0.9864
+
+activation sparsity: 
+after conv1 (tensor(1773099), 4816896, tensor(0.6319))
+after max pool 1 (tensor(369285), 1204224, tensor(0.6933))
+after conv2 (tensor(635692), 1638400, tensor(0.6120))
+after max pool 2 (tensor(74534), 409600, tensor(0.8180))
+after fc1 (tensor(54717), 122880, tensor(0.5547))
+after fc2 (tensor(39046), 86016, tensor(0.5461))
+train loss: 0.0292 acc: 0.9902
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 33/99
+activation sparsity: 
+after conv1 (tensor(1765663), 4816896, tensor(0.6334))
+after max pool 1 (tensor(366395), 1204224, tensor(0.6957))
+after conv2 (tensor(651433), 1638400, tensor(0.6024))
+after max pool 2 (tensor(76770), 409600, tensor(0.8126))
+after fc1 (tensor(55360), 122880, tensor(0.5495))
+after fc2 (tensor(39243), 86016, tensor(0.5438))
+val loss: 0.0469 acc: 0.9864
+
+activation sparsity: 
+after conv1 (tensor(1778427), 4816896, tensor(0.6308))
+after max pool 1 (tensor(370177), 1204224, tensor(0.6926))
+after conv2 (tensor(650588), 1638400, tensor(0.6029))
+after max pool 2 (tensor(76878), 409600, tensor(0.8123))
+after fc1 (tensor(55308), 122880, tensor(0.5499))
+after fc2 (tensor(39205), 86016, tensor(0.5442))
+train loss: 0.0299 acc: 0.9898
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 34/99
+activation sparsity: 
+after conv1 (tensor(1772720), 4816896, tensor(0.6320))
+after max pool 1 (tensor(367565), 1204224, tensor(0.6948))
+after conv2 (tensor(667179), 1638400, tensor(0.5928))
+after max pool 2 (tensor(79366), 409600, tensor(0.8062))
+after fc1 (tensor(56111), 122880, tensor(0.5434))
+after fc2 (tensor(39808), 86016, tensor(0.5372))
+val loss: 0.0512 acc: 0.9852
+
+activation sparsity: 
+after conv1 (tensor(1785417), 4816896, tensor(0.6293))
+after max pool 1 (tensor(371326), 1204224, tensor(0.6916))
+after conv2 (tensor(666238), 1638400, tensor(0.5934))
+after max pool 2 (tensor(79342), 409600, tensor(0.8063))
+after fc1 (tensor(55990), 122880, tensor(0.5444))
+after fc2 (tensor(39742), 86016, tensor(0.5380))
+train loss: 0.0290 acc: 0.9906
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 35/99
+activation sparsity: 
+after conv1 (tensor(1780076), 4816896, tensor(0.6305))
+after max pool 1 (tensor(368766), 1204224, tensor(0.6938))
+after conv2 (tensor(673625), 1638400, tensor(0.5889))
+after max pool 2 (tensor(79540), 409600, tensor(0.8058))
+after fc1 (tensor(56178), 122880, tensor(0.5428))
+after fc2 (tensor(39799), 86016, tensor(0.5373))
+val loss: 0.0605 acc: 0.9812
+
+activation sparsity: 
+after conv1 (tensor(1792595), 4816896, tensor(0.6279))
+after max pool 1 (tensor(372541), 1204224, tensor(0.6906))
+after conv2 (tensor(672689), 1638400, tensor(0.5894))
+after max pool 2 (tensor(79555), 409600, tensor(0.8058))
+after fc1 (tensor(56002), 122880, tensor(0.5443))
+after fc2 (tensor(39741), 86016, tensor(0.5380))
+train loss: 0.0256 acc: 0.9919
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 36/99
+activation sparsity: 
+after conv1 (tensor(1783452), 4816896, tensor(0.6298))
+after max pool 1 (tensor(369286), 1204224, tensor(0.6933))
+after conv2 (tensor(679447), 1638400, tensor(0.5853))
+after max pool 2 (tensor(79566), 409600, tensor(0.8057))
+after fc1 (tensor(56477), 122880, tensor(0.5404))
+after fc2 (tensor(38729), 86016, tensor(0.5497))
+val loss: 0.0461 acc: 0.9860
+
+activation sparsity: 
+after conv1 (tensor(1795851), 4816896, tensor(0.6272))
+after max pool 1 (tensor(373102), 1204224, tensor(0.6902))
+after conv2 (tensor(678700), 1638400, tensor(0.5858))
+after max pool 2 (tensor(79730), 409600, tensor(0.8053))
+after fc1 (tensor(56266), 122880, tensor(0.5421))
+after fc2 (tensor(38736), 86016, tensor(0.5497))
+train loss: 0.0245 acc: 0.9925
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 37/99
+activation sparsity: 
+after conv1 (tensor(1784805), 4816896, tensor(0.6295))
+after max pool 1 (tensor(369452), 1204224, tensor(0.6932))
+after conv2 (tensor(683621), 1638400, tensor(0.5828))
+after max pool 2 (tensor(80076), 409600, tensor(0.8045))
+after fc1 (tensor(56691), 122880, tensor(0.5386))
+after fc2 (tensor(39751), 86016, tensor(0.5379))
+val loss: 0.0436 acc: 0.9862
+
+activation sparsity: 
+after conv1 (tensor(1797245), 4816896, tensor(0.6269))
+after max pool 1 (tensor(373282), 1204224, tensor(0.6900))
+after conv2 (tensor(682791), 1638400, tensor(0.5833))
+after max pool 2 (tensor(80240), 409600, tensor(0.8041))
+after fc1 (tensor(56491), 122880, tensor(0.5403))
+after fc2 (tensor(39776), 86016, tensor(0.5376))
+train loss: 0.0239 acc: 0.9928
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 38/99
+activation sparsity: 
+after conv1 (tensor(1787560), 4816896, tensor(0.6289))
+after max pool 1 (tensor(369862), 1204224, tensor(0.6929))
+after conv2 (tensor(690207), 1638400, tensor(0.5787))
+after max pool 2 (tensor(80832), 409600, tensor(0.8027))
+after fc1 (tensor(57162), 122880, tensor(0.5348))
+after fc2 (tensor(39843), 86016, tensor(0.5368))
+val loss: 0.0431 acc: 0.9868
+
+activation sparsity: 
+after conv1 (tensor(1799946), 4816896, tensor(0.6263))
+after max pool 1 (tensor(373713), 1204224, tensor(0.6897))
+after conv2 (tensor(689677), 1638400, tensor(0.5791))
+after max pool 2 (tensor(81015), 409600, tensor(0.8022))
+after fc1 (tensor(56899), 122880, tensor(0.5370))
+after fc2 (tensor(39856), 86016, tensor(0.5366))
+train loss: 0.0240 acc: 0.9927
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 39/99
+activation sparsity: 
+after conv1 (tensor(1792028), 4816896, tensor(0.6280))
+after max pool 1 (tensor(370676), 1204224, tensor(0.6922))
+after conv2 (tensor(700162), 1638400, tensor(0.5727))
+after max pool 2 (tensor(82294), 409600, tensor(0.7991))
+after fc1 (tensor(57541), 122880, tensor(0.5317))
+after fc2 (tensor(39945), 86016, tensor(0.5356))
+val loss: 0.0437 acc: 0.9870
+
+activation sparsity: 
+after conv1 (tensor(1804415), 4816896, tensor(0.6254))
+after max pool 1 (tensor(374469), 1204224, tensor(0.6890))
+after conv2 (tensor(699459), 1638400, tensor(0.5731))
+after max pool 2 (tensor(82358), 409600, tensor(0.7989))
+after fc1 (tensor(57260), 122880, tensor(0.5340))
+after fc2 (tensor(39939), 86016, tensor(0.5357))
+train loss: 0.0241 acc: 0.9926
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 40/99
+activation sparsity: 
+after conv1 (tensor(1797847), 4816896, tensor(0.6268))
+after max pool 1 (tensor(371677), 1204224, tensor(0.6914))
+after conv2 (tensor(713774), 1638400, tensor(0.5643))
+after max pool 2 (tensor(84435), 409600, tensor(0.7939))
+after fc1 (tensor(58098), 122880, tensor(0.5272))
+after fc2 (tensor(40202), 86016, tensor(0.5326))
+val loss: 0.0446 acc: 0.9872
+
+activation sparsity: 
+after conv1 (tensor(1810126), 4816896, tensor(0.6242))
+after max pool 1 (tensor(375492), 1204224, tensor(0.6882))
+after conv2 (tensor(713177), 1638400, tensor(0.5647))
+after max pool 2 (tensor(84632), 409600, tensor(0.7934))
+after fc1 (tensor(57870), 122880, tensor(0.5291))
+after fc2 (tensor(40234), 86016, tensor(0.5322))
+train loss: 0.0239 acc: 0.9926
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 41/99
+activation sparsity: 
+after conv1 (tensor(1802710), 4816896, tensor(0.6258))
+after max pool 1 (tensor(372538), 1204224, tensor(0.6906))
+after conv2 (tensor(727507), 1638400, tensor(0.5560))
+after max pool 2 (tensor(86747), 409600, tensor(0.7882))
+after fc1 (tensor(58654), 122880, tensor(0.5227))
+after fc2 (tensor(40510), 86016, tensor(0.5290))
+val loss: 0.0448 acc: 0.9878
+
+activation sparsity: 
+after conv1 (tensor(1814740), 4816896, tensor(0.6233))
+after max pool 1 (tensor(376255), 1204224, tensor(0.6876))
+after conv2 (tensor(727148), 1638400, tensor(0.5562))
+after max pool 2 (tensor(86837), 409600, tensor(0.7880))
+after fc1 (tensor(58440), 122880, tensor(0.5244))
+after fc2 (tensor(40510), 86016, tensor(0.5290))
+train loss: 0.0225 acc: 0.9928
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 42/99
+activation sparsity: 
+after conv1 (tensor(1804766), 4816896, tensor(0.6253))
+after max pool 1 (tensor(372866), 1204224, tensor(0.6904))
+after conv2 (tensor(731686), 1638400, tensor(0.5534))
+after max pool 2 (tensor(87104), 409600, tensor(0.7873))
+after fc1 (tensor(58754), 122880, tensor(0.5219))
+after fc2 (tensor(40711), 86016, tensor(0.5267))
+val loss: 0.0442 acc: 0.9882
+
+activation sparsity: 
+after conv1 (tensor(1816814), 4816896, tensor(0.6228))
+after max pool 1 (tensor(376631), 1204224, tensor(0.6872))
+after conv2 (tensor(731349), 1638400, tensor(0.5536))
+after max pool 2 (tensor(87208), 409600, tensor(0.7871))
+after fc1 (tensor(58467), 122880, tensor(0.5242))
+after fc2 (tensor(40715), 86016, tensor(0.5267))
+train loss: 0.0203 acc: 0.9938
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 43/99
+activation sparsity: 
+after conv1 (tensor(1804359), 4816896, tensor(0.6254))
+after max pool 1 (tensor(372732), 1204224, tensor(0.6905))
+after conv2 (tensor(733932), 1638400, tensor(0.5520))
+after max pool 2 (tensor(87187), 409600, tensor(0.7871))
+after fc1 (tensor(58689), 122880, tensor(0.5224))
+after fc2 (tensor(40971), 86016, tensor(0.5237))
+val loss: 0.0439 acc: 0.9868
+
+activation sparsity: 
+after conv1 (tensor(1816413), 4816896, tensor(0.6229))
+after max pool 1 (tensor(376474), 1204224, tensor(0.6874))
+after conv2 (tensor(733448), 1638400, tensor(0.5523))
+after max pool 2 (tensor(87324), 409600, tensor(0.7868))
+after fc1 (tensor(58411), 122880, tensor(0.5247))
+after fc2 (tensor(40928), 86016, tensor(0.5242))
+train loss: 0.0186 acc: 0.9944
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 44/99
+activation sparsity: 
+after conv1 (tensor(1803656), 4816896, tensor(0.6256))
+after max pool 1 (tensor(372519), 1204224, tensor(0.6907))
+after conv2 (tensor(741330), 1638400, tensor(0.5475))
+after max pool 2 (tensor(88258), 409600, tensor(0.7845))
+after fc1 (tensor(58967), 122880, tensor(0.5201))
+after fc2 (tensor(40964), 86016, tensor(0.5238))
+val loss: 0.0415 acc: 0.9884
+
+activation sparsity: 
+after conv1 (tensor(1815714), 4816896, tensor(0.6231))
+after max pool 1 (tensor(376237), 1204224, tensor(0.6876))
+after conv2 (tensor(740872), 1638400, tensor(0.5478))
+after max pool 2 (tensor(88322), 409600, tensor(0.7844))
+after fc1 (tensor(58707), 122880, tensor(0.5222))
+after fc2 (tensor(40947), 86016, tensor(0.5240))
+train loss: 0.0173 acc: 0.9948
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 45/99
+activation sparsity: 
+after conv1 (tensor(1357857), 4816896, tensor(0.7181))
+after max pool 1 (tensor(264782), 1204224, tensor(0.7801))
+after conv2 (tensor(743069), 1638400, tensor(0.5465))
+after max pool 2 (tensor(88327), 409600, tensor(0.7844))
+after fc1 (tensor(59001), 122880, tensor(0.5198))
+after fc2 (tensor(41015), 86016, tensor(0.5232))
+val loss: 0.0410 acc: 0.9892
+
+activation sparsity: 
+after conv1 (tensor(1363901), 4816896, tensor(0.7169))
+after max pool 1 (tensor(266898), 1204224, tensor(0.7784))
+after conv2 (tensor(742575), 1638400, tensor(0.5468))
+after max pool 2 (tensor(88444), 409600, tensor(0.7841))
+after fc1 (tensor(58788), 122880, tensor(0.5216))
+after fc2 (tensor(41024), 86016, tensor(0.5231))
+train loss: 0.0163 acc: 0.9949
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 46/99
+activation sparsity: 
+after conv1 (tensor(1356392), 4816896, tensor(0.7184))
+after max pool 1 (tensor(264580), 1204224, tensor(0.7803))
+after conv2 (tensor(746121), 1638400, tensor(0.5446))
+after max pool 2 (tensor(88835), 409600, tensor(0.7831))
+after fc1 (tensor(59163), 122880, tensor(0.5185))
+after fc2 (tensor(40999), 86016, tensor(0.5234))
+val loss: 0.0421 acc: 0.9884
+
+activation sparsity: 
+after conv1 (tensor(1362453), 4816896, tensor(0.7172))
+after max pool 1 (tensor(266740), 1204224, tensor(0.7785))
+after conv2 (tensor(745817), 1638400, tensor(0.5448))
+after max pool 2 (tensor(88983), 409600, tensor(0.7828))
+after fc1 (tensor(58985), 122880, tensor(0.5200))
+after fc2 (tensor(40962), 86016, tensor(0.5238))
+train loss: 0.0153 acc: 0.9955
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 47/99
+activation sparsity: 
+after conv1 (tensor(910916), 4816896, tensor(0.8109))
+after max pool 1 (tensor(154571), 1204224, tensor(0.8716))
+after conv2 (tensor(745805), 1638400, tensor(0.5448))
+after max pool 2 (tensor(88773), 409600, tensor(0.7833))
+after fc1 (tensor(59199), 122880, tensor(0.5182))
+after fc2 (tensor(40977), 86016, tensor(0.5236))
+val loss: 0.0430 acc: 0.9884
+
+activation sparsity: 
+after conv1 (tensor(911103), 4816896, tensor(0.8109))
+after max pool 1 (tensor(155298), 1204224, tensor(0.8710))
+after conv2 (tensor(745413), 1638400, tensor(0.5450))
+after max pool 2 (tensor(88967), 409600, tensor(0.7828))
+after fc1 (tensor(59038), 122880, tensor(0.5195))
+after fc2 (tensor(40962), 86016, tensor(0.5238))
+train loss: 0.0143 acc: 0.9959
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 48/99
+activation sparsity: 
+after conv1 (tensor(1355884), 4816896, tensor(0.7185))
+after max pool 1 (tensor(264400), 1204224, tensor(0.7804))
+after conv2 (tensor(742706), 1638400, tensor(0.5467))
+after max pool 2 (tensor(88140), 409600, tensor(0.7848))
+after fc1 (tensor(59060), 122880, tensor(0.5194))
+after fc2 (tensor(40911), 86016, tensor(0.5244))
+val loss: 0.0440 acc: 0.9880
+
+activation sparsity: 
+after conv1 (tensor(1362044), 4816896, tensor(0.7172))
+after max pool 1 (tensor(266597), 1204224, tensor(0.7786))
+after conv2 (tensor(742125), 1638400, tensor(0.5470))
+after max pool 2 (tensor(88350), 409600, tensor(0.7843))
+after fc1 (tensor(58896), 122880, tensor(0.5207))
+after fc2 (tensor(40871), 86016, tensor(0.5248))
+train loss: 0.0135 acc: 0.9962
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 49/99
+activation sparsity: 
+after conv1 (tensor(1801599), 4816896, tensor(0.6260))
+after max pool 1 (tensor(372070), 1204224, tensor(0.6910))
+after conv2 (tensor(740380), 1638400, tensor(0.5481))
+after max pool 2 (tensor(87677), 409600, tensor(0.7859))
+after fc1 (tensor(59019), 122880, tensor(0.5197))
+after fc2 (tensor(40899), 86016, tensor(0.5245))
+val loss: 0.0446 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1813818), 4816896, tensor(0.6234))
+after max pool 1 (tensor(375871), 1204224, tensor(0.6879))
+after conv2 (tensor(739683), 1638400, tensor(0.5485))
+after max pool 2 (tensor(87747), 409600, tensor(0.7858))
+after fc1 (tensor(58890), 122880, tensor(0.5208))
+after fc2 (tensor(40852), 86016, tensor(0.5251))
+train loss: 0.0129 acc: 0.9966
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 50/99
+activation sparsity: 
+after conv1 (tensor(1801792), 4816896, tensor(0.6259))
+after max pool 1 (tensor(372099), 1204224, tensor(0.6910))
+after conv2 (tensor(739370), 1638400, tensor(0.5487))
+after max pool 2 (tensor(87362), 409600, tensor(0.7867))
+after fc1 (tensor(59072), 122880, tensor(0.5193))
+after fc2 (tensor(40848), 86016, tensor(0.5251))
+val loss: 0.0457 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1814046), 4816896, tensor(0.6234))
+after max pool 1 (tensor(375905), 1204224, tensor(0.6878))
+after conv2 (tensor(738674), 1638400, tensor(0.5491))
+after max pool 2 (tensor(87456), 409600, tensor(0.7865))
+after fc1 (tensor(58940), 122880, tensor(0.5203))
+after fc2 (tensor(40822), 86016, tensor(0.5254))
+train loss: 0.0124 acc: 0.9968
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 51/99
+activation sparsity: 
+after conv1 (tensor(1357625), 4816896, tensor(0.7182))
+after max pool 1 (tensor(262357), 1204224, tensor(0.7821))
+after conv2 (tensor(741151), 1638400, tensor(0.5476))
+after max pool 2 (tensor(87593), 409600, tensor(0.7861))
+after fc1 (tensor(59210), 122880, tensor(0.5181))
+after fc2 (tensor(40889), 86016, tensor(0.5246))
+val loss: 0.0469 acc: 0.9878
+
+activation sparsity: 
+after conv1 (tensor(1363778), 4816896, tensor(0.7169))
+after max pool 1 (tensor(264672), 1204224, tensor(0.7802))
+after conv2 (tensor(740471), 1638400, tensor(0.5481))
+after max pool 2 (tensor(87799), 409600, tensor(0.7856))
+after fc1 (tensor(59047), 122880, tensor(0.5195))
+after fc2 (tensor(40837), 86016, tensor(0.5252))
+train loss: 0.0119 acc: 0.9971
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 52/99
+activation sparsity: 
+after conv1 (tensor(1804528), 4816896, tensor(0.6254))
+after max pool 1 (tensor(372607), 1204224, tensor(0.6906))
+after conv2 (tensor(742902), 1638400, tensor(0.5466))
+after max pool 2 (tensor(87922), 409600, tensor(0.7853))
+after fc1 (tensor(59254), 122880, tensor(0.5178))
+after fc2 (tensor(40863), 86016, tensor(0.5249))
+val loss: 0.0494 acc: 0.9870
+
+activation sparsity: 
+after conv1 (tensor(1816741), 4816896, tensor(0.6228))
+after max pool 1 (tensor(376403), 1204224, tensor(0.6874))
+after conv2 (tensor(742162), 1638400, tensor(0.5470))
+after max pool 2 (tensor(88104), 409600, tensor(0.7849))
+after fc1 (tensor(59083), 122880, tensor(0.5192))
+after fc2 (tensor(40835), 86016, tensor(0.5253))
+train loss: 0.0117 acc: 0.9970
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 53/99
+activation sparsity: 
+after conv1 (tensor(1360298), 4816896, tensor(0.7176))
+after max pool 1 (tensor(262849), 1204224, tensor(0.7817))
+after conv2 (tensor(746455), 1638400, tensor(0.5444))
+after max pool 2 (tensor(88652), 409600, tensor(0.7836))
+after fc1 (tensor(59301), 122880, tensor(0.5174))
+after fc2 (tensor(40850), 86016, tensor(0.5251))
+val loss: 0.0523 acc: 0.9870
+
+activation sparsity: 
+after conv1 (tensor(1366487), 4816896, tensor(0.7163))
+after max pool 1 (tensor(265141), 1204224, tensor(0.7798))
+after conv2 (tensor(745614), 1638400, tensor(0.5449))
+after max pool 2 (tensor(88809), 409600, tensor(0.7832))
+after fc1 (tensor(59087), 122880, tensor(0.5191))
+after fc2 (tensor(40801), 86016, tensor(0.5257))
+train loss: 0.0116 acc: 0.9969
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 54/99
+activation sparsity: 
+after conv1 (tensor(1361914), 4816896, tensor(0.7173))
+after max pool 1 (tensor(263119), 1204224, tensor(0.7815))
+after conv2 (tensor(749839), 1638400, tensor(0.5423))
+after max pool 2 (tensor(89202), 409600, tensor(0.7822))
+after fc1 (tensor(59567), 122880, tensor(0.5152))
+after fc2 (tensor(40837), 86016, tensor(0.5252))
+val loss: 0.0545 acc: 0.9864
+
+activation sparsity: 
+after conv1 (tensor(1368135), 4816896, tensor(0.7160))
+after max pool 1 (tensor(265374), 1204224, tensor(0.7796))
+after conv2 (tensor(748940), 1638400, tensor(0.5429))
+after max pool 2 (tensor(89284), 409600, tensor(0.7820))
+after fc1 (tensor(59396), 122880, tensor(0.5166))
+after fc2 (tensor(40791), 86016, tensor(0.5258))
+train loss: 0.0121 acc: 0.9963
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 55/99
+activation sparsity: 
+after conv1 (tensor(1361520), 4816896, tensor(0.7173))
+after max pool 1 (tensor(263185), 1204224, tensor(0.7814))
+after conv2 (tensor(757871), 1638400, tensor(0.5374))
+after max pool 2 (tensor(90450), 409600, tensor(0.7792))
+after fc1 (tensor(59854), 122880, tensor(0.5129))
+after fc2 (tensor(40897), 86016, tensor(0.5245))
+val loss: 0.0544 acc: 0.9860
+
+activation sparsity: 
+after conv1 (tensor(1367656), 4816896, tensor(0.7161))
+after max pool 1 (tensor(265440), 1204224, tensor(0.7796))
+after conv2 (tensor(757154), 1638400, tensor(0.5379))
+after max pool 2 (tensor(90615), 409600, tensor(0.7788))
+after fc1 (tensor(59681), 122880, tensor(0.5143))
+after fc2 (tensor(40913), 86016, tensor(0.5244))
+train loss: 0.0123 acc: 0.9959
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 56/99
+activation sparsity: 
+after conv1 (tensor(1362743), 4816896, tensor(0.7171))
+after max pool 1 (tensor(263263), 1204224, tensor(0.7814))
+after conv2 (tensor(771097), 1638400, tensor(0.5294))
+after max pool 2 (tensor(92619), 409600, tensor(0.7739))
+after fc1 (tensor(60326), 122880, tensor(0.5091))
+after fc2 (tensor(40975), 86016, tensor(0.5236))
+val loss: 0.0483 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1368876), 4816896, tensor(0.7158))
+after max pool 1 (tensor(265578), 1204224, tensor(0.7795))
+after conv2 (tensor(770484), 1638400, tensor(0.5297))
+after max pool 2 (tensor(92769), 409600, tensor(0.7735))
+after fc1 (tensor(60160), 122880, tensor(0.5104))
+after fc2 (tensor(41011), 86016, tensor(0.5232))
+train loss: 0.0126 acc: 0.9959
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 57/99
+activation sparsity: 
+after conv1 (tensor(1365107), 4816896, tensor(0.7166))
+after max pool 1 (tensor(263498), 1204224, tensor(0.7812))
+after conv2 (tensor(785095), 1638400, tensor(0.5208))
+after max pool 2 (tensor(94849), 409600, tensor(0.7684))
+after fc1 (tensor(60952), 122880, tensor(0.5040))
+after fc2 (tensor(41202), 86016, tensor(0.5210))
+val loss: 0.0455 acc: 0.9884
+
+activation sparsity: 
+after conv1 (tensor(1371134), 4816896, tensor(0.7153))
+after max pool 1 (tensor(265777), 1204224, tensor(0.7793))
+after conv2 (tensor(784473), 1638400, tensor(0.5212))
+after max pool 2 (tensor(95053), 409600, tensor(0.7679))
+after fc1 (tensor(60843), 122880, tensor(0.5049))
+after fc2 (tensor(41180), 86016, tensor(0.5213))
+train loss: 0.0128 acc: 0.9959
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 58/99
+activation sparsity: 
+after conv1 (tensor(1815581), 4816896, tensor(0.6231))
+after max pool 1 (tensor(374588), 1204224, tensor(0.6889))
+after conv2 (tensor(798568), 1638400, tensor(0.5126))
+after max pool 2 (tensor(97200), 409600, tensor(0.7627))
+after fc1 (tensor(61503), 122880, tensor(0.4995))
+after fc2 (tensor(41538), 86016, tensor(0.5171))
+val loss: 0.0456 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1827502), 4816896, tensor(0.6206))
+after max pool 1 (tensor(378279), 1204224, tensor(0.6859))
+after conv2 (tensor(797599), 1638400, tensor(0.5132))
+after max pool 2 (tensor(97362), 409600, tensor(0.7623))
+after fc1 (tensor(61346), 122880, tensor(0.5008))
+after fc2 (tensor(41493), 86016, tensor(0.5176))
+train loss: 0.0122 acc: 0.9962
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 59/99
+activation sparsity: 
+after conv1 (tensor(1819178), 4816896, tensor(0.6223))
+after max pool 1 (tensor(375220), 1204224, tensor(0.6884))
+after conv2 (tensor(804109), 1638400, tensor(0.5092))
+after max pool 2 (tensor(98274), 409600, tensor(0.7601))
+after fc1 (tensor(61847), 122880, tensor(0.4967))
+after fc2 (tensor(41665), 86016, tensor(0.5156))
+val loss: 0.0480 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1831102), 4816896, tensor(0.6199))
+after max pool 1 (tensor(378902), 1204224, tensor(0.6854))
+after conv2 (tensor(803426), 1638400, tensor(0.5096))
+after max pool 2 (tensor(98591), 409600, tensor(0.7593))
+after fc1 (tensor(61611), 122880, tensor(0.4986))
+after fc2 (tensor(41613), 86016, tensor(0.5162))
+train loss: 0.0107 acc: 0.9967
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 60/99
+activation sparsity: 
+after conv1 (tensor(1818672), 4816896, tensor(0.6224))
+after max pool 1 (tensor(375034), 1204224, tensor(0.6886))
+after conv2 (tensor(791670), 1638400, tensor(0.5168))
+after max pool 2 (tensor(95958), 409600, tensor(0.7657))
+after fc1 (tensor(60924), 122880, tensor(0.5042))
+after fc2 (tensor(41397), 86016, tensor(0.5187))
+val loss: 0.0492 acc: 0.9868
+
+activation sparsity: 
+after conv1 (tensor(1830654), 4816896, tensor(0.6200))
+after max pool 1 (tensor(378761), 1204224, tensor(0.6855))
+after conv2 (tensor(791016), 1638400, tensor(0.5172))
+after max pool 2 (tensor(96187), 409600, tensor(0.7652))
+after fc1 (tensor(60731), 122880, tensor(0.5058))
+after fc2 (tensor(41315), 86016, tensor(0.5197))
+train loss: 0.0092 acc: 0.9974
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 61/99
+activation sparsity: 
+after conv1 (tensor(1372107), 4816896, tensor(0.7151))
+after max pool 1 (tensor(267015), 1204224, tensor(0.7783))
+after conv2 (tensor(792250), 1638400, tensor(0.5164))
+after max pool 2 (tensor(95972), 409600, tensor(0.7657))
+after fc1 (tensor(60743), 122880, tensor(0.5057))
+after fc2 (tensor(41351), 86016, tensor(0.5193))
+val loss: 0.0497 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1378006), 4816896, tensor(0.7139))
+after max pool 1 (tensor(269130), 1204224, tensor(0.7765))
+after conv2 (tensor(791706), 1638400, tensor(0.5168))
+after max pool 2 (tensor(96278), 409600, tensor(0.7649))
+after fc1 (tensor(60566), 122880, tensor(0.5071))
+after fc2 (tensor(41333), 86016, tensor(0.5195))
+train loss: 0.0078 acc: 0.9981
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 62/99
+activation sparsity: 
+after conv1 (tensor(925210), 4816896, tensor(0.8079))
+after max pool 1 (tensor(156684), 1204224, tensor(0.8699))
+after conv2 (tensor(794722), 1638400, tensor(0.5149))
+after max pool 2 (tensor(95962), 409600, tensor(0.7657))
+after fc1 (tensor(60826), 122880, tensor(0.5050))
+after fc2 (tensor(41356), 86016, tensor(0.5192))
+val loss: 0.0485 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(925056), 4816896, tensor(0.8080))
+after max pool 1 (tensor(157353), 1204224, tensor(0.8693))
+after conv2 (tensor(794054), 1638400, tensor(0.5153))
+after max pool 2 (tensor(96216), 409600, tensor(0.7651))
+after fc1 (tensor(60623), 122880, tensor(0.5066))
+after fc2 (tensor(41319), 86016, tensor(0.5196))
+train loss: 0.0070 acc: 0.9981
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 63/99
+activation sparsity: 
+after conv1 (tensor(923928), 4816896, tensor(0.8082))
+after max pool 1 (tensor(156673), 1204224, tensor(0.8699))
+after conv2 (tensor(793170), 1638400, tensor(0.5159))
+after max pool 2 (tensor(95715), 409600, tensor(0.7663))
+after fc1 (tensor(60852), 122880, tensor(0.5048))
+after fc2 (tensor(41312), 86016, tensor(0.5197))
+val loss: 0.0502 acc: 0.9874
+
+activation sparsity: 
+after conv1 (tensor(923772), 4816896, tensor(0.8082))
+after max pool 1 (tensor(157330), 1204224, tensor(0.8694))
+after conv2 (tensor(792787), 1638400, tensor(0.5161))
+after max pool 2 (tensor(96032), 409600, tensor(0.7655))
+after fc1 (tensor(60680), 122880, tensor(0.5062))
+after fc2 (tensor(41268), 86016, tensor(0.5202))
+train loss: 0.0070 acc: 0.9983
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 64/99
+activation sparsity: 
+after conv1 (tensor(1369989), 4816896, tensor(0.7156))
+after max pool 1 (tensor(264516), 1204224, tensor(0.7803))
+after conv2 (tensor(796070), 1638400, tensor(0.5141))
+after max pool 2 (tensor(96321), 409600, tensor(0.7648))
+after fc1 (tensor(60858), 122880, tensor(0.5047))
+after fc2 (tensor(41329), 86016, tensor(0.5195))
+val loss: 0.0516 acc: 0.9880
+
+activation sparsity: 
+after conv1 (tensor(1375855), 4816896, tensor(0.7144))
+after max pool 1 (tensor(266769), 1204224, tensor(0.7785))
+after conv2 (tensor(795694), 1638400, tensor(0.5143))
+after max pool 2 (tensor(96631), 409600, tensor(0.7641))
+after fc1 (tensor(60623), 122880, tensor(0.5066))
+after fc2 (tensor(41280), 86016, tensor(0.5201))
+train loss: 0.0066 acc: 0.9985
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 65/99
+activation sparsity: 
+after conv1 (tensor(1368557), 4816896, tensor(0.7159))
+after max pool 1 (tensor(264452), 1204224, tensor(0.7804))
+after conv2 (tensor(794554), 1638400, tensor(0.5150))
+after max pool 2 (tensor(96052), 409600, tensor(0.7655))
+after fc1 (tensor(60798), 122880, tensor(0.5052))
+after fc2 (tensor(41229), 86016, tensor(0.5207))
+val loss: 0.0513 acc: 0.9874
+
+activation sparsity: 
+after conv1 (tensor(1374425), 4816896, tensor(0.7147))
+after max pool 1 (tensor(266704), 1204224, tensor(0.7785))
+after conv2 (tensor(794182), 1638400, tensor(0.5153))
+after max pool 2 (tensor(96387), 409600, tensor(0.7647))
+after fc1 (tensor(60616), 122880, tensor(0.5067))
+after fc2 (tensor(41197), 86016, tensor(0.5211))
+train loss: 0.0066 acc: 0.9986
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 66/99
+activation sparsity: 
+after conv1 (tensor(1366844), 4816896, tensor(0.7162))
+after max pool 1 (tensor(264288), 1204224, tensor(0.7805))
+after conv2 (tensor(794089), 1638400, tensor(0.5153))
+after max pool 2 (tensor(96169), 409600, tensor(0.7652))
+after fc1 (tensor(60904), 122880, tensor(0.5044))
+after fc2 (tensor(41115), 86016, tensor(0.5220))
+val loss: 0.0504 acc: 0.9882
+
+activation sparsity: 
+after conv1 (tensor(1372928), 4816896, tensor(0.7150))
+after max pool 1 (tensor(266564), 1204224, tensor(0.7786))
+after conv2 (tensor(793644), 1638400, tensor(0.5156))
+after max pool 2 (tensor(96400), 409600, tensor(0.7646))
+after fc1 (tensor(60763), 122880, tensor(0.5055))
+after fc2 (tensor(41133), 86016, tensor(0.5218))
+train loss: 0.0065 acc: 0.9985
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 67/99
+activation sparsity: 
+after conv1 (tensor(1366354), 4816896, tensor(0.7163))
+after max pool 1 (tensor(264184), 1204224, tensor(0.7806))
+after conv2 (tensor(792332), 1638400, tensor(0.5164))
+after max pool 2 (tensor(95827), 409600, tensor(0.7660))
+after fc1 (tensor(60979), 122880, tensor(0.5038))
+after fc2 (tensor(41020), 86016, tensor(0.5231))
+val loss: 0.0521 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1372392), 4816896, tensor(0.7151))
+after max pool 1 (tensor(266442), 1204224, tensor(0.7787))
+after conv2 (tensor(791977), 1638400, tensor(0.5166))
+after max pool 2 (tensor(96052), 409600, tensor(0.7655))
+after fc1 (tensor(60808), 122880, tensor(0.5051))
+after fc2 (tensor(41036), 86016, tensor(0.5229))
+train loss: 0.0063 acc: 0.9986
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 68/99
+activation sparsity: 
+after conv1 (tensor(1366334), 4816896, tensor(0.7163))
+after max pool 1 (tensor(264116), 1204224, tensor(0.7807))
+after conv2 (tensor(794087), 1638400, tensor(0.5153))
+after max pool 2 (tensor(96256), 409600, tensor(0.7650))
+after fc1 (tensor(61083), 122880, tensor(0.5029))
+after fc2 (tensor(40959), 86016, tensor(0.5238))
+val loss: 0.0531 acc: 0.9872
+
+activation sparsity: 
+after conv1 (tensor(1372466), 4816896, tensor(0.7151))
+after max pool 1 (tensor(266389), 1204224, tensor(0.7788))
+after conv2 (tensor(793772), 1638400, tensor(0.5155))
+after max pool 2 (tensor(96514), 409600, tensor(0.7644))
+after fc1 (tensor(60880), 122880, tensor(0.5046))
+after fc2 (tensor(40980), 86016, tensor(0.5236))
+train loss: 0.0060 acc: 0.9986
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 69/99
+activation sparsity: 
+after conv1 (tensor(1367443), 4816896, tensor(0.7161))
+after max pool 1 (tensor(264221), 1204224, tensor(0.7806))
+after conv2 (tensor(798943), 1638400, tensor(0.5124))
+after max pool 2 (tensor(96963), 409600, tensor(0.7633))
+after fc1 (tensor(61283), 122880, tensor(0.5013))
+after fc2 (tensor(41032), 86016, tensor(0.5230))
+val loss: 0.0526 acc: 0.9882
+
+activation sparsity: 
+after conv1 (tensor(1373631), 4816896, tensor(0.7148))
+after max pool 1 (tensor(266515), 1204224, tensor(0.7787))
+after conv2 (tensor(798572), 1638400, tensor(0.5126))
+after max pool 2 (tensor(97230), 409600, tensor(0.7626))
+after fc1 (tensor(61116), 122880, tensor(0.5026))
+after fc2 (tensor(41015), 86016, tensor(0.5232))
+train loss: 0.0063 acc: 0.9986
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 70/99
+activation sparsity: 
+after conv1 (tensor(1369719), 4816896, tensor(0.7156))
+after max pool 1 (tensor(264527), 1204224, tensor(0.7803))
+after conv2 (tensor(810887), 1638400, tensor(0.5051))
+after max pool 2 (tensor(99181), 409600, tensor(0.7579))
+after fc1 (tensor(61636), 122880, tensor(0.4984))
+after fc2 (tensor(41380), 86016, tensor(0.5189))
+val loss: 0.0502 acc: 0.9882
+
+activation sparsity: 
+after conv1 (tensor(1375891), 4816896, tensor(0.7144))
+after max pool 1 (tensor(266788), 1204224, tensor(0.7785))
+after conv2 (tensor(810368), 1638400, tensor(0.5054))
+after max pool 2 (tensor(99421), 409600, tensor(0.7573))
+after fc1 (tensor(61442), 122880, tensor(0.5000))
+after fc2 (tensor(41368), 86016, tensor(0.5191))
+train loss: 0.0066 acc: 0.9984
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 71/99
+activation sparsity: 
+after conv1 (tensor(1372338), 4816896, tensor(0.7151))
+after max pool 1 (tensor(264716), 1204224, tensor(0.7802))
+after conv2 (tensor(825377), 1638400, tensor(0.4962))
+after max pool 2 (tensor(101920), 409600, tensor(0.7512))
+after fc1 (tensor(62376), 122880, tensor(0.4924))
+after fc2 (tensor(41848), 86016, tensor(0.5135))
+val loss: 0.0520 acc: 0.9882
+
+activation sparsity: 
+after conv1 (tensor(1378668), 4816896, tensor(0.7138))
+after max pool 1 (tensor(267005), 1204224, tensor(0.7783))
+after conv2 (tensor(825404), 1638400, tensor(0.4962))
+after max pool 2 (tensor(102199), 409600, tensor(0.7505))
+after fc1 (tensor(62219), 122880, tensor(0.4937))
+after fc2 (tensor(41818), 86016, tensor(0.5138))
+train loss: 0.0065 acc: 0.9980
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 72/99
+activation sparsity: 
+after conv1 (tensor(1374869), 4816896, tensor(0.7146))
+after max pool 1 (tensor(265154), 1204224, tensor(0.7798))
+after conv2 (tensor(829573), 1638400, tensor(0.4937))
+after max pool 2 (tensor(102830), 409600, tensor(0.7490))
+after fc1 (tensor(62566), 122880, tensor(0.4908))
+after fc2 (tensor(41845), 86016, tensor(0.5135))
+val loss: 0.0587 acc: 0.9872
+
+activation sparsity: 
+after conv1 (tensor(1380897), 4816896, tensor(0.7133))
+after max pool 1 (tensor(267393), 1204224, tensor(0.7780))
+after conv2 (tensor(829515), 1638400, tensor(0.4937))
+after max pool 2 (tensor(103163), 409600, tensor(0.7481))
+after fc1 (tensor(62463), 122880, tensor(0.4917))
+after fc2 (tensor(41769), 86016, tensor(0.5144))
+train loss: 0.0068 acc: 0.9981
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 73/99
+activation sparsity: 
+after conv1 (tensor(1375435), 4816896, tensor(0.7145))
+after max pool 1 (tensor(265470), 1204224, tensor(0.7796))
+after conv2 (tensor(831161), 1638400, tensor(0.4927))
+after max pool 2 (tensor(103363), 409600, tensor(0.7476))
+after fc1 (tensor(62804), 122880, tensor(0.4889))
+after fc2 (tensor(41891), 86016, tensor(0.5130))
+val loss: 0.0679 acc: 0.9862
+
+activation sparsity: 
+after conv1 (tensor(1381572), 4816896, tensor(0.7132))
+after max pool 1 (tensor(267663), 1204224, tensor(0.7777))
+after conv2 (tensor(831151), 1638400, tensor(0.4927))
+after max pool 2 (tensor(103656), 409600, tensor(0.7469))
+after fc1 (tensor(62701), 122880, tensor(0.4897))
+after fc2 (tensor(41871), 86016, tensor(0.5132))
+train loss: 0.0068 acc: 0.9978
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 74/99
+activation sparsity: 
+after conv1 (tensor(1377213), 4816896, tensor(0.7141))
+after max pool 1 (tensor(265915), 1204224, tensor(0.7792))
+after conv2 (tensor(832842), 1638400, tensor(0.4917))
+after max pool 2 (tensor(104041), 409600, tensor(0.7460))
+after fc1 (tensor(62638), 122880, tensor(0.4903))
+after fc2 (tensor(41760), 86016, tensor(0.5145))
+val loss: 0.0647 acc: 0.9852
+
+activation sparsity: 
+after conv1 (tensor(1383415), 4816896, tensor(0.7128))
+after max pool 1 (tensor(268151), 1204224, tensor(0.7773))
+after conv2 (tensor(833006), 1638400, tensor(0.4916))
+after max pool 2 (tensor(104574), 409600, tensor(0.7447))
+after fc1 (tensor(62569), 122880, tensor(0.4908))
+after fc2 (tensor(41708), 86016, tensor(0.5151))
+train loss: 0.0063 acc: 0.9979
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 75/99
+activation sparsity: 
+after conv1 (tensor(1381609), 4816896, tensor(0.7132))
+after max pool 1 (tensor(266563), 1204224, tensor(0.7786))
+after conv2 (tensor(829917), 1638400, tensor(0.4935))
+after max pool 2 (tensor(103345), 409600, tensor(0.7477))
+after fc1 (tensor(62201), 122880, tensor(0.4938))
+after fc2 (tensor(41577), 86016, tensor(0.5166))
+val loss: 0.0626 acc: 0.9866
+
+activation sparsity: 
+after conv1 (tensor(1387769), 4816896, tensor(0.7119))
+after max pool 1 (tensor(268803), 1204224, tensor(0.7768))
+after conv2 (tensor(829770), 1638400, tensor(0.4935))
+after max pool 2 (tensor(103784), 409600, tensor(0.7466))
+after fc1 (tensor(62121), 122880, tensor(0.4945))
+after fc2 (tensor(41515), 86016, tensor(0.5174))
+train loss: 0.0065 acc: 0.9981
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 76/99
+activation sparsity: 
+after conv1 (tensor(1387787), 4816896, tensor(0.7119))
+after max pool 1 (tensor(267214), 1204224, tensor(0.7781))
+after conv2 (tensor(839238), 1638400, tensor(0.4878))
+after max pool 2 (tensor(103998), 409600, tensor(0.7461))
+after fc1 (tensor(62877), 122880, tensor(0.4883))
+after fc2 (tensor(41850), 86016, tensor(0.5135))
+val loss: 0.0620 acc: 0.9872
+
+activation sparsity: 
+after conv1 (tensor(1393936), 4816896, tensor(0.7106))
+after max pool 1 (tensor(269487), 1204224, tensor(0.7762))
+after conv2 (tensor(839297), 1638400, tensor(0.4877))
+after max pool 2 (tensor(104460), 409600, tensor(0.7450))
+after fc1 (tensor(62769), 122880, tensor(0.4892))
+after fc2 (tensor(41772), 86016, tensor(0.5144))
+train loss: 0.0067 acc: 0.9978
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 77/99
+activation sparsity: 
+after conv1 (tensor(1393303), 4816896, tensor(0.7107))
+after max pool 1 (tensor(268034), 1204224, tensor(0.7774))
+after conv2 (tensor(859696), 1638400, tensor(0.4753))
+after max pool 2 (tensor(107295), 409600, tensor(0.7380))
+after fc1 (tensor(63352), 122880, tensor(0.4844))
+after fc2 (tensor(42321), 86016, tensor(0.5080))
+val loss: 0.0636 acc: 0.9868
+
+activation sparsity: 
+after conv1 (tensor(1399532), 4816896, tensor(0.7095))
+after max pool 1 (tensor(270297), 1204224, tensor(0.7755))
+after conv2 (tensor(859662), 1638400, tensor(0.4753))
+after max pool 2 (tensor(107761), 409600, tensor(0.7369))
+after fc1 (tensor(63251), 122880, tensor(0.4853))
+after fc2 (tensor(42199), 86016, tensor(0.5094))
+train loss: 0.0067 acc: 0.9980
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 78/99
+activation sparsity: 
+after conv1 (tensor(1398318), 4816896, tensor(0.7097))
+after max pool 1 (tensor(268419), 1204224, tensor(0.7771))
+after conv2 (tensor(872458), 1638400, tensor(0.4675))
+after max pool 2 (tensor(110241), 409600, tensor(0.7309))
+after fc1 (tensor(63756), 122880, tensor(0.4812))
+after fc2 (tensor(42286), 86016, tensor(0.5084))
+val loss: 0.0604 acc: 0.9888
+
+activation sparsity: 
+after conv1 (tensor(1404312), 4816896, tensor(0.7085))
+after max pool 1 (tensor(270681), 1204224, tensor(0.7752))
+after conv2 (tensor(872323), 1638400, tensor(0.4676))
+after max pool 2 (tensor(110674), 409600, tensor(0.7298))
+after fc1 (tensor(63636), 122880, tensor(0.4821))
+after fc2 (tensor(42241), 86016, tensor(0.5089))
+train loss: 0.0072 acc: 0.9975
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 79/99
+activation sparsity: 
+after conv1 (tensor(1400087), 4816896, tensor(0.7093))
+after max pool 1 (tensor(268683), 1204224, tensor(0.7769))
+after conv2 (tensor(884148), 1638400, tensor(0.4604))
+after max pool 2 (tensor(113024), 409600, tensor(0.7241))
+after fc1 (tensor(64165), 122880, tensor(0.4778))
+after fc2 (tensor(42362), 86016, tensor(0.5075))
+val loss: 0.0573 acc: 0.9884
+
+activation sparsity: 
+after conv1 (tensor(1405951), 4816896, tensor(0.7081))
+after max pool 1 (tensor(270913), 1204224, tensor(0.7750))
+after conv2 (tensor(883930), 1638400, tensor(0.4605))
+after max pool 2 (tensor(113485), 409600, tensor(0.7229))
+after fc1 (tensor(64103), 122880, tensor(0.4783))
+after fc2 (tensor(42266), 86016, tensor(0.5086))
+train loss: 0.0073 acc: 0.9977
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 80/99
+activation sparsity: 
+after conv1 (tensor(1401475), 4816896, tensor(0.7091))
+after max pool 1 (tensor(268915), 1204224, tensor(0.7767))
+after conv2 (tensor(901493), 1638400, tensor(0.4498))
+after max pool 2 (tensor(116683), 409600, tensor(0.7151))
+after fc1 (tensor(64567), 122880, tensor(0.4746))
+after fc2 (tensor(42770), 86016, tensor(0.5028))
+val loss: 0.0605 acc: 0.9882
+
+activation sparsity: 
+after conv1 (tensor(1407366), 4816896, tensor(0.7078))
+after max pool 1 (tensor(271188), 1204224, tensor(0.7748))
+after conv2 (tensor(901199), 1638400, tensor(0.4500))
+after max pool 2 (tensor(117086), 409600, tensor(0.7141))
+after fc1 (tensor(64470), 122880, tensor(0.4753))
+after fc2 (tensor(42705), 86016, tensor(0.5035))
+train loss: 0.0078 acc: 0.9975
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 81/99
+activation sparsity: 
+after conv1 (tensor(1404922), 4816896, tensor(0.7083))
+after max pool 1 (tensor(269455), 1204224, tensor(0.7762))
+after conv2 (tensor(917144), 1638400, tensor(0.4402))
+after max pool 2 (tensor(119808), 409600, tensor(0.7075))
+after fc1 (tensor(65349), 122880, tensor(0.4682))
+after fc2 (tensor(43008), 86016, tensor(0.5000))
+val loss: 0.0639 acc: 0.9858
+
+activation sparsity: 
+after conv1 (tensor(1410563), 4816896, tensor(0.7072))
+after max pool 1 (tensor(271656), 1204224, tensor(0.7744))
+after conv2 (tensor(917232), 1638400, tensor(0.4402))
+after max pool 2 (tensor(120325), 409600, tensor(0.7062))
+after fc1 (tensor(65308), 122880, tensor(0.4685))
+after fc2 (tensor(42894), 86016, tensor(0.5013))
+train loss: 0.0095 acc: 0.9965
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 82/99
+activation sparsity: 
+after conv1 (tensor(1409530), 4816896, tensor(0.7074))
+after max pool 1 (tensor(269962), 1204224, tensor(0.7758))
+after conv2 (tensor(930665), 1638400, tensor(0.4320))
+after max pool 2 (tensor(122518), 409600, tensor(0.7009))
+after fc1 (tensor(66091), 122880, tensor(0.4622))
+after fc2 (tensor(43220), 86016, tensor(0.4975))
+val loss: 0.0724 acc: 0.9856
+
+activation sparsity: 
+after conv1 (tensor(1415177), 4816896, tensor(0.7062))
+after max pool 1 (tensor(272154), 1204224, tensor(0.7740))
+after conv2 (tensor(930800), 1638400, tensor(0.4319))
+after max pool 2 (tensor(123080), 409600, tensor(0.6995))
+after fc1 (tensor(66053), 122880, tensor(0.4625))
+after fc2 (tensor(43158), 86016, tensor(0.4983))
+train loss: 0.0103 acc: 0.9961
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 83/99
+activation sparsity: 
+after conv1 (tensor(1863544), 4816896, tensor(0.6131))
+after max pool 1 (tensor(382242), 1204224, tensor(0.6826))
+after conv2 (tensor(939329), 1638400, tensor(0.4267))
+after max pool 2 (tensor(124276), 409600, tensor(0.6966))
+after fc1 (tensor(66476), 122880, tensor(0.4590))
+after fc2 (tensor(43412), 86016, tensor(0.4953))
+val loss: 0.0740 acc: 0.9870
+
+activation sparsity: 
+after conv1 (tensor(1875075), 4816896, tensor(0.6107))
+after max pool 1 (tensor(385880), 1204224, tensor(0.6796))
+after conv2 (tensor(939973), 1638400, tensor(0.4263))
+after max pool 2 (tensor(124915), 409600, tensor(0.6950))
+after fc1 (tensor(66483), 122880, tensor(0.4590))
+after fc2 (tensor(43350), 86016, tensor(0.4960))
+train loss: 0.0111 acc: 0.9958
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 84/99
+activation sparsity: 
+after conv1 (tensor(1867766), 4816896, tensor(0.6122))
+after max pool 1 (tensor(383120), 1204224, tensor(0.6819))
+after conv2 (tensor(942763), 1638400, tensor(0.4246))
+after max pool 2 (tensor(125039), 409600, tensor(0.6947))
+after fc1 (tensor(67090), 122880, tensor(0.4540))
+after fc2 (tensor(43776), 86016, tensor(0.4911))
+val loss: 0.0608 acc: 0.9884
+
+activation sparsity: 
+after conv1 (tensor(1879275), 4816896, tensor(0.6099))
+after max pool 1 (tensor(386767), 1204224, tensor(0.6788))
+after conv2 (tensor(942880), 1638400, tensor(0.4245))
+after max pool 2 (tensor(125386), 409600, tensor(0.6939))
+after fc1 (tensor(66994), 122880, tensor(0.4548))
+after fc2 (tensor(43651), 86016, tensor(0.4925))
+train loss: 0.0075 acc: 0.9971
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 85/99
+activation sparsity: 
+after conv1 (tensor(1868380), 4816896, tensor(0.6121))
+after max pool 1 (tensor(383310), 1204224, tensor(0.6817))
+after conv2 (tensor(934697), 1638400, tensor(0.4295))
+after max pool 2 (tensor(122558), 409600, tensor(0.7008))
+after fc1 (tensor(66844), 122880, tensor(0.4560))
+after fc2 (tensor(43738), 86016, tensor(0.4915))
+val loss: 0.0639 acc: 0.9862
+
+activation sparsity: 
+after conv1 (tensor(1879910), 4816896, tensor(0.6097))
+after max pool 1 (tensor(387022), 1204224, tensor(0.6786))
+after conv2 (tensor(935114), 1638400, tensor(0.4293))
+after max pool 2 (tensor(123021), 409600, tensor(0.6997))
+after fc1 (tensor(66766), 122880, tensor(0.4567))
+after fc2 (tensor(43620), 86016, tensor(0.4929))
+train loss: 0.0062 acc: 0.9977
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 86/99
+activation sparsity: 
+after conv1 (tensor(1867640), 4816896, tensor(0.6123))
+after max pool 1 (tensor(383053), 1204224, tensor(0.6819))
+after conv2 (tensor(924710), 1638400, tensor(0.4356))
+after max pool 2 (tensor(120451), 409600, tensor(0.7059))
+after fc1 (tensor(65986), 122880, tensor(0.4630))
+after fc2 (tensor(43317), 86016, tensor(0.4964))
+val loss: 0.0552 acc: 0.9880
+
+activation sparsity: 
+after conv1 (tensor(1879109), 4816896, tensor(0.6099))
+after max pool 1 (tensor(386675), 1204224, tensor(0.6789))
+after conv2 (tensor(924818), 1638400, tensor(0.4355))
+after max pool 2 (tensor(120825), 409600, tensor(0.7050))
+after fc1 (tensor(65965), 122880, tensor(0.4632))
+after fc2 (tensor(43101), 86016, tensor(0.4989))
+train loss: 0.0047 acc: 0.9985
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 87/99
+activation sparsity: 
+after conv1 (tensor(1870007), 4816896, tensor(0.6118))
+after max pool 1 (tensor(383365), 1204224, tensor(0.6816))
+after conv2 (tensor(931210), 1638400, tensor(0.4316))
+after max pool 2 (tensor(121848), 409600, tensor(0.7025))
+after fc1 (tensor(66052), 122880, tensor(0.4625))
+after fc2 (tensor(43179), 86016, tensor(0.4980))
+val loss: 0.0566 acc: 0.9880
+
+activation sparsity: 
+after conv1 (tensor(1881486), 4816896, tensor(0.6094))
+after max pool 1 (tensor(387054), 1204224, tensor(0.6786))
+after conv2 (tensor(931256), 1638400, tensor(0.4316))
+after max pool 2 (tensor(122314), 409600, tensor(0.7014))
+after fc1 (tensor(65985), 122880, tensor(0.4630))
+after fc2 (tensor(43056), 86016, tensor(0.4994))
+train loss: 0.0040 acc: 0.9990
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 88/99
+activation sparsity: 
+after conv1 (tensor(1868217), 4816896, tensor(0.6122))
+after max pool 1 (tensor(383193), 1204224, tensor(0.6818))
+after conv2 (tensor(916979), 1638400, tensor(0.4403))
+after max pool 2 (tensor(118774), 409600, tensor(0.7100))
+after fc1 (tensor(66019), 122880, tensor(0.4627))
+after fc2 (tensor(42847), 86016, tensor(0.5019))
+val loss: 0.0595 acc: 0.9874
+
+activation sparsity: 
+after conv1 (tensor(1879776), 4816896, tensor(0.6098))
+after max pool 1 (tensor(386878), 1204224, tensor(0.6787))
+after conv2 (tensor(917002), 1638400, tensor(0.4403))
+after max pool 2 (tensor(119196), 409600, tensor(0.7090))
+after fc1 (tensor(65901), 122880, tensor(0.4637))
+after fc2 (tensor(42769), 86016, tensor(0.5028))
+train loss: 0.0038 acc: 0.9990
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 89/99
+activation sparsity: 
+after conv1 (tensor(1870498), 4816896, tensor(0.6117))
+after max pool 1 (tensor(383566), 1204224, tensor(0.6815))
+after conv2 (tensor(915143), 1638400, tensor(0.4414))
+after max pool 2 (tensor(118423), 409600, tensor(0.7109))
+after fc1 (tensor(65787), 122880, tensor(0.4646))
+after fc2 (tensor(42714), 86016, tensor(0.5034))
+val loss: 0.0606 acc: 0.9872
+
+activation sparsity: 
+after conv1 (tensor(1881934), 4816896, tensor(0.6093))
+after max pool 1 (tensor(387235), 1204224, tensor(0.6784))
+after conv2 (tensor(914869), 1638400, tensor(0.4416))
+after max pool 2 (tensor(118807), 409600, tensor(0.7099))
+after fc1 (tensor(65677), 122880, tensor(0.4655))
+after fc2 (tensor(42543), 86016, tensor(0.5054))
+train loss: 0.0043 acc: 0.9988
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 90/99
+activation sparsity: 
+after conv1 (tensor(1425409), 4816896, tensor(0.7041))
+after max pool 1 (tensor(272488), 1204224, tensor(0.7737))
+after conv2 (tensor(927861), 1638400, tensor(0.4337))
+after max pool 2 (tensor(121282), 409600, tensor(0.7039))
+after fc1 (tensor(66366), 122880, tensor(0.4599))
+after fc2 (tensor(42829), 86016, tensor(0.5021))
+val loss: 0.0615 acc: 0.9876
+
+activation sparsity: 
+after conv1 (tensor(1430835), 4816896, tensor(0.7030))
+after max pool 1 (tensor(274695), 1204224, tensor(0.7719))
+after conv2 (tensor(927633), 1638400, tensor(0.4338))
+after max pool 2 (tensor(121618), 409600, tensor(0.7031))
+after fc1 (tensor(66176), 122880, tensor(0.4615))
+after fc2 (tensor(42708), 86016, tensor(0.5035))
+train loss: 0.0045 acc: 0.9985
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 91/99
+activation sparsity: 
+after conv1 (tensor(1425727), 4816896, tensor(0.7040))
+after max pool 1 (tensor(272676), 1204224, tensor(0.7736))
+after conv2 (tensor(929651), 1638400, tensor(0.4326))
+after max pool 2 (tensor(121551), 409600, tensor(0.7032))
+after fc1 (tensor(66530), 122880, tensor(0.4586))
+after fc2 (tensor(42709), 86016, tensor(0.5035))
+val loss: 0.0678 acc: 0.9868
+
+activation sparsity: 
+after conv1 (tensor(1430948), 4816896, tensor(0.7029))
+after max pool 1 (tensor(274879), 1204224, tensor(0.7717))
+after conv2 (tensor(929346), 1638400, tensor(0.4328))
+after max pool 2 (tensor(121949), 409600, tensor(0.7023))
+after fc1 (tensor(66344), 122880, tensor(0.4601))
+after fc2 (tensor(42525), 86016, tensor(0.5056))
+train loss: 0.0049 acc: 0.9985
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 92/99
+activation sparsity: 
+after conv1 (tensor(1425349), 4816896, tensor(0.7041))
+after max pool 1 (tensor(272788), 1204224, tensor(0.7735))
+after conv2 (tensor(928466), 1638400, tensor(0.4333))
+after max pool 2 (tensor(120953), 409600, tensor(0.7047))
+after fc1 (tensor(66760), 122880, tensor(0.4567))
+after fc2 (tensor(42887), 86016, tensor(0.5014))
+val loss: 0.0633 acc: 0.9878
+
+activation sparsity: 
+after conv1 (tensor(1430492), 4816896, tensor(0.7030))
+after max pool 1 (tensor(274977), 1204224, tensor(0.7717))
+after conv2 (tensor(928326), 1638400, tensor(0.4334))
+after max pool 2 (tensor(121354), 409600, tensor(0.7037))
+after fc1 (tensor(66670), 122880, tensor(0.4574))
+after fc2 (tensor(42739), 86016, tensor(0.5031))
+train loss: 0.0048 acc: 0.9985
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 93/99
+activation sparsity: 
+after conv1 (tensor(1425156), 4816896, tensor(0.7041))
+after max pool 1 (tensor(272762), 1204224, tensor(0.7735))
+after conv2 (tensor(935281), 1638400, tensor(0.4291))
+after max pool 2 (tensor(122784), 409600, tensor(0.7002))
+after fc1 (tensor(67107), 122880, tensor(0.4539))
+after fc2 (tensor(42989), 86016, tensor(0.5002))
+val loss: 0.0560 acc: 0.9892
+
+activation sparsity: 
+after conv1 (tensor(1430491), 4816896, tensor(0.7030))
+after max pool 1 (tensor(275001), 1204224, tensor(0.7716))
+after conv2 (tensor(935684), 1638400, tensor(0.4289))
+after max pool 2 (tensor(123141), 409600, tensor(0.6994))
+after fc1 (tensor(67028), 122880, tensor(0.4545))
+after fc2 (tensor(42910), 86016, tensor(0.5011))
+train loss: 0.0055 acc: 0.9982
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 94/99
+activation sparsity: 
+after conv1 (tensor(1430275), 4816896, tensor(0.7031))
+after max pool 1 (tensor(273368), 1204224, tensor(0.7730))
+after conv2 (tensor(950403), 1638400, tensor(0.4199))
+after max pool 2 (tensor(126154), 409600, tensor(0.6920))
+after fc1 (tensor(67738), 122880, tensor(0.4487))
+after fc2 (tensor(43334), 86016, tensor(0.4962))
+val loss: 0.0600 acc: 0.9862
+
+activation sparsity: 
+after conv1 (tensor(1435592), 4816896, tensor(0.7020))
+after max pool 1 (tensor(275600), 1204224, tensor(0.7711))
+after conv2 (tensor(950459), 1638400, tensor(0.4199))
+after max pool 2 (tensor(126681), 409600, tensor(0.6907))
+after fc1 (tensor(67694), 122880, tensor(0.4491))
+after fc2 (tensor(43285), 86016, tensor(0.4968))
+train loss: 0.0068 acc: 0.9974
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 95/99
+activation sparsity: 
+after conv1 (tensor(1435359), 4816896, tensor(0.7020))
+after max pool 1 (tensor(273935), 1204224, tensor(0.7725))
+after conv2 (tensor(961198), 1638400, tensor(0.4133))
+after max pool 2 (tensor(128886), 409600, tensor(0.6853))
+after fc1 (tensor(68013), 122880, tensor(0.4465))
+after fc2 (tensor(43781), 86016, tensor(0.4910))
+val loss: 0.0605 acc: 0.9890
+
+activation sparsity: 
+after conv1 (tensor(1440353), 4816896, tensor(0.7010))
+after max pool 1 (tensor(276108), 1204224, tensor(0.7707))
+after conv2 (tensor(961240), 1638400, tensor(0.4133))
+after max pool 2 (tensor(129298), 409600, tensor(0.6843))
+after fc1 (tensor(68044), 122880, tensor(0.4463))
+after fc2 (tensor(43721), 86016, tensor(0.4917))
+train loss: 0.0067 acc: 0.9977
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 96/99
+activation sparsity: 
+after conv1 (tensor(1439214), 4816896, tensor(0.7012))
+after max pool 1 (tensor(274305), 1204224, tensor(0.7722))
+after conv2 (tensor(973489), 1638400, tensor(0.4058))
+after max pool 2 (tensor(131596), 409600, tensor(0.6787))
+after fc1 (tensor(68896), 122880, tensor(0.4393))
+after fc2 (tensor(44275), 86016, tensor(0.4853))
+val loss: 0.0609 acc: 0.9870
+
+activation sparsity: 
+after conv1 (tensor(1444296), 4816896, tensor(0.7002))
+after max pool 1 (tensor(276461), 1204224, tensor(0.7704))
+after conv2 (tensor(973859), 1638400, tensor(0.4056))
+after max pool 2 (tensor(132282), 409600, tensor(0.6770))
+after fc1 (tensor(68913), 122880, tensor(0.4392))
+after fc2 (tensor(44207), 86016, tensor(0.4861))
+train loss: 0.0064 acc: 0.9976
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 97/99
+activation sparsity: 
+after conv1 (tensor(1890097), 4816896, tensor(0.6076))
+after max pool 1 (tensor(386830), 1204224, tensor(0.6788))
+after conv2 (tensor(967047), 1638400, tensor(0.4098))
+after max pool 2 (tensor(129849), 409600, tensor(0.6830))
+after fc1 (tensor(68941), 122880, tensor(0.4390))
+after fc2 (tensor(44607), 86016, tensor(0.4814))
+val loss: 0.0503 acc: 0.9896
+
+activation sparsity: 
+after conv1 (tensor(1901047), 4816896, tensor(0.6053))
+after max pool 1 (tensor(390382), 1204224, tensor(0.6758))
+after conv2 (tensor(966937), 1638400, tensor(0.4098))
+after max pool 2 (tensor(130292), 409600, tensor(0.6819))
+after fc1 (tensor(68980), 122880, tensor(0.4386))
+after fc2 (tensor(44618), 86016, tensor(0.4813))
+train loss: 0.0057 acc: 0.9981
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 98/99
+activation sparsity: 
+after conv1 (tensor(1887852), 4816896, tensor(0.6081))
+after max pool 1 (tensor(386320), 1204224, tensor(0.6792))
+after conv2 (tensor(973942), 1638400, tensor(0.4056))
+after max pool 2 (tensor(131676), 409600, tensor(0.6785))
+after fc1 (tensor(68614), 122880, tensor(0.4416))
+after fc2 (tensor(43550), 86016, tensor(0.4937))
+val loss: 0.0520 acc: 0.9882
+
+activation sparsity: 
+after conv1 (tensor(1898915), 4816896, tensor(0.6058))
+after max pool 1 (tensor(389870), 1204224, tensor(0.6762))
+after conv2 (tensor(974417), 1638400, tensor(0.4053))
+after max pool 2 (tensor(132255), 409600, tensor(0.6771))
+after fc1 (tensor(68577), 122880, tensor(0.4419))
+after fc2 (tensor(43560), 86016, tensor(0.4936))
+train loss: 0.0044 acc: 0.9986
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+Epoch 99/99
+activation sparsity: 
+after conv1 (tensor(1888434), 4816896, tensor(0.6080))
+after max pool 1 (tensor(386604), 1204224, tensor(0.6790))
+after conv2 (tensor(974178), 1638400, tensor(0.4054))
+after max pool 2 (tensor(131375), 409600, tensor(0.6793))
+after fc1 (tensor(69210), 122880, tensor(0.4368))
+after fc2 (tensor(43818), 86016, tensor(0.4906))
+val loss: 0.0644 acc: 0.9866
+
+activation sparsity: 
+after conv1 (tensor(1899524), 4816896, tensor(0.6057))
+after max pool 1 (tensor(390140), 1204224, tensor(0.6760))
+after conv2 (tensor(974191), 1638400, tensor(0.4054))
+after max pool 2 (tensor(131871), 409600, tensor(0.6780))
+after fc1 (tensor(69261), 122880, tensor(0.4364))
+after fc2 (tensor(43715), 86016, tensor(0.4918))
+train loss: 0.0041 acc: 0.9986
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
+
+evaluating using model saved at saved_weights/LeNet/no_prune_no_l2reg/best_weights.pt 
+
+activation sparsity: 
+after conv1 (tensor(1897667), 4816896, tensor(0.6060))
+after max pool 1 (tensor(389136), 1204224, tensor(0.6769))
+after conv2 (tensor(967207), 1638400, tensor(0.4097))
+after max pool 2 (tensor(130551), 409600, tensor(0.6813))
+after fc1 (tensor(69028), 122880, tensor(0.4382))
+after fc2 (tensor(44486), 86016, tensor(0.4828))
+activation sparsity: 
+after conv1 (tensor(1900361), 4816896, tensor(0.6055))
+after max pool 1 (tensor(389996), 1204224, tensor(0.6761))
+after conv2 (tensor(967564), 1638400, tensor(0.4094))
+after max pool 2 (tensor(130168), 409600, tensor(0.6822))
+after fc1 (tensor(69082), 122880, tensor(0.4378))
+after fc2 (tensor(44571), 86016, tensor(0.4818))
+activation sparsity: 
+after conv1 (tensor(1898014), 4816896, tensor(0.6060))
+after max pool 1 (tensor(389727), 1204224, tensor(0.6764))
+after conv2 (tensor(968251), 1638400, tensor(0.4090))
+after max pool 2 (tensor(131306), 409600, tensor(0.6794))
+after fc1 (tensor(68920), 122880, tensor(0.4391))
+after fc2 (tensor(44236), 86016, tensor(0.4857))
+activation sparsity: 
+after conv1 (tensor(1905199), 4816896, tensor(0.6045))
+after max pool 1 (tensor(391487), 1204224, tensor(0.6749))
+after conv2 (tensor(967625), 1638400, tensor(0.4094))
+after max pool 2 (tensor(130356), 409600, tensor(0.6817))
+after fc1 (tensor(68925), 122880, tensor(0.4391))
+after fc2 (tensor(44373), 86016, tensor(0.4841))
+activation sparsity: 
+after conv1 (tensor(1900987), 4816896, tensor(0.6054))
+after max pool 1 (tensor(389716), 1204224, tensor(0.6764))
+after conv2 (tensor(967687), 1638400, tensor(0.4094))
+after max pool 2 (tensor(130650), 409600, tensor(0.6810))
+after fc1 (tensor(68749), 122880, tensor(0.4405))
+after fc2 (tensor(44547), 86016, tensor(0.4821))
+activation sparsity: 
+after conv1 (tensor(1899364), 4816896, tensor(0.6057))
+after max pool 1 (tensor(388548), 1204224, tensor(0.6773))
+after conv2 (tensor(966558), 1638400, tensor(0.4101))
+after max pool 2 (tensor(129214), 409600, tensor(0.6845))
+after fc1 (tensor(68828), 122880, tensor(0.4399))
+after fc2 (tensor(44515), 86016, tensor(0.4825))
+activation sparsity: 
+after conv1 (tensor(1897821), 4816896, tensor(0.6060))
+after max pool 1 (tensor(389493), 1204224, tensor(0.6766))
+after conv2 (tensor(967220), 1638400, tensor(0.4097))
+after max pool 2 (tensor(130211), 409600, tensor(0.6821))
+after fc1 (tensor(68856), 122880, tensor(0.4396))
+after fc2 (tensor(44637), 86016, tensor(0.4811))
+activation sparsity: 
+after conv1 (tensor(1900627), 4816896, tensor(0.6054))
+after max pool 1 (tensor(390168), 1204224, tensor(0.6760))
+after conv2 (tensor(966687), 1638400, tensor(0.4100))
+after max pool 2 (tensor(130497), 409600, tensor(0.6814))
+after fc1 (tensor(69147), 122880, tensor(0.4373))
+after fc2 (tensor(44403), 86016, tensor(0.4838))
+activation sparsity: 
+after conv1 (tensor(1893539), 4816896, tensor(0.6069))
+after max pool 1 (tensor(388571), 1204224, tensor(0.6773))
+after conv2 (tensor(966001), 1638400, tensor(0.4104))
+after max pool 2 (tensor(130047), 409600, tensor(0.6825))
+after fc1 (tensor(69029), 122880, tensor(0.4382))
+after fc2 (tensor(44578), 86016, tensor(0.4817))
+activation sparsity: 
+after conv1 (tensor(1457990), 3687936, tensor(0.6047))
+after max pool 1 (tensor(299455), 921984, tensor(0.6752))
+after conv2 (tensor(740899), 1254400, tensor(0.4094))
+after max pool 2 (tensor(99680), 313600, tensor(0.6821))
+after fc1 (tensor(52623), 94080, tensor(0.4407))
+after fc2 (tensor(33896), 65856, tensor(0.4853))
+
+test loss: 0.0716 acc: 0.9863
+
+parameters sparsity: 
+conv1.weight (tensor(0), 150, tensor(1.))
+conv1.bias (tensor(0), 6, tensor(1.))
+conv2.weight (tensor(0), 2400, tensor(1.))
+conv2.bias (tensor(0), 16, tensor(1.))
+fc1.weight (tensor(0), 48000, tensor(1.))
+fc1.bias (tensor(0), 120, tensor(1.))
+fc2.weight (tensor(0), 10080, tensor(1.))
+fc2.bias (tensor(0), 84, tensor(1.))
+fc3.weight (tensor(0), 840, tensor(1.))
+fc3.bias (tensor(0), 10, tensor(1.))
