@@ -3,8 +3,8 @@ import torch
 # sparsity level is defined as number of non-zero elements / total size
 
 def get_sparsity(mat):
-	zeros_count = (abs(mat - 0) <= 0.00000001).sum()
-	return (zeros_count, torch.numel(mat), 1 - zeros_count / torch.numel(mat))
+	non_zeros_count = abs(mat).gt(0).sum()
+	return (non_zeros_count, torch.numel(mat), non_zeros_count / torch.numel(mat))
 
 def get_prune_threshold(mat, sparsity_level):
 	return torch.quantile(abs(mat), 1 - sparsity_level)

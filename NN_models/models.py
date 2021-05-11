@@ -17,15 +17,6 @@ class MLP1(nn.Module):
 
 		x = x.view(-1, 28 * 28)
 
-		# if self.sparsity_level != None:
-		# 	with torch.no_grad():
-		# 		self.fc1.weight.mul_(get_sparse_mask(self.fc1.weight.data, self.sparsity_level))
-		# 		# self.fc1.bias.mul_(get_sparse_mask(self.fc1.bias.data, self.sparsity_level))
-		# 		self.fc2.weight.mul_(get_sparse_mask(self.fc2.weight.data, self.sparsity_level))
-		# 		# self.fc2.bias.mul_(get_sparse_mask(self.fc2.bias.data, self.sparsity_level))
-		# 		self.fc3.weight.mul_(get_sparse_mask(self.fc3.weight.data, self.sparsity_level))
-		# 		# self.fc3.bias.mul_(get_sparse_mask(self.fc3.bias.data, self.sparsity_level))
-		
 		x1 = F.relu(self.fc1(x))
 		if print_activation_sparsity:
 			print("activation sparsity: ")
@@ -55,32 +46,35 @@ class LeNet(nn.Module):
 
 	def forward(self, x, print_activation_sparsity=False):
 
-		x = F.relu(self.conv1(x))
+		xc1 = F.relu(self.conv1(x))
 		if print_activation_sparsity:
 			print("activation sparsity: ")
-			print("after conv1", get_sparsity(x))
+			print("after conv1", get_sparsity(xc1))
 
-		x = self.max_pool_1(x)
+		xcp1 = self.max_pool_1(xc1)
 		if print_activation_sparsity:
-			print("after max pool 1", get_sparsity(x))
+			print("after max pool 1", get_sparsity(xcp1))
 
-		x = F.relu(self.conv2(x))
+		xc2 = F.relu(self.conv2(xcp1))
 		if print_activation_sparsity:
-			print("after conv2", get_sparsity(x))
+			print("after conv2", get_sparsity(xc2))
 
-		x = self.max_pool_2(x)
+		xcp2 = self.max_pool_2(xc2)
 		if print_activation_sparsity:
-			print("after max pool 2", get_sparsity(x))
+			print("after max pool 2", get_sparsity(xcp2))
 
-		x = x.view(-1, 16 * 5 * 5)
+		xf0 = xcp2.view(-1, 16 * 5 * 5)
 
-		x = F.relu(self.fc1(x))
+		xf1 = F.relu(self.fc1(xf0))
 		if print_activation_sparsity:
-			print("after fc1", get_sparsity(x))
+			print("after fc1", get_sparsity(xf1))
 
-		x = F.relu(self.fc2(x))
+		xf2 = F.relu(self.fc2(xf1))
 		if print_activation_sparsity:
-			print("after fc2", get_sparsity(x), flush=True)
+			print("after fc2", get_sparsity(xf2), flush=True)
 
-		x = self.fc3(x)
-		return (x, (0))
+		xf3 = self.fc3(xf2)
+
+		return (xf3, (xc1, xc2, xf0, xf1, xf2))
+
+

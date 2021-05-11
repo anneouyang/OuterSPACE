@@ -7,7 +7,7 @@ import os
 import sys
 import copy
 
-from models import MLP1
+from models import *
 from dataloaders import dataloaders
 from sparse_util import *
 from util import *
@@ -64,14 +64,23 @@ def eval(model, load_dir=None, name="best_weights.pt"):
 
 
 
-def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False):
+def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False, model_type="MLP1"):
 
 	optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 	criterion = nn.CrossEntropyLoss()
+
 	if l2reg:
-		lambda1, lambda2, lambda3, alambda1, alambda2 = 0.01, 0.01, 0.01, 0.002, 0.002
+		if model_type == "MLP1":
+			lambda1, lambda2, lambda3, alambda1, alambda2 = 0.01, 0.01, 0.01, 0.002, 0.002
+		elif model_type == "LeNet":
+			lambda1, lambda2, lambda3 = 0.01, 0.01, 0
+			alambdaf0, alambdaf1, alambdaf2 = 0, 0, 0
+			alambdac1, alambdac2 = 0.001, 0.001
 	else:
-		lambda1, lambda2, lambda3, alambda1, alambda2 = 0, 0, 0, 0, 0
+		if model_type == "MLP1":
+			lambda1, lambda2, lambda3, alambda1, alambda2 = 0, 0, 0, 0, 0
+		elif model_type == "LeNet":
+			lambda1, lambda2, lambda3, alambdaf0, alambdaf1, alambdaf2, alambdac1, alambdac2 = 0, 0, 0, 0, 0, 0, 0, 0
 
 	train_losses = []
 	train_accs = []
@@ -105,25 +114,50 @@ def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False):
 					loss = criterion(outputs, labels)
 					if l2reg:
 						# print("l2reg")
-						all_fc1_params = torch.cat([x.view(-1) for x in model.fc1.parameters()])
-						all_fc2_params = torch.cat([x.view(-1) for x in model.fc2.parameters()])
-						all_fc3_params = torch.cat([x.view(-1) for x in model.fc3.parameters()])
-						l2_regularization_fc1 = lambda1 * torch.norm(all_fc1_params, 2)
-						l2_regularization_fc2 = lambda2 * torch.norm(all_fc2_params, 2)
-						l2_regularization_fc3 = lambda3 * torch.norm(all_fc3_params, 2)
-						l2_regularization_act1 = alambda1 * torch.norm(activations[0], 2)
-						l2_regularization_act2 = alambda2 * torch.norm(activations[1], 2)
-						loss = loss + (l2_regularization_fc1 + l2_regularization_fc2 + l2_regularization_fc3 + l2_regularization_act1 + l2_regularization_act2)
+						if model_type == "MLP1":
+							# print("l2reg")
+							all_fc1_params = torch.cat([x.view(-1) for x in model.fc1.parameters()])
+							all_fc2_params = torch.cat([x.view(-1) for x in model.fc2.parameters()])
+							all_fc3_params = torch.cat([x.view(-1) for x in model.fc3.parameters()])
+							l2_regularization_fc1 = lambda1 * torch.norm(all_fc1_params, 2)
+							l2_regularization_fc2 = lambda2 * torch.norm(all_fc2_params, 2)
+							l2_regularization_fc3 = lambda3 * torch.norm(all_fc3_params, 2)
+							l2_regularization_act1 = alambda1 * torch.norm(activations[0], 2)
+							l2_regularization_act2 = alambda2 * torch.norm(activations[1], 2)
+							loss = loss + (l2_regularization_fc1 + l2_regularization_fc2 + l2_regularization_fc3 + l2_regularization_act1 + l2_regularization_act2)
+						elif model_type == "LeNet":
+							all_fc1_params = torch.cat([x.view(-1) for x in model.fc1.parameters()])
+							all_fc2_params = torch.cat([x.view(-1) for x in model.fc2.parameters()])
+							all_fc3_params = torch.cat([x.view(-1) for x in model.fc3.parameters()])
+							l2_regularization_fc1 = lambda1 * torch.norm(all_fc1_params, 2)
+							l2_regularization_fc2 = lambda2 * torch.norm(all_fc2_params, 2)
+							l2_regularization_fc3 = lambda3 * torch.norm(all_fc3_params, 2)
+							act_f0, act_f1, act_f2 = activations[-3], activations[-2], activations[-1]
+							l2_regularization_actf0 = alambdaf0 * torch.norm(act_f0, 2)
+							l2_regularization_actf1 = alambdaf1 * torch.norm(act_f1, 2)
+							l2_regularization_actf2 = alambdaf2 * torch.norm(act_f2, 2)
+							act_c1, act_c2 = activations[0], activations[1]
+							l2_regularization_actc1 = alambdac1 * torch.norm(act_c1, 2)
+							l2_regularization_actc2 = alambdac2 * torch.norm(act_c2, 2)
+							loss = loss + (l2_regularization_fc1 + l2_regularization_fc2 + l2_regularization_fc3 + l2_regularization_actf0 + l2_regularization_actf1 + l2_regularization_actf2 + l2_regularization_actc1 + l2_regularization_actc2)
 					_, preds = torch.max(outputs, 1)
 					if phase == 'train':
 						loss.backward()
 						# during fine-tune step, don't update already pruned gradients
 						if finetune:
-							for k, m in enumerate(model.modules()):
-								if isinstance(m, nn.Linear):
-									weight_copy = m.weight.data.abs().clone()
-									mask = weight_copy.gt(0).float()
-									m.weight.grad.data.mul_(mask)
+							if model_type == "MLP1":
+								for k, m in enumerate(model.modules()):
+									if isinstance(m, nn.Linear):
+										weight_copy = m.weight.data.abs().clone()
+										mask = weight_copy.gt(0).float()
+										m.weight.grad.data.mul_(mask)
+							elif model_type == "LeNet":
+								# prune fully connected layers
+								for k, m in enumerate(model.modules()):
+									if isinstance(m, nn.Linear):
+										weight_copy = m.weight.data.abs().clone()
+										mask = weight_copy.gt(0).float()
+										m.weight.grad.data.mul_(mask)
 						optimizer.step()
 
 				running_loss += loss.item() * inputs.size(0)
@@ -154,24 +188,34 @@ def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False):
 		plot_training_stats(train_losses, train_accs, val_losses, val_accs, save_dir)
 
 
-def prune(model, sparsity_level, save_dir=None):
+def prune(model, sparsity_level, save_dir=None, model_type="MLP1"):
 	print("Before pruning: ")
 	print_parameters_sparsity(model)
-	for m in model.modules():
-		if isinstance(m, nn.Linear): # only prune fully connected layers
-			if get_sparsity(m.weight.data)[-1] <= sparsity_level:
-				continue # already reached desired sparsity
-			threshold = get_prune_threshold(m.weight.data, sparsity_level)
-			weight_copy = m.weight.data.abs().clone()
-			mask = weight_copy.gt(threshold).float()
-			m.weight.data.mul_(mask)
+	if model_type == "MLP1":
+		for m in model.modules():
+			if isinstance(m, nn.Linear): # only prune fully connected layers
+				if get_sparsity(m.weight.data)[-1] <= sparsity_level:
+					continue # already reached desired sparsity
+				threshold = get_prune_threshold(m.weight.data, sparsity_level)
+				weight_copy = m.weight.data.abs().clone()
+				mask = weight_copy.gt(threshold).float()
+				m.weight.data.mul_(mask)
+	elif model_type == "LeNet":
+		for m in model.modules():
+			if isinstance(m, nn.Linear): # prune fully connected layers
+				if get_sparsity(m.weight.data)[-1] <= sparsity_level:
+					continue # already reached desired sparsity
+				threshold = get_prune_threshold(m.weight.data, sparsity_level)
+				weight_copy = m.weight.data.abs().clone()
+				mask = weight_copy.gt(threshold).float()
+				m.weight.data.mul_(mask)
 	print("After pruning: ")
 	print_parameters_sparsity(model)
 	save_model_weights(model, save_dir)
 
 
-def finetune(model, num_epochs=10, save_dir=None, l2reg=False):
-	train(model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg, finetune=True)
+def finetune(model, num_epochs=10, save_dir=None, l2reg=False, model_type="MLP1"):
+	train(model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg, finetune=True, model_type=model_type)
 
 def main():
 
@@ -183,53 +227,60 @@ def main():
 	parser.add_argument("--sparsity_level", help="Sparsity level (percentage of non-zero elements", type=float, default=0.1, nargs="?")
 	parser.add_argument("--l2reg", help="Add L2 regularization to loss", type=bool, default=False, nargs="?")
 	parser.add_argument("--eval_weights", help="Name of weights used in eval", type=str, default="best_weights.pt", nargs="?")
+	parser.add_argument("--model_type", help="Model type", type=str, default="MLP1", nargs="?")
 
 	args = parser.parse_args()
-	mode, num_epochs, load_model_name, saved_model_name, eval_weights, sparsity_level, l2reg = args.mode, args.num_epochs, args.load_model_name, args.saved_model_name, args.eval_weights, args.sparsity_level, args.l2reg
+	mode, num_epochs, load_model_name, saved_model_name, eval_weights, sparsity_level, l2reg, model_type = args.mode, args.num_epochs, args.load_model_name, args.saved_model_name, args.eval_weights, args.sparsity_level, args.l2reg, args.model_type
+
+	if model_type == "MLP1":
+		model = MLP1()
+		dir_base_path = "saved_weights/MLP1/"
+	elif model_type == "LeNet":
+		model = LeNet()
+		dir_base_path = "saved_weights/LeNet/"
+	else:
+		raise("Invalid model type")
 
 	if load_model_name == None:
 		load_dir = None
 	else:
-		load_dir = 'saved_weights/' + str(load_model_name)
+		load_dir = dir_base_path + str(load_model_name)
 
 	if saved_model_name == None:
 		save_dir = None
 	else:
-		save_dir = 'saved_weights/' + str(saved_model_name)
+		save_dir = dir_base_path + str(saved_model_name)
 		try:
 			os.stat(save_dir)
 		except:
 			os.mkdir(save_dir)
-
-
-	model = MLP1()
 
 	if mode == "eval":
 		eval(model, load_dir, eval_weights)
 	elif mode == "train":
 		if load_dir != None:
 			load_model_weights(model, load_dir, eval_weights)
-		train(model=model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg, finetune=False)
+		train(model=model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg, finetune=False, model_type=model_type)
 		eval(model, save_dir, eval_weights)
 	elif mode == "prune":
 		if load_dir != None:
 			load_model_weights(model, load_dir, eval_weights)
-		prune(model=model, sparsity_level=sparsity_level, savedir=save_dir)
+		prune(model=model, sparsity_level=sparsity_level, savedir=save_dir, model_type=model_type)
 		eval(model, save_dir, eval_weights)
 	elif mode == "finetune":
 		if load_dir != None:
 			load_model_weights(model, load_dir, eval_weights)
-		finetune(model=model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg)
+		finetune(model=model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg, model_type=model_type)
 		eval(model, save_dir, eval_weights)
 	elif mode == "pf":
 		if load_dir != None:
 			load_model_weights(model, load_dir, eval_weights)
 		print("Before pruning")
 		eval(model)
-		prune(model=model, sparsity_level=sparsity_level, save_dir=save_dir)
+		prune(model=model, sparsity_level=sparsity_level, save_dir=save_dir, model_type=model_type)
 		print("After pruning")
 		eval(model)
-		finetune(model=model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg)
+		finetune(model=model, num_epochs=num_epochs, save_dir=save_dir, l2reg=l2reg, model_type=model_type)
 		print("After finetuning")
 		eval(model)
 	else:
