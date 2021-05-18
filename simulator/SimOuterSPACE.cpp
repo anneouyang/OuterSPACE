@@ -5,6 +5,7 @@
 #include <Memory.h>
 
 #include <cassert>
+#include <memory>
 #include <iterator>
 #include <algorithm>
 
@@ -15,7 +16,11 @@ typedef uintptr_t pointer_t;
 
 struct OuterSPACEConfig {
     size_t NUM_PE = 256;
+    size_t NUM_PE_TILES = 16;
     size_t BLOCK_SIZE = 64;
+    size_t L0_CACHE_NUM_GROUPS = 4;
+    size_t L0_CACHE_SIZE = 16 * 1024;
+    size_t NUM_DRAM_CHANNELS = 16;
     size_t DRAM_BANDWIDTH = 16 * 8 / 1.5;
 };
 
@@ -51,10 +56,10 @@ public:
         mergePhase();
     }
 
-    const std::vector<MultiplyTask> getMultiplyTasks() {
+    const std::vector<MultiplyTask> &getMultiplyTasks() {
         return multTasks;
     }
-    const std::vector<MergeTask> getMergeTasks() {
+    const std::vector<MergeTask> &getMergeTasks() {
         return mergeTasks;
     }
 
@@ -84,6 +89,7 @@ private:
                     result.push_back(CSRElement{ k, task.lmatCol.data[j].val * task.rmatRow.data[k].val });
                 }
                 multResults[rowId].push_back(std::move(result));
+                task.result.push_back(CSRRow{&multResults[rowId].back()[0], multResults[rowId].back().size()});
             }
 
             multTasks.push_back(task);
@@ -147,10 +153,10 @@ template<typename T>
 class TaskDispatcherStatic : public TaskDispatcher<T> {
 public:
     TaskDispatcherStatic(const std::vector<T> &tasks, size_t numPEs) : peTasks(numPEs) {
-        size_t taskPerPE = (tasks.size() + numPEs - 1) / numPEs;
+        // size_t taskPerPE = (tasks.size() + numPEs - 1) / numPEs;
 
         for (size_t i = 0; i < tasks.size(); i++) {
-            peTasks[i / taskPerPE].push_back(tasks[i]);
+            peTasks[i % numPEs].push_back(tasks[i]);
         }
     }
 
@@ -195,11 +201,8 @@ size_t analyzeCycles(std::tuple<size_t, size_t> taskParams) {
     return std::max(workload, dramCycles);
 }
 
-size_t simulateOuterSPACEAnalytical(const CSRMatrix &lmatCSC, const CSRMatrix &rmatCSR) {
-    TaskProvider provider(lmatCSC, rmatCSR);
-
+size_t simulateOuterSPACEAnalyticalMultiply(TaskProvider &provider) {
     TaskDispatcherStatic<MultiplyTask> dispatcherMultiply(provider.getMultiplyTasks(), config.NUM_PE);
-    TaskDispatcherStatic<MergeTask>    dispatcherMerge(provider.getMergeTasks(), config.NUM_PE);
 
     size_t maxCyclePE = 0;
     for (size_t i = 0; i < config.NUM_PE; i++) {
@@ -209,9 +212,14 @@ size_t simulateOuterSPACEAnalytical(const CSRMatrix &lmatCSC, const CSRMatrix &r
         }
         maxCyclePE = std::max(maxCyclePE, cycleCurrent);
     }
-    size_t cycleMultiply = maxCyclePE;
 
-    maxCyclePE = 0;
+    return maxCyclePE;
+}
+
+size_t simulateOuterSPACEAnalyticalMerge(TaskProvider &provider) {
+    TaskDispatcherStatic<MergeTask>    dispatcherMerge(provider.getMergeTasks(), config.NUM_PE);
+
+    size_t maxCyclePE = 0;
     for (size_t i = 0; i < config.NUM_PE; i++) {
         size_t cycleCurrent = 0;
         while (dispatcherMerge.haveTask(i)) {
@@ -219,9 +227,14 @@ size_t simulateOuterSPACEAnalytical(const CSRMatrix &lmatCSC, const CSRMatrix &r
         }
         maxCyclePE = std::max(maxCyclePE, cycleCurrent);
     }
-    size_t cycleMerge = maxCyclePE;
 
-    return cycleMultiply + cycleMerge;
+    return maxCyclePE;
+}
+
+size_t simulateOuterSPACEAnalytical(const CSRMatrix &lmatCSC, const CSRMatrix &rmatCSR) {
+    TaskProvider provider(lmatCSC, rmatCSR);
+
+    return simulateOuterSPACEAnalyticalMultiply(provider) + simulateOuterSPACEAnalyticalMerge(provider);
 }
 
 struct MemoryRequest {
@@ -264,12 +277,14 @@ struct MemoryPortFIFO {
 
 class Cache : public Module {
 public:
-    Cache(SimCache simulator) : simulator(std::move(simulator)), upstream(upstreamFIFO.getSlavePort()) {}
+    Cache(SimCache simulator, std::string name = "") : Module(), simulator(std::move(simulator)), upstream(upstreamFIFO.getSlavePort()), name(name) {}
 
     MemoryPortMaster getUpstreamPort() { return upstreamFIFO.getMasterPort(); }
     void setDownstreamPort(MemoryPortMaster port) { this->downstream = port; }
 
     virtual void clockUpdate() override {
+        bool respBusy = false;
+
         if (downstream.resp.isReadable() && upstream.resp.isWritable()) {
             MemoryResponse resp = downstream.resp.read(1)[0];
             MemoryRequest  req  = pendingReqs.front();
@@ -279,6 +294,8 @@ public:
                 waitingRead = false;
             }
             upstream.resp.write({ resp });
+
+            respBusy = true;
         }
 
         if (upstream.req.isReadable() && downstream.req.isWritable()) {
@@ -288,6 +305,7 @@ public:
             if (req.is_write) {
                 consume = true;
                 sendRequest(req);
+                cntWrite++;
             } else {
                 if (!waitingRead) {
                     bool miss = simulator.access(req.addr);
@@ -296,9 +314,13 @@ public:
                         req.addr = simulator.getLineAddr(req.addr);
                         sendRequest(req);
                         waitingRead = true;
-                    } else if (upstream.resp.isWritable()) {
+
+                        cntRead++, cntReadMiss++;
+                    } else if (upstream.resp.isWritable() && !respBusy && pendingReqs.empty()) {
                         consume = true;
                         upstream.resp.write({ MemoryResponse{} });
+
+                        cntRead++;
                     }
                 }
             }
@@ -309,6 +331,10 @@ public:
         }
     }
     virtual void clockApply() override {}
+
+    virtual void printStats() {
+        fprintf(stderr, "CACHE %s: Write %zu Read %zu Miss %zu (Miss Rate = %.3lf) Pending %zu\n", name.c_str(), cntWrite, cntRead, cntReadMiss, double(cntReadMiss) / cntRead, pendingReqs.size());
+    }
 
 private:
     void sendRequest(MemoryRequest req) {
@@ -327,11 +353,14 @@ private:
     std::deque<MemoryRequest> pendingReqs;
 
     bool waitingRead = false;
+
+    std::string name;
+    size_t cntRead = 0, cntWrite = 0, cntReadMiss = 0;
 };
 
 class Crossbar : public Module {
 public:
-    Crossbar(size_t numUp, size_t numDown) : numUp(numUp), numDown(numDown), upstreamFIFOs(numUp), upstreams(numUp), downstreams(numDown), pendingReqs(numDown) {
+    Crossbar(size_t numUp, size_t numDown, std::string name) : numUp(numUp), numDown(numDown), upstreamFIFOs(numUp), upstreams(numUp), downstreams(numDown), pendingReqs(numDown), name(name) {
         for (size_t i = 0; i < numUp; i++) {
             upstreams[i] = upstreamFIFOs[i].getSlavePort();
         }
@@ -347,6 +376,13 @@ public:
         processReq();
     }
     virtual void clockApply() override {}
+
+    virtual void printStats() {
+        fprintf(stderr, "CROSSBAR %s: PENDING ", name.c_str());
+        for (auto &&pending : pendingReqs)
+            fprintf(stderr, "%zu ", pending.size());
+        fprintf(stderr, "\n");
+    }
 
 private:
     void processResp() {
@@ -389,6 +425,8 @@ private:
     std::vector<std::deque<size_t>> pendingReqs;    // save the upstream port id
 
     std::function<size_t(pointer_t)> mapper;
+
+    std::string name;
 };
 
 class PE : public Module {
@@ -414,10 +452,12 @@ public:
                 req.addr = writeQueue.front().first;
                 callback = writeQueue.front().second;
                 req.is_write = true;
+                writeQueue.pop_front();
             } else if (!readQueue.empty()) {
                 req.addr = readQueue.front().first;
                 callback = readQueue.front().second;
                 req.is_write = false;
+                readQueue.pop_front();
             } else {
                 reqValid = false;
             }
@@ -438,7 +478,7 @@ public:
             }
         }
 
-        if (!computing) {
+        if (!computing && !computeQueue.empty()) {
             computing = true;
             remainingCycles = computeQueue.front().first;
         }
@@ -465,18 +505,20 @@ public:
     virtual void clockUpdate() override {
         if (readQueue.empty() && dispatcher.haveTask(peid)) {
             MultiplyTask task = dispatcher.nextTask(peid);
+            dispatchedTasks++;
             if (task.lmatCol.size != 0 && task.rmatRow.size != 0) {
                 for (size_t i = 0; i < task.lmatCol.size; i++) {
                     readQueue.push_back({ pointer_t(task.lmatCol.data + i), callback_t([]() {}) });
 
-                    pointer_t writeAddr = (pointer_t)&task.result[0];
+                    pointer_t writeAddr = (pointer_t)task.result[i].data;
                     size_t writeBytes = 0;
                     for (size_t j = 0; j < task.rmatRow.size; j++) {
                         bool needWrite = false;
                         writeBytes += sizeof(CSRElement);
-                        if (writeBytes >= 64 || j + 1 >= task.rmatRow.size) {
+                        if (writeBytes >= config.BLOCK_SIZE || j + 1 >= task.rmatRow.size) {
                             needWrite = true;
-                            writeAddr += 64;
+                            writeAddr += config.BLOCK_SIZE;
+                            writeBytes -= config.BLOCK_SIZE;
                         }
                         readQueue.push_back({ pointer_t(task.rmatRow.data + j), callback_t([this, needWrite, writeAddr]() {
                             computeQueue.push_back({1, callback_t([this, needWrite, writeAddr]() {
@@ -492,9 +534,75 @@ public:
         PE::clockUpdate();
     }
 
+    bool done() {
+        return !dispatcher.haveTask(peid) && readQueue.empty() && computeQueue.empty() && writeQueue.empty();
+    }
+
+    virtual void printStats() {
+        // return;
+        fprintf(stderr, "PE %zu: Dispatched %zu tasks\n", peid, dispatchedTasks);
+        fprintf(stderr, "PE %zu: Queue R %zu C %zu W %zu\n", peid, readQueue.size(), computeQueue.size(), writeQueue.size());
+    }
+
 private:
     TaskDispatcher<MultiplyTask> &dispatcher;
     size_t peid;
+
+    size_t dispatchedTasks = 0;
+};
+
+class PEMerger : public PE {
+public:
+    PEMerger(TaskDispatcher<MergeTask> &dispatcher, size_t peid) : dispatcher(dispatcher), peid(peid) {}
+
+    virtual void clockUpdate() override {
+        if (readQueue.empty() && dispatcher.haveTask(peid)) {
+            MergeTask task = dispatcher.nextTask(peid);
+            dispatchedTasks++;
+            auto [workload, dramAccess] = analyzeMergeTask(task);
+
+            size_t writeBytes = task.output.size * sizeof(CSRElement);
+            size_t numWrite = (writeBytes + config.BLOCK_SIZE - 1) / config.BLOCK_SIZE;
+            pointer_t writeAddr = (pointer_t)task.output.data;
+
+            for (size_t idx = 0; idx < task.inputs.size(); idx++) {
+                auto &&input = task.inputs[idx];
+
+                size_t readBytes = input.size * sizeof(CSRElement);
+                size_t numRead = (readBytes + config.BLOCK_SIZE - 1) / config.BLOCK_SIZE;
+                for (size_t i = 0; i < numRead; i++) {
+                    bool isLast = idx + 1 >= task.inputs.size() && i + 1 >= numRead;
+                    readQueue.push_back({ pointer_t(input.data + i * config.BLOCK_SIZE), callback_t([this, isLast, workload, numWrite, writeAddr]() {
+                        if (isLast) {
+                            computeQueue.push_back({workload, callback_t([this, numWrite, writeAddr]() {
+                                for (size_t j = 0; j < numWrite; j++) {
+                                    writeQueue.push_back({ pointer_t(writeAddr + j * config.BLOCK_SIZE), callback_t([]() {}) });
+                                }
+                            })});
+                        }
+                    }) });
+                }
+            }
+        }
+
+        PE::clockUpdate();
+    }
+
+    bool done() {
+        return !dispatcher.haveTask(peid) && readQueue.empty() && computeQueue.empty() && writeQueue.empty();
+    }
+
+    virtual void printStats() {
+        // return;
+        fprintf(stderr, "PE %zu: Dispatched %zu tasks\n", peid, dispatchedTasks);
+        fprintf(stderr, "PE %zu: Queue R %zu C %zu W %zu\n", peid, readQueue.size(), computeQueue.size(), writeQueue.size());
+    }
+
+private:
+    TaskDispatcher<MergeTask> &dispatcher;
+    size_t peid;
+
+    size_t dispatchedTasks = 0;
 };
 
 class DRAMBackend : public Module {
@@ -507,7 +615,7 @@ private:
     static constexpr size_t DRAM_GRANULARITY = 32;
 
 public:
-    DRAMBackend(size_t channelWidth) : channelWidth(channelWidth), memFIFO(MemoryPortFIFO::DEFAULT_CAPACITY, ~0), memport(memFIFO.getSlavePort()) {
+    DRAMBackend(size_t channelWidth, std::string name) : channelWidth(channelWidth), memFIFO(MemoryPortFIFO::DEFAULT_CAPACITY, ~0), memport(memFIFO.getSlavePort()), name(name) {
         ramulator::Config &configs = getConfig();
 
         // NOTE: spec and ctrls will be deleted by `memory', no unique_ptr required
@@ -533,15 +641,25 @@ public:
     MemoryPortMaster getPort() { return memFIFO.getMasterPort(); }
 
     virtual void clockUpdate() override {
+        if (cntPendingResponse > 0) {
+            cntPendingResponse--;
+            memport.resp.write({ MemoryResponse{} });
+        }
+
         if (memport.req.isReadable() && cntPendingReqs < NUM_OUTSTANDING_REQUESTS) {
             MemoryRequest req = memport.req.read(1)[0];
             long translatedAddr = addrTranslator(req.addr);
+
+            if (req.is_write)
+                cntWrite++;
+            else
+                cntRead++;
 
             for (size_t offset = 0; offset < channelWidth; offset += DRAM_GRANULARITY) {
                 bool isLast = offset + DRAM_GRANULARITY >= channelWidth;
                 ramulator::Request ramReq(translatedAddr + offset, req.is_write ? ramulator::Request::Type::WRITE : ramulator::Request::Type::READ, [this, isLast](ramulator::Request &r) {
                     if (isLast)
-                        memport.resp.write({ MemoryResponse{} });
+                        cntPendingResponse++;
                     cntPendingReqs--;
                 });
                 cntPendingReqs++;
@@ -553,8 +671,8 @@ public:
             cntClock -= DRAM_CLOCK_PERIOD;
 
             if (!requests.empty()) {
-                memory->send(requests.front());
-                requests.pop();
+                if (memory->send(requests.front()))
+                    requests.pop();
             }
 
             memory->tick();
@@ -562,6 +680,10 @@ public:
         cntClock += 1;
     }
     virtual void clockApply() override {}
+
+    virtual void printStats() {
+        fprintf(stderr, "DRAM %s: READ %zu WRITE %zu, PENDING REQ %zu, BANDWIDTH %.3lf B/cycle\n", name.c_str(), cntRead, cntWrite, cntPendingReqs, double(cntRead + cntWrite) * channelWidth / Module::cntCycle);
+    }
 
 
 private:
@@ -589,4 +711,165 @@ private:
     std::function<long(pointer_t)> addrTranslator;
 
     std::queue<ramulator::Request> requests;
+
+    size_t cntPendingResponse = 0;
+
+    std::string name;
+    size_t cntRead = 0, cntWrite = 0;
 };
+
+size_t simulateOuterSPACEMultiply(TaskProvider &provider) {
+    TaskDispatcherStatic<MultiplyTask> dispatcherMultiply(provider.getMultiplyTasks(), config.NUM_PE);
+
+    assert(config.NUM_PE % config.NUM_PE_TILES == 0);
+    const size_t NUM_PE_PER_TILE = config.NUM_PE / config.NUM_PE_TILES;
+
+    std::vector<std::vector<std::unique_ptr<PEMultiplier>>> pes(config.NUM_PE_TILES);
+    std::vector<std::unique_ptr<Crossbar>> crossbar(config.NUM_PE_TILES);
+    std::vector<std::vector<std::unique_ptr<Cache>>> cache(config.NUM_PE_TILES);
+    std::unique_ptr<Crossbar> gcrossbar;
+    std::vector<std::unique_ptr<DRAMBackend>> dram(config.NUM_DRAM_CHANNELS);
+
+    gcrossbar.reset(new Crossbar(config.NUM_PE, config.NUM_DRAM_CHANNELS, "Global"));
+
+    for (size_t i = 0; i < config.NUM_PE_TILES; i++) {
+        crossbar[i].reset(new Crossbar(NUM_PE_PER_TILE, NUM_PE_PER_TILE, std::string("Tile ") + std::to_string(i)));
+        
+        pes[i].resize(NUM_PE_PER_TILE);
+        for (size_t j = 0; j < NUM_PE_PER_TILE; j++) {
+            pes[i][j].reset(new PEMultiplier(dispatcherMultiply, i * NUM_PE_PER_TILE + j));
+            pes[i][j]->setMemoryPort(crossbar[i]->getUpstreamPort(j));
+        }
+
+        cache[i].resize(NUM_PE_PER_TILE);
+        for (size_t j = 0; j < NUM_PE_PER_TILE; j++) {
+            cache[i][j].reset(new Cache(SimCache(config.L0_CACHE_NUM_GROUPS, clog2(config.L0_CACHE_SIZE / config.BLOCK_SIZE / config.L0_CACHE_NUM_GROUPS / NUM_PE_PER_TILE), clog2(config.BLOCK_SIZE)), std::to_string(i) + "-" + std::to_string(j)));
+            crossbar[i]->setDownstreamPort(j, cache[i][j]->getUpstreamPort());
+            cache[i][j]->setDownstreamPort(gcrossbar->getUpstreamPort(i * NUM_PE_PER_TILE + j));
+        }
+
+        crossbar[i]->setMapper([NUM_PE_PER_TILE](pointer_t addr) -> size_t {
+            return addr / (config.L0_CACHE_SIZE / NUM_PE_PER_TILE) % NUM_PE_PER_TILE;
+        });
+    }
+
+    for (size_t i = 0; i < config.NUM_DRAM_CHANNELS; i++) {
+        dram[i].reset(new DRAMBackend(config.BLOCK_SIZE, std::to_string(i)));
+        dram[i]->setAddressTranslator([](pointer_t addr) -> long {
+            return addr / config.BLOCK_SIZE / config.NUM_DRAM_CHANNELS * config.BLOCK_SIZE + addr % config.BLOCK_SIZE;
+        });
+        gcrossbar->setDownstreamPort(i, dram[i]->getPort());
+    }
+
+    constexpr size_t PAGE_SIZE = 4096;
+
+    gcrossbar->setMapper([](pointer_t addr) -> size_t {
+        return addr / PAGE_SIZE % config.NUM_DRAM_CHANNELS;
+    });
+
+    size_t cnt = 0;
+    while (true) {
+        Module::updateAll();
+        cnt++;
+
+        if (cnt % 100000 == 0)
+        {
+            fprintf(stderr, "=== STATS AT CYCLE %8zu ===\n", cnt);
+            Module::printStatsAll();
+            fprintf(stderr, "===============================\n");
+        }
+
+        bool alldone = true;
+        for (auto &&tile : pes) {
+            for (auto &&pe : tile) {
+                if (!pe->done()) {
+                    alldone = false;
+                    break;
+                }
+            }
+        }
+
+        if (alldone) {
+            break;
+        }
+    }
+
+    return cnt;
+}
+
+size_t simulateOuterSPACEMerge(TaskProvider &provider) {
+    TaskDispatcherStatic<MergeTask> dispatcherMerge(provider.getMergeTasks(), config.NUM_PE);
+
+    assert(config.NUM_PE % config.NUM_PE_TILES == 0);
+    const size_t NUM_PE_PER_TILE = config.NUM_PE / config.NUM_PE_TILES;
+
+    std::vector<std::unique_ptr<PEMerger>> pes(config.NUM_PE);
+    std::unique_ptr<Crossbar> gcrossbar;
+    std::vector<std::unique_ptr<DRAMBackend>> dram(config.NUM_DRAM_CHANNELS);
+
+    gcrossbar.reset(new Crossbar(config.NUM_PE, config.NUM_DRAM_CHANNELS, "Global"));
+
+    for (size_t i = 0; i < config.NUM_PE; i++) {
+        pes[i].reset(new PEMerger(dispatcherMerge, i));
+        pes[i]->setMemoryPort(gcrossbar->getUpstreamPort(i));
+    }
+
+    for (size_t i = 0; i < config.NUM_DRAM_CHANNELS; i++) {
+        dram[i].reset(new DRAMBackend(config.BLOCK_SIZE, std::to_string(i)));
+        dram[i]->setAddressTranslator([](pointer_t addr) -> long {
+            return addr / config.BLOCK_SIZE / config.NUM_DRAM_CHANNELS * config.BLOCK_SIZE + addr % config.BLOCK_SIZE;
+            });
+        gcrossbar->setDownstreamPort(i, dram[i]->getPort());
+    }
+
+    constexpr size_t PAGE_SIZE = 4096;
+
+    gcrossbar->setMapper([](pointer_t addr) -> size_t {
+        return addr / PAGE_SIZE % config.NUM_DRAM_CHANNELS;
+    });
+
+    size_t cnt = 0;
+    while (true) {
+        Module::updateAll();
+        cnt++;
+
+        if (cnt % 100000 == 0)
+        {
+            fprintf(stderr, "=== STATS AT CYCLE %8zu ===\n", cnt);
+            Module::printStatsAll();
+            fprintf(stderr, "===============================\n");
+        }
+
+        bool alldone = true;
+        for (auto &&pe : pes) {
+            if (!pe->done()) {
+                alldone = false;
+                break;
+            }
+        }
+
+        if (alldone) {
+            break;
+        }
+    }
+
+    return cnt;
+}
+
+size_t simulateOuterSPACE(const CSRMatrix &lmatCSC, const CSRMatrix &rmatCSR) {
+    TaskProvider provider(lmatCSC, rmatCSR);
+
+    size_t cycleMultiplyAnalytical = simulateOuterSPACEAnalyticalMultiply(provider);
+    fprintf(stderr, "OuterSPACE Multiply Analytical: %zu\n", cycleMultiplyAnalytical);
+
+    size_t cycleMultiplyCycleAccurate = simulateOuterSPACEMultiply(provider);
+    fprintf(stderr, "OuterSPACE Multiply Cycle-Accurate: %zu\n", cycleMultiplyCycleAccurate);
+
+    size_t cycleMergeAnalytical = simulateOuterSPACEAnalyticalMerge(provider);
+    fprintf(stderr, "OuterSPACE Merge Analytical: %zu\n", cycleMergeAnalytical);
+
+    size_t cycleMergeCycleAccurate = simulateOuterSPACEMerge(provider);
+    fprintf(stderr, "OuterSPACE Merge Cycle-Accurate: %zu\n", cycleMergeCycleAccurate);
+
+    return cycleMultiplyCycleAccurate + cycleMergeCycleAccurate;
+}

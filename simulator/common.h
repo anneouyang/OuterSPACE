@@ -5,7 +5,7 @@
 
 
 typedef uint32_t index_t;
-typedef double value_t;
+typedef float value_t;
 
 #pragma pack(push, 1)
 struct CSRElement
@@ -58,4 +58,11 @@ struct CompactCOOMatrix
 template<typename T>
 T alignTo(T input, T align) {
 	return (input + align - 1) / align * align;
+}
+
+constexpr int clog2(size_t val)
+{
+	if (val <= 1)
+		return 0;
+	return clog2((val - 1) / 2 + 1) + 1;
 }

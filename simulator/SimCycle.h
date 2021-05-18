@@ -6,6 +6,7 @@
 #include <deque>
 #include <stdexcept>
 #include <cassert>
+#include <list>
 
 template<typename T>
 struct PortWrite

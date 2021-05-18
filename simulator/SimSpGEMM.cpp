@@ -15,7 +15,7 @@
 // #include <execution>
 
 #include "common.h"
-#include "SimCache.h"
+// #include "SimCache.h"
 
 #undef NDEBUG
 #include <cassert>
@@ -652,12 +652,7 @@ size_t policyMIN(const CSRMatrix &csr, const std::vector<size_t> &order, size_t 
 	return memAccess;
 }
 
-int clog2(size_t val)
-{
-	if (val <= 1)
-		return 0;
-	return clog2((val - 1) / 2 + 1) + 1;
-}
+
 
 size_t policySlotMIN(const CSRMatrix &csr, const std::vector<size_t> &order, size_t numSlot, size_t sizeSlot, size_t predictWindow)
 {
@@ -818,14 +813,18 @@ size_t policySlotMIN(const CSRMatrix &csr, const std::vector<size_t> &order, siz
 
 size_t simulateCycle(const CompactCOOMatrix &lmat, const CSRMatrix &rmat, std::string dumpFilePrefix);
 size_t simulateOuterSPACEAnalytical(const CSRMatrix &lmatCSC, const CSRMatrix &rmatCSR);
+size_t simulateOuterSPACE(const CSRMatrix &lmatCSC, const CSRMatrix &rmatCSR);
 // COOMatrix reorderGraph(COOMatrix input);
 
 int main(int argc, char *argv[])
 {
-	bool SYMMETRIC;
-	std::string filename;
+	bool SYMMETRIC = false;
+	std::string filename[2];
 
-	if (argc > 1)
+	filename[0] = argv[1];
+	filename[1] = argv[2];
+
+	/*if (argc > 1)
 	{
 		filename = argv[1];
 		if (argc > 2 && std::string(argv[2]) == "1")
@@ -837,40 +836,47 @@ int main(int argc, char *argv[])
 	{
 		filename = R"(D:\Project\SparseAccelerator\simulator\SimSpGEMM\gcc\rmat\rmat-10k-x8.mtx)";
 		SYMMETRIC = false;
-	}
+	}*/
 
-	size_t NRow, NCol;
-
-	std::ifstream fin(filename);
-
-	COOMatrix coo;
+	size_t NRow[2], NCol[2];
+	COOMatrix coo[2];
 	
 	TIMER("Read Matrix")
 	{
-		coo = readcoo(fin, NRow, NCol, SYMMETRIC);
+		for (size_t i = 0; i < 2; i++) {
+			std::ifstream fin(filename[i]);
+			coo[i] = readcoo(fin, NRow[i], NCol[i], SYMMETRIC);
+		}
 	}
+
+	// Workaround: Transpose Matrix 2
+	std::swap(NRow[1], NCol[1]);
+	for (auto &&e : coo[1]) {
+		std::swap(e.row, e.col);
+	}
+	//
 
 	/*TIMER("Gorder")
 	{
 		coo = reorderGraph(std::move(coo));
 	}*/
 
-	size_t nnz = coo.size();
+	for (size_t i = 0; i < 2; i++) {
+		size_t nnz = coo[i].size();
+		printf("NCol = %zu, NRow = %zu, NNZ = %zu\n", NRow[i], NCol[i], nnz);
+	}
 
-	printf("NCol = %zu, NRow = %zu, NNZ = %zu\n", NRow, NCol, nnz);
-
-	if (NRow != NCol)
+	/*if (NRow != NCol)
 	{
 		printf("WARNING: NRow != NCol\n");
-	}
+	}*/
 
 	CSRMatrix csr, csc;
 	
-	csc = coo2csr<true>(coo, NCol);
-
 	TIMER("COO2CSR")
 	{
-		csr = coo2csr(coo, NRow);
+		csc = coo2csr<true>(coo[0], NCol[0]);
+		csr = coo2csr(coo[1], NRow[1]);
 	}
 
 	assert(csr.pos.size() == csc.pos.size());
@@ -884,7 +890,7 @@ int main(int argc, char *argv[])
 	}
 	printf("mul flops ref = %zu\n", mulflops_ref);
 
-	size_t cycleOuterSPACE = simulateOuterSPACEAnalytical(csc, csr);
+	size_t cycleOuterSPACE = simulateOuterSPACE(csc, csr);
 	printf("OuterSPACE cycles = %zu Perf=%.2lf GFlops\n", cycleOuterSPACE, (double)mulflops_ref / cycleOuterSPACE * 1.5);
 	
 #if 0
