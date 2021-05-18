@@ -1,1 +1,6 @@
 **/*.pt
+NN_models/saved_weights
+NN_models/mtx_weights
+**/__pycache__
+NN_models/data
+NN_models/plot_latency_acc_curve.py

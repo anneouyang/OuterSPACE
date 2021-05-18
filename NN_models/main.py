@@ -74,7 +74,7 @@ def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False, mode
 			lambda1, lambda2, lambda3, alambda1, alambda2 = 0.01, 0.01, 0.01, 0.002, 0.002
 		elif model_type == "LeNet":
 			lambda1, lambda2, lambda3 = 0.01, 0.01, 0
-			alambdaf0, alambdaf1, alambdaf2 = 0, 0, 0
+			alambdaf0, alambdaf1, alambdaf2 = 0.0005, 0.0005, 0.0005
 			alambdac1, alambdac2 = 0.001, 0.001
 	else:
 		if model_type == "MLP1":
@@ -136,7 +136,7 @@ def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False, mode
 							l2_regularization_actf0 = alambdaf0 * torch.norm(act_f0, 2)
 							l2_regularization_actf1 = alambdaf1 * torch.norm(act_f1, 2)
 							l2_regularization_actf2 = alambdaf2 * torch.norm(act_f2, 2)
-							act_c1, act_c2 = activations[0], activations[1]
+							act_c1, act_c2 = activations[1], activations[3]
 							l2_regularization_actc1 = alambdac1 * torch.norm(act_c1, 2)
 							l2_regularization_actc2 = alambdac2 * torch.norm(act_c2, 2)
 							loss = loss + (l2_regularization_fc1 + l2_regularization_fc2 + l2_regularization_fc3 + l2_regularization_actf0 + l2_regularization_actf1 + l2_regularization_actf2 + l2_regularization_actc1 + l2_regularization_actc2)
@@ -154,7 +154,7 @@ def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False, mode
 							elif model_type == "LeNet":
 								# prune fully connected layers
 								for k, m in enumerate(model.modules()):
-									if isinstance(m, nn.Linear):
+									if isinstance(m, nn.Linear) or isinstance(m, nn.Conv2d):
 										weight_copy = m.weight.data.abs().clone()
 										mask = weight_copy.gt(0).float()
 										m.weight.grad.data.mul_(mask)
@@ -167,7 +167,7 @@ def train(model, num_epochs=10, save_dir=None, l2reg=False, finetune=False, mode
 			epoch_acc = running_corrects.double() / len(dataloaders[phase].dataset)
 
 			if phase == 'val' and save_dir != None:
-				save_model_weights(model, save_dir, "weights_epoch_" + str(epoch) + ".pt")
+				# save_model_weights(model, save_dir, "weights_epoch_" + str(epoch) + ".pt")
 				if (len(val_accs) == 0 or epoch_acc > max(val_accs)):
 					save_model_weights(model, save_dir, "best_weights.pt")
 
@@ -192,23 +192,47 @@ def prune(model, sparsity_level, save_dir=None, model_type="MLP1"):
 	print("Before pruning: ")
 	print_parameters_sparsity(model)
 	if model_type == "MLP1":
-		for m in model.modules():
+		# for m in model.modules():
+		for name, m in model.named_modules():
 			if isinstance(m, nn.Linear): # only prune fully connected layers
+				# print("AAA")
+				# print(name, m)
+				# if name == "fc1":
+				# 	# sparsity_level = 0.001
+				# 	sparsity_level = 0.001
+				# if name == "fc2":
+				# 	sparsity_level = 0.01
+				# raise
 				if get_sparsity(m.weight.data)[-1] <= sparsity_level:
 					continue # already reached desired sparsity
 				threshold = get_prune_threshold(m.weight.data, sparsity_level)
 				weight_copy = m.weight.data.abs().clone()
 				mask = weight_copy.gt(threshold).float()
 				m.weight.data.mul_(mask)
+				# raise
 	elif model_type == "LeNet":
-		for m in model.modules():
+		for name, m in model.named_modules():
 			if isinstance(m, nn.Linear): # prune fully connected layers
+				if name == "fc1":
+					sparsity_level = 0.1
+				if name == "fc2":
+					sparsity_level = 0.1
+				if name == "fc3":
+					sparsity_level = 0.1
 				if get_sparsity(m.weight.data)[-1] <= sparsity_level:
 					continue # already reached desired sparsity
 				threshold = get_prune_threshold(m.weight.data, sparsity_level)
 				weight_copy = m.weight.data.abs().clone()
 				mask = weight_copy.gt(threshold).float()
 				m.weight.data.mul_(mask)
+			if isinstance(m, nn.Conv2d): # prune fully connected layers
+				if get_sparsity(m.weight.data)[-1] <= 0.25:
+					continue # already reached desired sparsity
+				threshold = get_prune_threshold(m.weight.data, 0.25)
+				weight_copy = m.weight.data.abs().clone()
+				mask = weight_copy.gt(threshold).float()
+				m.weight.data.mul_(mask)
+				# pass
 	print("After pruning: ")
 	print_parameters_sparsity(model)
 	save_model_weights(model, save_dir)

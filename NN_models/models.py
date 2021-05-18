@@ -7,8 +7,8 @@ class MLP1(nn.Module):
 
 	def __init__(self):
 		super(MLP1, self).__init__()
-		hidden1 = 1000
-		hidden2 = 1000
+		hidden1 = 100
+		hidden2 = 100
 		self.fc1 = nn.Linear(28 * 28, hidden1)
 		self.fc2 = nn.Linear(hidden1, hidden2)
 		self.fc3 = nn.Linear(hidden2, 10)
@@ -40,9 +40,15 @@ class LeNet(nn.Module):
 		self.max_pool_1 = torch.nn.MaxPool2d(kernel_size=2)
 		self.conv2 = torch.nn.Conv2d(in_channels=6, out_channels=16, kernel_size=5, stride=1, padding=0, bias=True)
 		self.max_pool_2 = torch.nn.MaxPool2d(kernel_size=2)
+		# # model 1
 		self.fc1 = torch.nn.Linear(16*5*5, 120)
 		self.fc2 = torch.nn.Linear(120, 84)
 		self.fc3 = torch.nn.Linear(84, 10)
+
+		# model 2
+		# self.fc1 = torch.nn.Linear(16*5*5, 90)
+		# self.fc2 = torch.nn.Linear(90, 64)
+		# self.fc3 = torch.nn.Linear(64, 10)
 
 	def forward(self, x, print_activation_sparsity=False):
 
@@ -75,6 +81,6 @@ class LeNet(nn.Module):
 
 		xf3 = self.fc3(xf2)
 
-		return (xf3, (xc1, xc2, xf0, xf1, xf2))
+		return (xf3, (xc1, xcp1, xc2, xcp2, xf0, xf1, xf2))
 
 
